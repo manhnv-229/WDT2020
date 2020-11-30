@@ -1,0 +1,81 @@
+﻿.menu {
+    width: 200px;
+    height: 100vh;
+}
+
+    .menu .logo {
+        position: relative;
+        width: 100%;
+        height: 48px;
+        padding-left: 16px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+        .menu .logo .icon-bar {
+            background-image: url('/content/img/toggle.png');
+            background-size: contain;
+            width: 24px;
+            height: 24px;
+            /*background-color: red;*/
+        }
+
+        .menu .logo .logo-page {
+            background-image: url('/content/img/cukcuk-logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 130px;
+            height: 24px;
+            margin: 10px;
+            /*background-color: blue;*/
+        }
+
+    .menu .menu__content {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        /*background-color: #4cff00*/
+    }
+
+        .menu .menu__content .menu__item {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 44px;
+            padding-left: 16px;
+            cursor: pointer;
+        }
+
+            .menu .menu__content .menu__item:hover {
+                background-color: #e5e5e5;
+                color: #000000;
+            }
+
+            .menu .menu__content .menu__item .menu__icon {
+                width: 20px;
+                height: 20px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .menu .menu__content .menu__item .menu__dashboard {
+                background-image: url('../../content/icon/dashboard.png');
+            }
+
+            .menu .menu__content .menu__item .menu__report {
+                background-image: url('../../content/icon/report.png');
+            }
+
+            .menu .menu__content .menu__item .menu__employee {
+                background-image: url('../../content/icon/dic-employee.png');
+            }
+
+            .menu .menu__content .menu__item .menu__setting {
+                background-image: url('../../content/icon/setting.png');
+            }
+
+
+            .menu .menu__content .menu__item .menu__text {
+                margin-left: 10px;
+            }

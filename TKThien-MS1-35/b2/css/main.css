@@ -1,0 +1,52 @@
+﻿@import url('layout/menu.css');
+@import url('layout/header.css');
+@import url('layout/content.css');
+@import url('button.css');
+@import url('combobox.css');
+@import url('input.css');
+@import url('table.css');
+@import url('common/font.css');
+
+body {
+    font-family: "GoogleSans-Regular";
+    font-size: 13px;
+    font-style: normal;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'GoogleSans-Bold';
+    src: url('../content/font/GoogleSans-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'GoogleSans-Italic';
+    src: url('../content/font/GoogleSans-Italic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'GoogleSans-Regular';
+    src: url('../content/font/GoogleSans-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'GoogleSans-Medium';
+    src: url('../content/font/GoogleSans-Medium.otf') format('opentype');
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #bababa;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7f7f7f;
+    border-radius: 5px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #5d5d5d;
+    }
