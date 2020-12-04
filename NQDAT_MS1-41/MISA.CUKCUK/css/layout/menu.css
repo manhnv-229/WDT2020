@@ -1,0 +1,40 @@
+﻿.menu {
+    width: 200px;
+    height: 100vh;
+}
+    /*logo*/
+    .menu .logo {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        /*align-items: center;
+        justify-content: center;*/
+    }
+
+        .menu .logo .icon-bar {
+            width: 30px;
+            height: 30px;
+            background-image: url('/content/img/toggle.png');
+        }
+
+        .menu .logo .logo-page {
+            width: 200px;
+            height: 60px;
+            background-image: url('/content/img/cukcuk-logo.png');
+        }
+    /*menu content*/
+    .menu .menu__content {
+        position: relative;
+        width: 100%;
+        display: flex;
+    }
+
+        .menu .menu__content .menu__item-icon {
+            width: 16px;
+            height: 16px;
+            background-color: #ff6a00;
+        }
+
+        .menu .menu__content .menu__item-text {
+        }
