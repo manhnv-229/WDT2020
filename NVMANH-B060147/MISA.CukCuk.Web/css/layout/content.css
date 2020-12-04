@@ -1,0 +1,8 @@
+﻿.content{
+    position: absolute;
+    top:60px;
+    left:200px;
+    bottom:0;
+    right:0;
+    background-color:black;
+}
