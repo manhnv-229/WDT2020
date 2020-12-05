@@ -1,0 +1,19 @@
+﻿.menu{
+    width: 100%;
+    padding-left: 10px;
+}
+.menu .menu-item{
+    background-color: blueviolet;
+    display: flex;
+    background-position:center;
+}
+    .menu .menu-item .menu-item-logo{
+        width: 24px;
+        height: 24px;
+        background-color: bisque;
+        background-image: url('../../content/icon/refresh.png');
+    }
+.menu .menu-item .menu-item-text{
+    margin-left: 10px;
+
+}
