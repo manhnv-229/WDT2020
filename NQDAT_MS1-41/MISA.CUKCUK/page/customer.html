@@ -6,20 +6,333 @@
     <link href="/css/main.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="menu">
-        <div class="logo">
-            <div class="icon-bar"></div>
-            <div class="logo-page"></div>
+    <div class="container">
+        <!--menu-->
+        <div class="menu">
+            <!--menu-header-->
+            <div class="menu__header">
+                <div class="icon-bar"></div>
+                <div class="logo"></div>
+            </div>
+            <!--menu-content-->
+            <div class="menu__content">
+                <div class="menu-item">
+                    <div class="menu-item__icon menu-item__icon--dash-board"></div>
+                    <div class="menu-item__text">Tổng quan</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item__icon menu-item__icon--report"></div>
+                    <div class="menu-item__text">Báo cáo</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item__icon menu-item__icon--buy"></div>
+                    <div class="menu-item__text">Mua hàng</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item__icon menu-item__icon--dic-employee"></div>
+                    <div class="menu-item__text">Danh mục khách hàng</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item__icon menu-item__icon--setting"></div>
+                    <div class="menu-item__text">Thiết lập hệ thống</div>
+                </div>
+            </div>
         </div>
-        <div class="menu__content">
-            <div class="menu__item">
-                <div class="menu__item-icon"></div>
-                <div class="menu__item-text">Tổng quan</div>
+        <!--header-->
+        <div class="header">
+            <div class="select-restaurant">
+                <select>
+                    <option>Nhà hàng biển Đông</option>
+                    <option>Nhà hàng biển Tây</option>
+                </select>
+            </div>
+            <div class="space-center"></div>
+            <div class="account-box">
+                <div class="account-box__avatar">
+                </div>
+                <div class="account-box__name">
+                    <span>Nguyễn Quốc Đạt</span>
+                </div>
+                <div class="account-box__option">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!--content-->
+        <div class="content">
+            <div class="content__header">
+                <div class="content-title">
+                    Danh sách khách hàng
+                </div>
+                <div class="space-center"></div>
+                <button class="btn--add-customer">
+                    <div class="btn--add-customer__icon"></div>
+                    <div class="btn--add-customer__text">Thêm khách hàng</div>
+                </button>
             </div>
 
+            <div class="content__filter">
+                <div class="search-box">
+                    <div class="search-box__icon"></div>
+                    <input type="search" class="search-box__text" placeholder="Tìm kiếm theo mã, tên khác" />
+                </div>
+                <div class="space-center"></div>
+                <div class="btn--refesh">
+                    <div class="btn--refesh__img"></div>
+                </div>
+            </div>
+            <div class="grid content__grid-table">
+                <table cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Mã nhân viên</th>
+                            <th>Họ và tên</th>
+                            <th>Giới tính</th>
+                            <th>Ngày sinh</th>
+                            <th>Địa chỉ </th>
+                            <th>Số điện thoại</th>
+                            <th>ABCD</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+                        <tr>
+                            <td>NV00123</td>
+                            <td>Nguyễn Quốc Đạt</td>
+                            <td>Nam</td>
+                            <td>12/10/2000</td>
+                            <td>Hải Dương</td>
+                            <td>1234567789</td>
+                            <td>XYZA</td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="content-footer">
+
+            </div>
         </div>
     </div>
-    <div class="header"></div>
-    <div class="content"></div>
 </body>
 </html>

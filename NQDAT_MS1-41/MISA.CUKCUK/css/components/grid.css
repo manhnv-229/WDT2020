@@ -1,0 +1,35 @@
+﻿.grid {
+    height: 200px;
+    overflow: auto;
+}
+
+    .grid::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .grid::-webkit-scrollbar-track {
+        background: #D2D2D2;
+        border-radius: 10px;
+    }
+
+    /* Handle */
+    .grid::-webkit-scrollbar-thumb {
+        background: #BBBBBB;
+        border-radius: 10px;
+    }
+
+        /* Handle on hover */
+        .grid::-webkit-scrollbar-thumb:hover {
+            background: #b30000;
+        }
+
+    .grid table th, td {
+        border-bottom: 2px solid #BBBBBB;
+        margin: 0 16px 0 16px;
+        padding: 10px;
+        text-align: left;
+        white-space: nowrap;
+        max-width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }

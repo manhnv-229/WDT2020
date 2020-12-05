@@ -1,8 +1,63 @@
-﻿.header{
+﻿.header {
     width: calc(100% - 200px);
-    height: 60px;
-    background-color: #ffd800;
-    position: absolute;
-    top: 0;
-    left: 200px;
+    max-height: 60px;
+    margin-left: 200px;
+    align-items: center;
+    background-color: #ffffff;
+    border-bottom: 2px solid #D2D2D2;
+    display: flex;
 }
+
+    .header .select-restaurant {
+        width: 200px;
+        height: 60px;
+        margin-right: 16px;
+        align-items: center;
+    }
+
+    .header .space-center {
+        flex-grow: 1;
+    }
+
+    .header .select-restaurant select {
+        border: none;
+        outline: none;
+        margin: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        background: none;
+        cursor: pointer;
+    }
+
+    .header .account-box {
+        width: 220px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+
+        .header .account-box .account-box__avatar {
+            width: 30px;
+            height: 30px;
+            margin-right: 16px;
+            cursor: pointer;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url('../../content/icon/avatar-default.png');
+        }
+
+        .header .account-box .account-box__name {
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+            margin-right: 16px;
+        }
+        .header .account-box .account-box__option {
+            width: 20px;
+            height: 20px;
+            margin-right: 16px;
+            cursor: pointer;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url('../../content/icon/option.png');
+        }

@@ -1,40 +1,79 @@
 ﻿.menu {
     width: 200px;
     height: 100vh;
+    position: fixed;
+    background-color: #ffffff;
+    border-right: 2px solid #D2D2D2;
 }
-    /*logo*/
-    .menu .logo {
-        position: relative;
-        width: 100%;
+
+    .menu .menu__header {
+        width: 200px;
         height: 60px;
         display: flex;
-        /*align-items: center;
-        justify-content: center;*/
+        align-items: center;
+        justify-content: center;
     }
 
-        .menu .logo .icon-bar {
-            width: 30px;
-            height: 30px;
+        .menu .menu__header .icon-bar {
+            width: 24px;
+            height: 24px;
+            margin: 12px 10px 12px 16px;
+            cursor: pointer;
+            background-size: contain;
             background-image: url('/content/img/toggle.png');
         }
 
-        .menu .logo .logo-page {
-            width: 200px;
-            height: 60px;
+        .menu .menu__header .logo {
+            width: 140px;
+            height: 40px;
+            margin-right:10px;
+            background-size: contain;
+            background-repeat: no-repeat;
             background-image: url('/content/img/cukcuk-logo.png');
         }
-    /*menu content*/
+
     .menu .menu__content {
-        position: relative;
-        width: 100%;
+        width: 200px;
+    }
+
+    .menu .menu-item {
+        width: 200px;
+        height: 40px;
         display: flex;
     }
 
-        .menu .menu__content .menu__item-icon {
-            width: 16px;
-            height: 16px;
-            background-color: #ff6a00;
+        .menu .menu-item:hover {
+            background: #DADCE0;
+            cursor:pointer;
         }
 
-        .menu .menu__content .menu__item-text {
-        }
+    .menu .menu__content .menu-item__text {
+        line-height: 40px;
+    }
+
+    .menu .menu__content .menu-item__icon {
+        width: 20px;
+        height: 20px;
+        margin: 10px;
+        background-size: contain;
+    }
+
+    .menu .menu__content .menu-item__icon--dash-board {
+        background-image: url('../../content/icon/dashboard.png');
+    }
+
+    .menu .menu__content .menu-item__icon--report {
+        background-image: url('../../content/icon/report.png');
+    }
+
+    .menu .menu__content .menu-item__icon--buy {
+        background-image: url('../../content/icon/dashboard.png');
+    }
+
+    .menu .menu__content .menu-item__icon--dic-employee {
+        background-image: url('../../content/icon/dic-employee.png');
+    }
+
+    .menu .menu__content .menu-item__icon--setting {
+        background-image: url('../../content/icon/setting.png');
+    }

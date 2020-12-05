@@ -1,8 +1,108 @@
-﻿.content{
-    position:absolute;
-    top:60px;
-    left:200px;
-    bottom:0;
-    right:0;
-    background-color: #000000;
+﻿.content {
+    width: calc(100% - 200px);
+    height: calc(100vh - 62px);
+    margin-left: 200px;
+    background-color: #ffffff;
 }
+
+    .content .content__header {
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+
+    .content .space-center {
+        flex-grow: 1;
+    }
+
+    .content .content__header .content-title {
+        font-size: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 16px;
+    }
+
+    .content .content__header .btn--add-customer {
+        height: 38px;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        margin-right: 16px;
+        background-color: #019160;
+        cursor: pointer;
+    }
+
+        .content .content__header .btn--add-customer .btn--add-customer__icon {
+            width: 16px;
+            height: 16px;
+            margin-left: 16px;
+            margin-right: 8px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url('../../content/icon/add.png');
+        }
+
+        .content .content__header .btn--add-customer .btn--add-customer__text {
+            font: 13px;
+            color: #ffffff;
+            margin-right: 16px;
+        }
+
+    .content .content__filter {
+        height: 36px;
+        align-items: center;
+        display: flex;
+    }
+
+        .content .content__filter .search-box {
+            height: 36px;
+            display: flex;
+            align-items: center;
+            border: 2px solid #BBBBBB;
+            border-radius: 4px;
+            margin-left: 16px;
+        }
+
+            .content .content__filter .search-box .search-box__icon {
+                width: 16px;
+                height: 16px;
+                margin: 0px 8px 0px 16px;
+                background-image: url('../../content/icon/search.png');
+                cursor: pointer;
+            }
+
+            .content .content__filter .search-box .search-box__text {
+                border: none;
+                outline: none;
+                background: none;
+            }
+
+        .content .content__filter .space-center {
+            flex-grow: 1;
+        }
+
+        .content .content__filter .btn--refesh {
+            width: 36px;
+            height: 36px;
+            border: 2px solid #BBBBBB;
+            border-radius: 4px;
+            margin-right: 16px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+            .content .content__filter .btn--refesh .btn--refesh__img {
+                width: 20px;
+                height: 20px;
+                margin: 8px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-image: url('../../content/icon/refresh.png');
+            }
+
+    .content .content__grid-table {
+        height: calc(100vh - 218px);
+        margin: 16px;
+    }
