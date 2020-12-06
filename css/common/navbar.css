@@ -1,0 +1,75 @@
+﻿.navbar {
+    width: 220px;
+    background-color: #ffffff;
+    border-right: 1px solid #e5e5e5;
+    height: 100vh;
+    float: left;
+}
+    .navbar .logo-site{
+        width: 100%;
+        height: 60px;
+        display:flex;
+    }
+    .navbar .navbar-content{
+        width: 100%;
+    }
+        /*LOGO*/
+.logo-site .toggle-icon {
+    width: 30px;
+    height: 30px;
+    background-image: url('/content/img/toggle.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 22px;
+    top:15px;
+}
+.logo-site .logo-icon {
+    width: 100%;
+    height: 30px;
+    background-image: url('/content/img/cukcuk-logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:absolute;
+    top:15px;
+    left: 61px;
+}
+
+.navbar .navbar-content .navbar-item {
+    display: flex;
+    height: 44px;
+    padding-left: 24px;
+    cursor: pointer;
+    line-height: 44px;
+}
+.navbar .navbar-content .navbar-item:hover{
+    background-color: #e5e5e5;
+    color: #000000;
+ 
+}
+.navbar .navbar-item-icon{
+    height:20px;
+    width: 20px;
+    margin: auto 0;
+    margin-right: 15px;
+}
+.item-1 {
+    background-image: url('/content/icon/dashboard.png');
+    background-size: contain;
+}
+.item-2 {
+    background-image: url('/content/icon/report.png');
+    background-size: contain;
+}
+.item-3 {
+    background-image: url('/content/icon/dashboard.png');
+    background-size: contain;
+}
+.item-4 {
+    background-image: url('/content/icon/dic-employee.png');
+    background-size: contain;
+}
+.item-5 {
+    background-image: url('/content/icon/setting.png');
+    background-size: contain;
+}
