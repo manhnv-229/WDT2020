@@ -65,7 +65,7 @@
     width: 210px;
     height: 40px;
     border-radius: 5px;
-    border: 2px solid #9e9c9c;
+    border: 2px solid #bbbbbb;
 }
 .search-refresh .search .search__icon{
     background-image: url('../../CONTENT/icon/search.png');
@@ -86,7 +86,7 @@
     position: absolute;
     right: 15px;
     border-radius: 5px;
-    border: 2px solid #9e9c9c;
+    border: 2px solid #bbbbbb;
     height: 40px;
     width: 40px;
 }
@@ -115,7 +115,7 @@
     background-color: #f2f2f2;
 }
 .customer__table .customer__row th,td{
-    border-bottom: 2px solid #9e9c9c;
+    border-bottom: 2px solid #bbbbbb;
     padding-left: 10px;
     padding-right: 10px;
 }

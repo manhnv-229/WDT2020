@@ -3,7 +3,7 @@
     width: 228px;
     height: 100vh;
     background-color: #ffffff;
-    border-right: 2px solid #9e9c9c;
+    border-right: 2px solid #bbbbbb;
 }
 /* css menu logo */
 .menu .logo{
@@ -47,7 +47,7 @@
     align-items: center;
 }
 .menu .menu__content .menu__item:hover{
-    background-color: #9e9c9c;
+    background-color: #bbbbbb;
 }
 .menu__content .menu__item .menu-icon{
     width: 30px;
