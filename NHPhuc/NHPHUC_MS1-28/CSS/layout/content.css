@@ -118,6 +118,13 @@
     border-bottom: 2px solid #bbbbbb;
     padding-left: 10px;
     padding-right: 10px;
+    cursor: pointer;
+}
+.customer__list .customer__table .customer__row:hover{
+    background-color: #bbbbbb;
+}
+.customer__list .customer__table .customer__row:first-child:hover{
+    background-color: #ffffff;
 }
 /* css page number */
 .content .page__number{
