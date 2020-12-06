@@ -1,0 +1,57 @@
+@import url('layout/content.css');
+@import url('layout/header.css');
+@import url('layout/menu.css');
+@import url('components/button.css');
+@import url('components/input.css');
+@import url('components/combobox.css');
+@import url('components/table.css');
+@import url('components/icon.css');
+@import url('components/grid.css');
+@import url('components/lightbox.css');
+@import url('common/buttons.css');
+@import url('components/form.css');
+
+body {
+    font-family: GoogleSans-Regular;
+    font-size: 13px;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 100%;
+    padding: 16px;
+}
+.m-row {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 16px;
+}
+.row-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 16px;
+}
+*, *:before, *::after{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'GoogleSans-Bold';
+    src: url('../content/font/GoogleSans-Bold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'GoogleSans-Italic';
+    src: url('../content/font/GoogleSans-Italic.otf') format('opentype');
+}
+@font-face {
+    font-family: 'GoogleSans-Regular';
+    src: url('../content/font/GoogleSans-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'GoogleSans-Medium';
+    src: url('../content/font/GoogleSans-Medium.otf') format('opentype');
+}

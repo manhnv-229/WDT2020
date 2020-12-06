@@ -1,0 +1,72 @@
+﻿.icon-20px {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-18px {
+    width: 18px;
+    height: 18px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon__search {
+    background-image: url('../../content/icon/search.png');
+}
+.icon__record1 {
+background-image: url('../../content/icon/document-online.png');
+}
+
+.icon__record2 {
+background-image: url('../../content/icon/refresh.png');
+}
+
+.icon__report {
+background-image: url('../../content/icon/report.png');
+}
+
+.icon__dashboard {
+background-image: url('../../content/icon/dashboard.png');
+}
+
+.icon__employee {
+background-image: url('../../content/icon/dic-employee.png');
+}
+
+.icon__setting {
+background-image: url('../../content/icon/setting.png');
+}
+
+.icon__add {
+    background-image: url('../../content/icon/add.png');
+}
+.icon__restore {
+    background-image: url('../../content/icon/refresh.png');
+}
+
+.icon__first-page {
+    background-image: url('../../content/icon/btn-firstpage.svg');
+}
+.icon__prev-page {
+    background-image: url('../../content/icon/btn-prev-page.svg');
+}
+.icon__next-page {
+    background-image: url('../../content/icon/btn-next-page.svg');
+}
+.icon__last-page {
+    background-image: url('../../content/icon/btn-lastpage.svg');
+}
+.icon__close {
+    background-image: url('../../content/icon/x.svg');
+}
+.icon__arrowdown {
+    background-image: url('../../content/icon/option.png');
+}
+
+.icon__avatar {
+    background-image: url('../../content/icon/avatar-default.png');
+}

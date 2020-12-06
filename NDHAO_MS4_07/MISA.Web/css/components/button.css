@@ -1,0 +1,51 @@
+/* default button */
+.button {
+    height: 40px;
+    min-width: 100px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #019160;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #2FBE8E;
+}
+.button:active {
+    background-color: #01B075;
+}
+/* second button*/
+.button--second {
+    min-width: 40px;
+    background-color: #fff;
+    color: #000000;
+    border: 1px solid #bbb;
+}
+.button--second:hover{
+   background-color: #e9ebee;
+}
+
+.button--second:active {
+    background-color: #01B075;
+}
+/* button icon*/
+.button--icon {
+    text-align: left;
+    padding: 0 16px;
+}
+.button--icon .button--icon__text {
+   
+}
+
+.button--icon .button--icon__icon {
+    margin-right: 8px;
+}

@@ -1,0 +1,74 @@
+.content {
+    background-color: #fff;
+    width: calc(100% - 200px);
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+    .content .content-header{
+        width: 100%;
+        margin-top: 16px;
+        margin-bottom: 8px;
+    }
+        .content .content-header .content-header__title {
+            font-weight: bold;
+            font-size: 24px;
+        }
+    .content .content-filter {
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 8px;
+    }
+      
+    .content .page-pagination {
+        width: 100%;
+        height: 70px;
+    }
+        .content .page-pagination .pagination {
+            max-width: 300px;
+            width: 100%;
+        }
+            .content .page-pagination .pagination .page-control {
+                max-width: 200px;
+                width: 100%;
+            }
+
+            .content .page-pagination .pagination .pagination__icon {
+                width: 24px;
+                height: 24px;
+                border-radius: 4px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                transition: all 0.3s ease;
+            }
+                .content .page-pagination .pagination .pagination__icon:hover {
+                    background-color: #e9ebee;
+                }
+                .content .page-pagination .pagination .page-control .page-number {
+                    max-width: 35px;
+                    max-height: 35px;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    line-height: 35px;
+                    border-radius: 50%;
+                    border: 1px solid #bbbbbb;
+                    background-color: #e9ebee;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+                .content .page-pagination .pagination .page-control .page-number:hover {
+                    background-color: #ffffff;
+                }
+
+                .content .page-pagination .pagination .page-control .page-number.active,
+                .content .page-pagination .pagination .page-control .page-number:active {
+                    background-color: #019160;
+                    border-color: #019160;
+                    color: #ffffff;
+                }

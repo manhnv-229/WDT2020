@@ -1,0 +1,25 @@
+.primary-table {
+    width: 100%;
+    border: none;
+    border-spacing: 0px;
+    border-collapse: separate;
+}
+    .primary-table tbody td,
+    .primary-table thead th {
+        padding: 0 10px 0 16px;
+        height: 48px;
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 100px;
+        border-bottom: 1px solid #bbbbbb;
+    }
+
+    .primary-table tbody tr:nth-child(2n+1) {
+        background-color: #f4f4f4 ;
+    }
+
+    .primary-table tbody tr:hover {
+        background-color: #2fbe8e;
+    }

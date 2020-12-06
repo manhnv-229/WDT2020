@@ -1,0 +1,81 @@
+﻿/* Form */
+.form-wrapper {
+    position: relative;
+    width: 650px;
+    height: 510px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+    .form-wrapper .form-header {
+        padding: 24px !important;
+    }
+
+        .form-wrapper .form-header .title {
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .form-wrapper .form-header .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+    .form-wrapper .primary-form .form-col4 {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+
+    .form-wrapper .primary-form .form-col8 {
+        flex: 0 0 66.66%;
+        max-width: 66.66%;
+    }
+
+    .form-wrapper .primary-form .form-col12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .form-wrapper .primary-form .form-group {
+        display: flex;
+        flex-direction: column;
+        margin: 8px 5px;
+    }
+
+        .form-wrapper .primary-form .form-group label {
+            font-family: GoogleSans-Medium;
+            font-size: 13px;
+            color: #000000;
+            margin-bottom: 4px;
+        }
+
+            .form-wrapper .primary-form .form-group label span {
+                color: #ff0000;
+            }
+
+        .form-wrapper .primary-form .form-group .form-control {
+            height: 40px;
+            padding: 0 16px;
+            border-radius: 4px;
+            border: 1px solid #e5e5e5;
+        }
+
+            .form-wrapper .primary-form .form-group .form-control:hover {
+                border: 1px solid #019160;
+            }
+.primary-form .direct-form {
+    position: relative;
+}
+
+/* add form */
+.form-wrapper .add-form .user-avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

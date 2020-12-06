@@ -1,0 +1,14 @@
+﻿/* restore button */
+.restore-button {
+    width: 40px;
+    padding: 0;
+}
+
+/* dropdown button*/
+.dropdown-button {
+    padding: 0;
+    margin-left: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+}

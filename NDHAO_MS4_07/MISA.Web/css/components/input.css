@@ -1,0 +1,44 @@
+/* Input icon */
+.inputbox--icon {
+    max-width: 350px;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+    display: flex;
+    align-items: center;
+}
+.inputbox--icon:hover{
+    border: 1px solid #019160;
+
+}
+.inputbox--icon:focus{
+    color: #000;
+}
+    .inputbox--icon .input-field{
+        height: 100%;
+        width: 100%;
+        border: none;
+        outline: none;
+    }
+    .inputbox--icon input::-webkit-input-placeholder {
+        color: #bbb;
+        font-size: 12px;
+    }
+    .inputbox--icon .input-icon {
+        margin-right: 8px;
+    }
+
+/* Input label */
+.inputbox--label label {
+    font-family: GoogleSans-Medium;
+    font-size: 13px;
+    color: #000000;
+    margin-bottom: 4px;
+}
+.inputbox--label input {
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+}

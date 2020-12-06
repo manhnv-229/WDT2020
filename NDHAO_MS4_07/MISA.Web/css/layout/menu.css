@@ -1,0 +1,56 @@
+.menu {
+    width: 200px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    border-right: 1px solid #e5e5e5;
+}
+    .menu .logo {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        padding-left: 16px;
+        align-items: center;
+    }
+        .menu .logo .logo__bar {
+            width: 24px;
+            height: 24px;
+            background-image: url('../../content/img/toggle.png');
+            background-size: contain;
+            background-position: center;
+            margin-right: 10px;
+        }
+        .menu .logo .logo__img {
+            width: 100px;
+            height: 34px;
+            background-image: url('../../content/img/cukcuk-logo.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    .menu__content{
+        width: 100%;
+    }
+        .menu__content .menu__item{
+            display: flex;
+            align-items: center;
+            padding-left: 16px;
+            height: 44px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .menu__content .menu__item:hover{
+            background-color: #e5e5e5;
+        }
+        .menu__content .menu__item:active{
+            background-color: #019160;
+        }
+            .menu__item .menu__icon {
+                margin-right: 10px;
+            }
+             .menu__item .menu__text {
+                font-size: 13px;
+            }
+            
