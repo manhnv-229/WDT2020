@@ -1,9 +1,11 @@
-﻿@import url('layout/menu.css');
-@import url('layout/content.css');
+﻿@import url('layout/content.css');
 @import url('layout/header.css');
+@import url('layout/menu.css');
+
 
 body {
-    font-family: 'GoogleSans-Regular';
+    margin: 0;
+    font-family: GoogleSans-Regular;
     font-size: 13px;
 }
 
@@ -23,42 +25,43 @@ body {
 }
 
 .main {
-    clear: both;
 }
 
 .panel-left {
-    float: left;
     width: 200px;
     height: 100vh;
-    background-color: white;
 }
 
 .panel-right {
+    position: absolute;
+    top: 0;
     left: 200px;
-    width: calc(100%-200px);
+    width: calc(100% - 200px);
     height: 100vh;
-    background-color: aqua;
 }
 
 .panel-left .logo {
+    padding-left: 20px;
     display: flex;
     align-items: center;
     height: 60px;
     width: 100%;
 }
 
-    .panel-left .logo .expend-icon {
-        width: 30px;
-        height: 30px;
-        background-image: url('../content/img/toggle.png');
-        background-position:center;
-        background-repeat: no-repeat;
-    }
+.logo .expend-icon {
+    width: 30px;
+    height: 30px;
+    background-image: url(../content/img/toggle.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-    .panel-left .logo .logo-page {
-        width: 100%;
-        height: 34px;
-        background-position: center;
-        background-image: url('../content/img/cukcuk-logo.png');
-        background-size: contain;
-    }
+.logo .logo-page {
+    margin-left: 10px;
+    width: 100%;
+    height: 34px;
+    background-image: url(../content/img/cukcuk-logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
