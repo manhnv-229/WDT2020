@@ -1,8 +1,11 @@
 ﻿.grid {
-    height: 200px;
+    width: 600px;
     overflow: auto;
 }
 
+    .grid table {
+        width: 100%;
+    }
     .grid::-webkit-scrollbar {
         width: 8px;
     }
@@ -12,16 +15,10 @@
         border-radius: 10px;
     }
 
-    /* Handle */
     .grid::-webkit-scrollbar-thumb {
         background: #BBBBBB;
         border-radius: 10px;
     }
-
-        /* Handle on hover */
-        .grid::-webkit-scrollbar-thumb:hover {
-            background: #b30000;
-        }
 
     .grid table th, td {
         border-bottom: 2px solid #BBBBBB;
@@ -29,7 +26,9 @@
         padding: 10px;
         text-align: left;
         white-space: nowrap;
-        max-width: 100px;
+        max-width: 200px;
+        height: 38px;
         overflow: hidden;
         text-overflow: ellipsis;
     }
+   

@@ -89,8 +89,7 @@
             border: 2px solid #BBBBBB;
             border-radius: 4px;
             margin-right: 16px;
-            background-size: contain;
-            background-repeat: no-repeat;
+            cursor: pointer;
         }
 
             .content .content__filter .btn--refesh .btn--refesh__img {
@@ -103,6 +102,84 @@
             }
 
     .content .content__grid-table {
-        height: calc(100vh - 218px);
+        width: calc(100% - 32px);
+        height: calc(100vh - 248px);
         margin: 16px;
     }
+
+    .content .content-footer {
+        width: calc(100% - 32px);
+        margin: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+        .content .content-footer .count-customer {
+            width: 200px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .content .content-footer .total-page {
+            width: 200px;
+            font-size: 13px;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .content .content-footer .paginate {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+            .content .content-footer .paginate .page {
+                width: 38px;
+                height: 38px;
+                outline: none;
+                font-weight: bold;
+                background: #E9EBEE;
+                cursor: pointer;
+                margin: 0 8px 0 8px;
+                border-radius: 50%;
+                border: 1px solid #D2D2D2;
+            }
+
+                .content .content-footer .paginate .page:hover {
+                    background-color: #019160;
+                    color: #ffffff;
+                }
+
+            .content .content-footer .paginate .page-control {
+                width: 38px;
+                height: 38px;
+                background: none;
+                outline: none;
+                border: none;
+                cursor: pointer;
+            }
+
+            .content .content-footer .paginate .active-page {
+                background-color: #019160;
+                color: #ffffff;
+            }
+
+            .content .content-footer .paginate .first-page {
+                background-size: contain;
+                background-image: url('../../content/icon/btn-firstpage.svg');
+            }
+
+            .content .content-footer .paginate .prev-page {
+                background-image: url('../../content/icon/btn-prev-page.svg');
+                background-size: contain;
+            }
+
+            .content .content-footer .paginate .next-page {
+                background-image: url('../../content/icon/btn-next-page.svg');
+                background-size: contain;
+            }
+
+            .content .content-footer .paginate .last-page {
+                background-image: url('../../content/icon/btn-lastpage.svg');
+                background-size: contain;
+            }
