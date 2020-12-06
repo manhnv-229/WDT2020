@@ -1,0 +1,79 @@
+/* css menu */
+.menu{
+    width: 228px;
+    height: 100vh;
+    background-color: #ffffff;
+    border-right: 2px solid #9e9c9c;
+}
+/* css menu logo */
+.menu .logo{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.menu .logo .icon-bar{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    background-image: url('../../CONTENT/img/toggle.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.menu .logo .logo-page{
+    width: 120px;
+    height: 30px;
+    background-color: white;
+    background-image: url('../../CONTENT/img/cukcuk-logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+}
+/* css menu content */
+.menu .menu__content{
+    position: relative;
+    width: 100%;
+}
+.menu .menu__content .menu__item{
+    display: flex;
+    height: 40px;
+    width: calc(100% - 35px);
+    cursor: pointer;
+    padding-left: 35px;
+    align-items: center;
+}
+.menu .menu__content .menu__item:hover{
+    background-color: #9e9c9c;
+}
+.menu__content .menu__item .menu-icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.menu__content .menu__item .dashboard{
+    background-image: url('../../CONTENT/icon/dashboard.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.menu__content .menu__item .report{
+    background-image: url('../../CONTENT/icon/report.png');
+}
+.menu__content .menu__item .cart{
+    background-image: url('../../CONTENT/icon/refresh.png');
+}
+.menu__content .menu__item .employee{
+    background-image: url('../../CONTENT/icon/dic-employee.png');
+}
+.menu__content .menu__item .setting{
+    background-image: url('../../CONTENT/icon/setting.png');
+}
+.menu__content .menu__item .menu-text{
+    font-weight: bolder;
+}
+

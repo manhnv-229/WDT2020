@@ -1,0 +1,65 @@
+/* css header */
+.header{
+    width: calc(100% - 230px);
+    height: 58px;
+    border-bottom: 2px solid #9e9c9c ;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 230px;
+    display: flex;
+    align-items: center;
+}
+/* css header restaurant */
+.header .header__restaurant{
+    display: flex;
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    left: 10px; 
+    justify-content: center;
+    cursor: pointer;
+}
+.header .menu__restaurant .header__restaurant-name{
+    line-height: 30px;
+    font-weight: bolder;
+}
+.header .menu__restaurant .menu__restaurant-angledown{
+    background-image: url('../../CONTENT/icon/angle-down.png');
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 10px 0 0 10px;
+}
+/* css user */
+.header .user{
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+}
+.header .user .avatar{
+    width: 30px;
+    height: 30px;
+    background-image: url('../../CONTENT/icon/avatar-default.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+.header .user .user__name{
+    line-height: 30px;
+    font-weight: bolder;
+    margin: auto 5px ;
+}
+.header .user .option{
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    background-image: url('../../CONTENT/icon/option.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
