@@ -1,6 +1,7 @@
 ﻿@import url('layout/menu.css');
 @import url('layout/content.css');
 @import url('layout/header.css');
+
 body {
     font-family: 'GoogleSans-Regular';
     font-size: 13px;
@@ -10,46 +11,54 @@ body {
     font-family: 'GoogleSans-Regular';
     src: url('../content/font/GoogleSans-Regular.otf') format('opentype');
 }
+
 @font-face {
     font-family: 'GoogleSans-Bold';
     src: url('../content/font/GoogleSans-Bold.otf') format('opentype');
 }
+
 @font-face {
     font-family: 'GoogleSans-Italic';
     src: url('../content/font/GoogleSans-Italic.otf') format('opentype');
 }
-.main{
+
+.main {
     clear: both;
 }
-.panel-left{
+
+.panel-left {
     float: left;
     width: 200px;
-    height:100vh;
+    height: 100vh;
     background-color: white;
 }
+
 .panel-right {
     left: 200px;
     width: calc(100%-200px);
     height: 100vh;
-    background-color:aqua;
+    background-color: aqua;
 }
-.panel-left .logo{
+
+.panel-left .logo {
     display: flex;
     align-items: center;
     height: 60px;
     width: 100%;
 }
-.logo .expend-icon {
-    width: 34px;
-    height: 34px;
-    background-image: url('../content/img/toggle.png');
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.logo .logo-page {
-    width: 100%;
-    height: 34px;
-    background-position: center;
-    background-image: url('../content/img/cukcuk-logo.png');
-    background-size: cover;
-}
+
+    .panel-left .logo .expend-icon {
+        width: 30px;
+        height: 30px;
+        background-image: url('../content/img/toggle.png');
+        background-position:center;
+        background-repeat: no-repeat;
+    }
+
+    .panel-left .logo .logo-page {
+        width: 100%;
+        height: 34px;
+        background-position: center;
+        background-image: url('../content/img/cukcuk-logo.png');
+        background-size: contain;
+    }
