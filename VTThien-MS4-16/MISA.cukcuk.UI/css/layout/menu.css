@@ -35,7 +35,6 @@
     .menu .menu__content .menu__item {
         height: 44px;
         display: flex;
-        width: 100%;
         background-color: #ffffff;
         align-items:center;
         padding-left:16px;

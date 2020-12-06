@@ -41,6 +41,7 @@
         padding-left: 16px;
         cursor: pointer;
         justify-content:space-between;
+        margin-right:10px;
     }
 
         .header .header__user .avatar {
