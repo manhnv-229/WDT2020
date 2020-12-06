@@ -1,0 +1,27 @@
+﻿@import url('layout/menu.css');
+@import url('layout/content.css');
+@import url('layout/header.css');
+@import url('component/buttobox.css');
+@import url('component/inpuon.css');
+@import url('component/combt.css');
+@import url('component/table.css');
+
+body {
+    font-family: 'GoogleSans-Regular';
+    font-size: 13px;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: 'GoogleSans-Italic';
+    src: url('../Content/font/GoogleSans-Italic.otf') format('opentype');
+}
+@font-face {
+    font-family: 'GoogleSans-Bold';
+    src: url('../Content/font/GoogleSans-Bold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'GoogleSans-Regular';
+    src: url('../Content/font/GoogleSans-Regular.otf') format('opentype');
+}
