@@ -1,8 +1,70 @@
 ﻿.header{
     width: calc(100% - 200px);
     height: 48px;
-    background-color: blueviolet;
     position:absolute;
     top:0;
     left:200px;
+    display:flex ;
+    justify-content: space-between;
+    border:solid 0.5px #808080;
 }
+
+    .header .header__adress {
+        height: 44px;
+        display: flex;
+        width: 100%;
+        background-color: #ffffff;
+        align-items: center;
+        padding-left: 16px;
+        cursor: pointer;
+    }
+
+        .header .header__adress .address_text {
+            margin-left:10px;
+
+        }
+        .header .header__adress .dropdownbtn {
+            width: 20px;
+            height: 20px;
+            margin-left:12px;
+            margin-right:12px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url('../../content/icon/btn-lastpage.svg');
+        }
+
+    .header .header__user {
+        height: 44px;
+        display: flex;
+        width: 250px;
+        align-items: center;
+        padding-left: 16px;
+        cursor: pointer;
+        justify-content:space-between;
+    }
+
+        .header .header__user .avatar {
+            width: 40px;
+            height: 40px;
+            margin-left: 12px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url('../../content/icon/avatar-default.png');
+        }
+
+
+    .header .header__user .username{
+        margin-left:10px;
+
+    }
+
+        .header .header__user .more {
+            width: 20px;
+            height: 20px;
+            margin-left: 12px;
+            margin-right: 12px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url('../../content/icon/option.png');
+        }
+

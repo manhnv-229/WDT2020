@@ -1,6 +1,7 @@
 ﻿.menu{
     width:200px;
     height:100vh;
+    border:solid 1px #e6e6e6;
 }
 /*logo*/
     .menu .logo {
