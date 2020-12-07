@@ -1,0 +1,149 @@
+﻿.misa-btn {
+    display: flex;
+    align-items: center;
+    background-color: #019160;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 13px;
+    color: #ffffff;
+    font-family: GoogleSans-Regular;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: none;
+    cursor:pointer;
+}
+    .misa-btn:hover {
+        background-color: #e9ebee;
+    }
+.misa-btn .icon-add{
+    background-position: left;
+}
+.btn-refresh {
+    border: 1px solid #bbbbbb;
+    width: 50px;
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    background-image: url('/content/icon/refresh.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+    .btn-refresh:hover {
+        background-color: #E5E5E5;
+    }
+
+.btn-firtpage {
+    width: 24px;
+    height: 25px;
+    border: none;
+    background-size: contain;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    background-image: url('/content/icon/btn-firstpage.png');
+}
+    .btn-firtpage:hover {
+        border-radius: 4px;
+        border: 1px solid #bbbbbb;
+    }
+    .btn-prevpage {
+        width: 21px;
+        height: 24px;
+        border: none;       
+        background-size: contain;
+        background-color: #ffffff;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        background-image: url('/content/icon/btn-prev-page.png');
+    }
+        .btn-prevpage:hover {
+            border-radius: 4px;
+            border: 1px solid #bbbbbb;
+        }
+.btn-number-page {
+    /*border-radius:50%;
+    padding: 4px;
+    width: 21px;
+    height: 24px;
+    cursor: pointer;*/
+    position: relative;
+    background: #019160;
+    border: 1px solid #bbbbbb;
+    border-radius: 50%;
+    box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+    height: 30px;
+    width: 30px;
+}
+    .btn-number-page:hover{
+        background-color: #ffffff;
+    }
+    .btn-number-page2 {
+        position: relative;
+        background: #E9EBEE;
+        border: 1px solid #bbbbbb;
+        border-radius: 50%;
+        box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+        height: 30px;
+        width: 30px;
+    }
+.btn-number-page2:hover {
+    background-color: #ffffff;
+}
+.btn-number-page3 {
+    position: relative;
+    background: #E9EBEE;
+    border: 1px solid #bbbbbb;
+    border-radius: 50%;
+    box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+    height: 30px;
+    width: 30px;
+}
+.btn-number-page3:hover {
+    background-color: #ffffff;
+}
+.btn-number-page4 {
+    position: relative;
+    background: #E9EBEE;
+    border: 1px solid #bbbbbb;
+    border-radius: 50%;
+    box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+    height: 30px;
+    width: 30px;
+}
+.btn-number-page4:hover {
+    background-color: #ffffff;
+}
+.btn-fowardpage {
+    width: 21px;
+    height: 24px;
+    border: none;
+    background-size: contain;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    background-image: url('/content/icon/btn-next-page.png');
+}
+.btn-fowardpage:hover {
+    border-radius: 4px;
+    border: 1px solid #bbbbbb;
+}
+.btn-endpage {
+    width: 21px;
+    height: 24px;
+    border: none;
+    background-size: contain;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    background-image: url('/content/icon/btn-lastpage.png');
+}
+.btn-endpage:hover {
+    border-radius: 4px;
+    border: 1px solid #bbbbbb;
+}
