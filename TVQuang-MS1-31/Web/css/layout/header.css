@@ -1,0 +1,9 @@
+﻿.header {
+    width: calc(100% - 200px);
+    height: 60px;
+    background-color: #00ff21;
+    position: absolute;
+    top: 0;
+    left: 200px;
+}
+
