@@ -1,0 +1,43 @@
+﻿.header {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: calc( 100% - 200px );
+    height: 60px;
+   
+}
+.header .left{position:absolute;}
+.header .right {
+    position: absolute;
+    right: 16px;
+    display: flex;
+    margin: 12px 0;
+}
+.header .left select{
+    border: none;
+    margin: 12px 0 12px 24px;   
+    font-size: 16px;
+    font-weight: bold;
+}
+.header .left option{
+    font-weight: bold;
+}
+
+.header .right .account-avatar {
+    width:24px; height:24px;
+    background-image: url('../../content/icon/avatar-default.png');
+    background-size: contain;
+    background-repeat:no-repeat;
+}
+.header .right .account-name{
+    margin: 5px 16px;
+}
+
+.header .right .account-option {
+    width: 20px; height:20px;
+    cursor: pointer;
+    background-image: url('../../content/icon/option.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 2px 0 2px 16px;
+}

@@ -1,0 +1,21 @@
+﻿.content {
+    position: absolute;
+    top: 60px;
+    left: 200px;
+    bottom: 0;
+    right: 0;
+   
+}
+.content .title{
+    position:absolute;
+    top: 12px;
+    left: 16px;
+    font-weight:bold;
+    font-size: 18px;
+}
+
+.content .add{
+    position:absolute;
+    top:12px;
+    right:16px;
+}
