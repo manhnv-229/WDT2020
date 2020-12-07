@@ -1,0 +1,13 @@
+﻿.pagination {
+    display: inline-block;
+}
+    .pagination p {
+        font-size: 40px;
+    }
+
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
