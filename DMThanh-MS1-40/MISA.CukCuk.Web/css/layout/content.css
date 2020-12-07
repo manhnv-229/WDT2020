@@ -1,0 +1,93 @@
+﻿.content {
+    /*position: absolute;
+    top: 76px;
+    left: 216px;
+    width: calc(100vh - 216px);
+    height: calc(100vh - 76px);
+    bottom: 0;
+    right: 0;
+    background-color: #ffffff;*/
+    
+    top: 76px;
+    left: 216px;
+    bottom: 0px;
+    right: 0px;    
+    position: absolute;
+}
+/*Page Title*/
+.content .header-content{
+    padding: 16px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+   
+}
+    .content .header-content .title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .content .header-content .page-feature{
+        position: absolute;
+        right: 16px;
+    }
+       
+        /*Filter-bar*/
+        .content .filter-bar {
+            display: flex;
+            padding: 12px;
+            background-color:#ffffff;
+        }
+            .content .filter-bar .filter-left{               
+                padding-left:0px;
+            }
+            .content .filter-bar .filter-right {
+                position: absolute;
+                right: 16px;
+            }
+            /*Grid- View*/
+            .content .grid {
+
+            }
+/*toolbar*/
+    .content .toolbar-paging {
+      
+    }
+
+    .content .toolbar {
+        border-top: 1px solid #bbbbbb;
+        align-items: center;        
+        display: flex;
+        height: 56px;
+        background-color: #ffffff;
+    }
+    .content .toolbar .toolbar-left{
+        padding: 16px;
+    }
+        .content .toolbar .toolbar-right {
+            position: absolute;
+            padding: 12px;
+            right: 0;
+        }
+        .content .toolbar .toolbar-center {  
+            
+            display:flex;
+            align-items: center;
+            position: absolute;           
+            padding-left: 45%;            
+            justify-content: space-around;
+        }
+            .content .toolbar .toolbar-center .btn1 {
+                padding: 5px;
+            }
+            .content .toolbar .toolbar-center .btn2 {
+                padding: 5px;
+            }
+            .content .toolbar .toolbar-center .btn3 {
+                padding: 5px;
+            }
+            .content .toolbar .toolbar-center .btn4 {
+                padding: 5px;
+            }
+
+        
+      
