@@ -6,7 +6,7 @@
     right: 0;
    
 }
-.content .title{
+.content .top .title{
     position:absolute;
     top: 12px;
     left: 16px;
@@ -14,8 +14,32 @@
     font-size: 18px;
 }
 
-.content .add{
+.content .top .add-user{
     position:absolute;
     top:12px;
     right:16px;
+    align-items: center;
+}
+
+.content .top .add-user {
+    height: 40px;
+    background: #019160;
+    color: #ffffff;
+    border-radius:4px;
+    display: flex;
+    cursor:pointer;
+}
+.content .top .add-user:hover {
+    background: #2FBE8E;
+}
+.content .top .add-user .icon-add {
+    margin:0 8px 0 16px;
+    width: 13px; height:13px;
+    background-image: url('../../content/icon/add.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.content .top .add-user .text{
+    margin-right:16px;
 }

@@ -4,7 +4,7 @@
     left: 200px;
     width: calc( 100% - 200px );
     height: 60px;
-   
+    border-bottom: 1px solid #BBBBBB;
 }
 .header .left{position:absolute;}
 .header .right {
