@@ -1,0 +1,114 @@
+﻿.grid {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+
+    .grid .grid-header {
+        height: 50px;
+    }
+
+    .grid .grid-content, .tablescroll_wrapper, .tablescroll {
+        height: calc(100% - 25px);
+    }
+
+.tablescroll {
+}
+
+table th {
+    border-bottom: 1px solid #bbbbbb;
+    /*border-left: 1px solid #bbbbbb;*/
+    /*padding: 10px 16px !important;*/
+    text-align: left;
+}
+
+    table th .cell {
+        padding: 15px 16px !important;
+    }
+
+table td {
+    border-bottom: 1px solid #bbbbbb;
+    /*border-left: 1px solid #bbbbbb;*/
+    padding: 15px 16px !important;
+    text-align: left;
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+
+table th {
+    /*z-index:1;
+    position:sticky;
+    background-color: #ffffff;
+    top:0px;
+    left:0;
+    padding-top: 22px !important;*/
+    font-weight: bold !important;
+    background-color: #ffffff;
+}
+
+tbody tr:nth-child(2n+1) {
+    background-color: #fafafa;
+}
+
+tbody tr:hover {
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+
+table td span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+/*td,
+th {
+    border: 1px solid #000;
+    width: 100px;
+}*/
+
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+td:first-child, th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background-color: grey;
+}
+
+td:last-child, th:last-child {
+    position: sticky;
+    right: 0;
+    z-index: 1;
+    background-color: blue;
+}
+
+thead tr th {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+}
+
+th:first-child, th:last-child {
+    z-index: 2;
+    background-color: #ffffff;
+}
+td div {
+    max-width: 200px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}

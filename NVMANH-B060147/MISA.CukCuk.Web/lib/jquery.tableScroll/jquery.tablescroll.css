@@ -1,0 +1,20 @@
+
+/*.tablescroll_wrapper
+{ border:1px solid #ccc; }*/
+
+
+.tablescroll_wrapper
+{ border-left:0; }
+
+.tablescroll_head
+{ font-weight:bold; background-color:#ffffff; border-left:0; border-top:0; margin-bottom:0px; }
+
+
+.tablescroll tbody tr.first td
+{ border-top:0; }
+
+/*.tablescroll_foot
+{ font-weight:bold; background-color:#eee; border-left:0; border-top:0; margin-top:3px; }*/
+
+.tablescroll tfoot td
+{ border-right:0; border-bottom:0; }

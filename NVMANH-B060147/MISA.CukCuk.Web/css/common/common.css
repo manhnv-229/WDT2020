@@ -1,0 +1,163 @@
+﻿.text-align-right {
+    text-align: right;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.m-row{
+    margin-top: 16px;
+}
+
+.m-flex-1{
+    flex:1;
+}
+
+.m-flex-2 {
+    flex: 2;
+}
+
+.m-flex-3 {
+    flex: 3;
+}
+
+.m-flex-4 {
+    flex: 4;
+}
+
+.m-flex-5 {
+    flex: 5;
+}
+
+.m-flex-6 {
+    flex: 6;
+}
+
+.m-label{
+    margin-bottom: 4px;
+}
+
+.m-flex{
+    display: flex;
+}
+
+.mg-left-10px{
+    margin-left: 10px;
+}
+.mg-left-20px {
+    margin-left: 20px;
+}
+
+    .mg-top-0 {
+        margin-top: 0px;
+    }
+
+    .label-required{
+        color: #ff0000;
+    }
+
+.notice-required {
+    display: none;
+    position: absolute;
+    background-color: #FF4747;
+    color: #ffffff;
+    top: 0;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.notice-required-abow {
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: #FF4747;
+    transform: rotate(45deg);
+    left: 50%;
+}
+
+input[required]::after {
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: #FF4747;
+    transform: rotate(45deg);
+    left: 50%;
+    content: "Thông tin";
+}
+
+input.border-red{
+    border: 1px solid #FF4747;
+}
+.loading{
+    display: none;
+}
+.loading-modal{
+    position: fixed;
+    top: 0;
+    left:0;
+    bottom:0;
+    right: 0;
+    background-color: #000;
+    opacity: .5;
+    z-index:999;
+}
+.loading-icon {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    border: 2px solid #4cff00;
+    border-bottom: none;
+    animation: spin 2s linear infinite;
+}
+
+
+.row-selected {
+    background-color: #01916026 !important;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box-toast-msg {
+    display: none;
+    position: fixed;
+    background-color: #ffffff;
+    padding: 24px;
+    color: #019160;
+    font-size: 20px;
+    bottom: 24px;
+    text-align: center;
+    right: 24px;
+    border: 1px solid #ccc;
+}
+
+.group-label-info{
+    margin-top:10px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.hr-group-label {
+    width: 70px;
+    margin-left: 0;
+    border: 2px solid #019160;
+}

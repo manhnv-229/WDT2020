@@ -1,0 +1,63 @@
+﻿/*@import url('/content/font/fontawesome-5.15.1/css/all.css');*/
+@import url('/lib/plugin/all.css');
+@import url('/css/common/common.css');
+@import url('/css/common/dialog.css');
+@import url('/css/common/icon.css');
+@import url('/css/common/button.css');
+@import url('/css/common/input.css');
+@import url('/css/common/toolbar.css');
+@import url('/css/common/grid.css');
+@import url('/css/common/header.css');
+@import url('/css/common/navbar.css');
+@import url('/css/common/content.css');
+@import url('ui-custom.css');
+@import url('radio.css');
+
+body {
+    margin: 0;
+    font-family: GoogleSans-Regular;
+    font-size: 13px;
+}
+
+
+
+@font-face {
+    font-family: 'GoogleSans-Regular';
+    src: url('/content/font/GoogleSans-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'GoogleSans-Bold';
+    src: url('/content/font/GoogleSans-Bold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'GoogleSans-Italic';
+    src: url('/content/font/GoogleSans-Italic.otf') format('opentype');
+}
+@font-face {
+    font-family: 'GoogleSans-Light';
+    src: url('/content/font/GoogleSans-Light.otf') format('opentype');
+}
+@font-face {
+    font-family: 'GoogleSans-Thin';
+    src: url('../../content/font/GoogleSans-Thin.otf') format('opentype');
+}
+@font-face {
+    font-family: 'GoogleSans-Black';
+    src: url('../../content/font/GoogleSans-Black.otf') format('opentype');
+}
+
+::-webkit-scrollbar {
+    width: 5px !important;
+    height: 5px !important;
+    z-index: 1231232123421
+}
+
+::-webkit-scrollbar-track {
+    width:6px;
+    background-color: #bbb;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #808080;
+    border-radius: 8px
+}

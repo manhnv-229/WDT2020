@@ -1,0 +1,97 @@
+﻿.navbar {
+    position: relative;
+    float: left;
+    width: 220px;
+    height: 100vh;
+    background-color: #ffffff;
+    border-right: 1px solid #bbbbbb;
+}
+
+    .navbar .logo-site {
+        display: flex;
+        align-items:center;
+        width: 100%;
+        height: 60px;
+    }
+    .navbar .logo-box {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        left: 24px;
+        cursor:pointer;
+    }
+
+        /*Logo page*/
+        .navbar .logo-box .toggle-icon {
+            width: 30px;
+            height: 30px;
+            background-image: url('/content/img/toggle.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .navbar .logo-box .amis-logo {
+            width: 100%;
+            height: 30px;
+            margin-left: 10px;
+            /*background-image: url('/content/img/amis-logo.png');*/
+            background-image: url('/content/img/cukcuk-logo.png');
+            background-position: 0 center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+    .navbar .navbar-content {
+        width: 100%;
+    }
+
+        .navbar .navbar-content .nav-item{
+            display:flex;
+            padding-left:24px;
+            height:44px;
+            cursor:pointer;
+            line-height:44px;
+        }
+
+            .navbar .navbar-content .nav-item:hover {
+                background-color: #e5e5e5;
+                color: #000000;
+            }
+
+            .navbar .navbar-content .nav-item:focus{
+                background-color:aqua;
+            }
+
+            .navbar .navbar-content .nav-item:active{
+                background-color:aquamarine;
+            }
+
+            .nav-item .nav-item-icon {
+                width: 20px;
+                height: 20px;
+                align-self: center;
+                margin-right: 10px;
+                background-size: contain;
+            }
+
+/*Tổng quan*/
+.nav-item-dashboard {
+    background-image: url('/content/icon/dashboard.png');
+}
+
+/*Báo cáo*/
+.nav-item-report {
+    background-image: url(/content/icon/report.png);
+}
+
+/*Cài đặt hệ thống*/
+.nav-item-setting {
+    background-image: url(/content/icon/setting.png);
+}
+
+/*Danh mục*/
+.nav-item-dic {
+    background-image: url(/content/icon/dic-employee.png);
+}
+
