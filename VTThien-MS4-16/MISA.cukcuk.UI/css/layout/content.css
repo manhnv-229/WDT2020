@@ -81,7 +81,8 @@
             .content .line2 .content_search .placeholder{
                 margin-left:8px;
                 color:#808080;
-                font-size:x-small;
+                font-size:xx-small;
+                border:0;
             }
         .content .line2 .reload {
             padding:4px;
