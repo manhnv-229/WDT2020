@@ -1,0 +1,69 @@
+﻿.content {
+    display: flex;
+    padding: 10px 20px 0px 20px;
+}
+.content-right{
+    position:absolute;
+    right:20px;
+}
+#search {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 11px;
+}
+.input-search {
+    padding-left: 40px;
+}
+.icon-search {
+    background-image: url(../../content/icon/search.png);
+    background-repeat: no-repeat;
+    background-position: 16px center;
+}
+.btn-classic {
+    display: flex;
+    align-items: center;
+    background-color: #019160;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 13px;
+    color: #ffffff;
+    font-family: GoogleSans-Regular;
+    padding-left: 16px;
+    padding-right: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    min-width: 100px;
+    justify-content: center;
+}
+.btn-icon {
+    width: 16px;
+    height: 16px;
+    background-image: url(/content/icon/add.png);
+    background-position: center;
+}
+.btn-text {
+    margin-left:6px;
+}
+.btn-classic2 {
+    float:right;
+    align-items: center;
+    border-radius: 4px;
+    height: 40px;
+    width: 60px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: 1px solid gray;
+    background-color:white;
+    padding-left:20px;
+}
+.btn-icon2 {
+    
+    background-image: url('../../content/icon/refresh.png');
+    background-position: center;
+    width: 16px;
+    height: 16px;
+
+}

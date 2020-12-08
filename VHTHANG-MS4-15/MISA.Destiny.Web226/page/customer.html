@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Quản lý khách hàng</title>
+    <link href="../css/main.css" rel="stylesheet" />
+    <link href="../css/layout/content.css" rel="stylesheet" />
+    <link href="../css/layout/header.css" rel="stylesheet" />
+    <link href="../css/layout/menu.css" rel="stylesheet" />
+    <link href="../css/common/table.css" rel="stylesheet" />
+    <link href="../css/common/footer.css" rel="stylesheet" />
+    <link href="../css/common/button.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="main">
+        <!--phan ben trai-->
+        <div class="panel-left">
+            <div class="logo">
+                <div class="expend-icon"></div>
+                <div class="logo-page"></div>
+
+            </div>
+            <div class="menu">
+                <div class="menu_item">
+                    <div class="menu_item-icon">
+                        <img src="../content/icon/dashboard.png" width="24px" height="24px"/>
+                    </div>
+                    <div class="menu_item-text">
+                        Tổng quan
+                    </div>
+                </div>
+                <div class="menu_item">
+                    <div class="menu_item-icon">
+                        <img src="../content/icon/report.png" width="24px" height="24px"/>
+                    </div>
+                    <div class="menu_item-text">
+                        Báo cáo
+                    </div>
+                </div>
+                <div class="menu_item">
+                    <div class="menu_item-icon">
+                        <img src="../content/icon/dashboard.png" width="24px" height="24px"/>
+                    </div>
+                    <div class="menu_item-text">
+                        Mua hàng
+                    </div>
+                </div>
+                <div class="menu_item">
+                    <div class="menu_item-icon">
+                        <img src="../content/icon/dic-employee.png" width="24" height="24"/>
+                    </div>
+                    <div class="menu_item-text">
+                        Danh mục khách hàng
+                    </div>
+                </div>
+                <div class="menu_item">
+                    <div class="menu_item-icon">
+                        <img src="../content/icon/dic-employee.png" width="24" height="24"/>
+                    </div>
+                    <div class="menu_item-text">
+                        Danh mục khách hàng
+                    </div>
+                </div>
+                <div class="menu_item">
+                    <div class="menu_item-icon">
+                        <img src="../content/icon/setting.png" width="24" height="24"/>
+                    </div>
+                    <div class="menu_item-text">
+                        Thiết lập hệ thống
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--phan ben phai-->
+
+        <div class="panel-right">
+            <div class="header">
+                <div class="dropdown1">
+                    <select>
+                        <option>Nhà hàng Biển Đông</option>
+                        <option>Nhà hàng Hải Dương</option>
+                        <option>Nhà hàng Đội Cấn</option>
+                        <option>Nhà hàng Cầu Giấy</option>
+                    </select>
+                </div>
+                <div class="account">
+                    <div class="avatar1">
+                    </div>
+                    <div class="name">Vũ Hữu Thắng</div>
+                    <div class="option1">
+                        <img src="../content/icon/option.png" />
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+            <div class="content">
+                <div class="content-left">
+                    <h2>Danh sách khách hàng</h2>
+                    <div class="search1">
+                        <input class="input-search icon-search" type="search" id="search" placeholder="Tìm kiếm theo mã, Tên Khách hàng" />
+                    </div>
+                </div>
+                <div class="content-right">
+                    <button class="btn-classic">
+                        <div class="btn-icon"></div>
+                        <div class="btn-text">Thêm khách hàng</div>
+                    </button>
+                    <button class="btn-classic2">
+                        <div class="btn-icon2"></div>
+                    </button>
+                </div>
+            </div>
+            <div class="infomation-table">
+                <div class="grid grid-customer ">
+                    <table id="tb-customer" cellspacing="0" cellpadding="0" border="0" class="table1" style="min-width: 100%;">
+                        <tr class="title-tb1">
+                            <th colspan="1" rowspan="1" fieldName="CustomerCode"><div class="cell">Mã khách hàng</div></th>
+                            <th colspan="1" rowspan="1" fieldName="FullName"><div class="cell">Họ và tên</div></th>
+                            <th colspan="1" rowspan="1" fieldName="GenderName"><div class="cell">Giới tính</div></th>
+                            <th colspan="1" rowspan="1" fieldName="DateOfBirth" formatType="ddmmyyyy" style="text-align:center"><div class="cell">Ngày sinh</div></th>
+                            <th colspan="1" rowspan="1" fieldName="CustomerGroupName"><div class="cell">Nhóm khách hàng</div></th>
+                            <th colspan="1" rowspan="1" fieldName="PhoneNumber"><div class="cell">Điện thoại</div></th>
+                            <th colspan="1" rowspan="1" fieldName="Email"><div class="cell">Email</div></th>
+                            <th colspan="1" rowspan="1" fieldName="Address"><div class="cell">Địa chỉ</div></th>
+                            <th colspan="1" rowspan="1" fieldName="DebitAmount" formatType="Money"><div class="cell">Số tiền nợ</div></th>
+                            <th colspan="1" rowspan="1" fieldName="MemberCardCode"><div class="cell">Mã thẻ thành viên</div></th>
+                            <th class="gutter" style="width: 6px;"></th>
+                        </tr>
+                        <tbody class="tb1">
+                            <tr class="table-row first">
+                                <td rowspan="1" colspan="1" style="width: 100px;">
+                                    <div class="cell">KH0441943</div>
+                                </td>
+                                <td rowspan="1" colspan="1" style="width: 143px;">
+                                    <div class="cell">Bùi Khánh Loan</div>
+                                </td>
+                                <td rowspan="1" colspan="1" style="width: 58px;"><div class="cell"></div></td>
+                                <td rowspan="1" colspan="1" style="width: 100px;"><div class="cell text-align-center">15/03/1965</div></td>
+                                <td rowspan="1" colspan="1" style="width: 72px;"><div class="cell"></div></td>
+                                <td rowspan="1" colspan="1" style="width: 119px;"><div class="cell">094413864334</div></td>
+                                <td rowspan="1" colspan="1" style="width: 192px;"><div class="cell">huonghoan@misa.com</div></td>
+                                <td rowspan="1" colspan="1" style="width: 232px;"><div class="cell">970 Riddle Hill Pkwy, Comcast Building, Albany, New York, 12229</div></td>
+                                <td rowspan="1" colspan="1" class="text-align-right" style="width: 55px;"><div class="cell"></div></td>
+                                <td rowspan="1" colspan="1" style="width: 98px;"><div class="cell">206225549</div></td>
+                                <td rowspan="1" colspan="1" style="width: 32px;"><div class="cell"></div></td>
+                            </tr>
+                            <tr class="table-row"><td rowspan="1" colspan="1"><div class="cell">KH79169</div></td><td rowspan="1" colspan="1"><div class="cell">Nguyễn Thị Ánh</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell text-align-center">07/07/1979</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell">0975961223</div></td><td rowspan="1" colspan="1"><div class="cell">deploy.hoan414@misa.com</div></td><td rowspan="1" colspan="1"><div class="cell">3398 Front Circle, Plaza Building, Dover, DE, 95351</div></td><td rowspan="1" colspan="1" class="text-align-right"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell">412564008</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td></tr>
+                            <tr class="table-row"><td rowspan="1" colspan="1"><div class="cell">KH466213</div></td><td rowspan="1" colspan="1"><div class="cell">Trần Tú Diễm</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell text-align-center">13/04/1987</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell">0973787919</div></td><td rowspan="1" colspan="1"><div class="cell">prohuong@misa.com</div></td><td rowspan="1" colspan="1"><div class="cell">29 Buttonwood Hwy, Salem, OR, 33546</div></td><td rowspan="1" colspan="1" class="text-align-right"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell">770512481</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td></tr>
+                            <tr class="table-row"><td rowspan="1" colspan="1"><div class="cell">KH018845</div></td><td rowspan="1" colspan="1"><div class="cell">Nguyễn Thị Lệ</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell text-align-center">14/11/1971</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell">0938246225</div></td><td rowspan="1" colspan="1"><div class="cell">proQkute789@gmail.com</div></td><td rowspan="1" colspan="1"><div class="cell">35 2nd Cir, Macy's Building, Montgomery, Alabama, 11016</div></td><td rowspan="1" colspan="1" class="text-align-right"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell">522731982</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td></tr>
+                            <tr class="table-row"><td rowspan="1" colspan="1"><div class="cell">KH846208</div></td><td rowspan="1" colspan="1"><div class="cell">Vũ Anh Trung</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell text-align-center">15/02/1959</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell">0908391296</div></td><td rowspan="1" colspan="1"><div class="cell">deployhuong@misa.com</div></td><td rowspan="1" colspan="1"><div class="cell">2801 N Mount Blvd, Hartford, CT, 93898</div></td><td rowspan="1" colspan="1" class="text-align-right"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell">376244545</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td></tr>
+                            <tr class="table-row"><td rowspan="1" colspan="1"><div class="cell">KH529774</div></td><td rowspan="1" colspan="1"><div class="cell">Hoàng Mỹ My</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell text-align-center">01/01/1970</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell">0996427002</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1" class="text-align-right"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell">869261570</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td></tr>
+                            <tr class="table-row"><td rowspan="1" colspan="1"><div class="cell">KH995601</div></td><td rowspan="1" colspan="1"><div class="cell">Nguyễn Văn Bằng</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell text-align-center">09/03/1951</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell">0999560192</div></td><td rowspan="1" colspan="1"><div class="cell">nguyenmisa@misa.com</div></td><td rowspan="1" colspan="1"><div class="cell">461 NW Riddle Hill Lane, Concord, NH, 04357</div></td><td rowspan="1" colspan="1" class="text-align-right"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell">116388614</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td></tr>
+                            <tr class="table-row"><td rowspan="1" colspan="1"><div class="cell">KH943360</div></td><td rowspan="1" colspan="1"><div class="cell">Nguyễn Thị Chi</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell text-align-center">18/05/1950</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell">0912136225</div></td><td rowspan="1" colspan="1"><div class="cell">minhcuon@gmail.com</div></td><td rowspan="1" colspan="1"><div class="cell">951 Highland Parkway, 2nd Floor, Lincoln, NE, 67950</div></td><td rowspan="1" colspan="1" class="text-align-right"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell">816565662</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td></tr>
+                            <tr class="table-row"><td rowspan="1" colspan="1"><div class="cell">KH280604</div></td><td rowspan="1" colspan="1"><div class="cell">Nông Thị Ngọc</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell text-align-center">13/09/1960</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell">0930550069</div></td><td rowspan="1" colspan="1"><div class="cell">pro.hoan61@misa.com</div></td><td rowspan="1" colspan="1"><div class="cell">77 SW Waterview Road, 3rd Floor, Carson City, NV, 60011</div></td><td rowspan="1" colspan="1" class="text-align-right"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell">589897455</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td></tr>
+                            <tr class="table-row"><td rowspan="1" colspan="1"><div class="cell">KH990706</div></td><td rowspan="1" colspan="1"><div class="cell">Nguyễn Diễm Minh</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell text-align-center">08/04/1950</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell">0950433775</div></td><td rowspan="1" colspan="1"><div class="cell">deployFmisa@misa.com</div></td><td rowspan="1" colspan="1"><div class="cell">804 West Bayview Ln, STE 1849, Trenton, NJ, 49680</div></td><td rowspan="1" colspan="1" class="text-align-right"><div class="cell"></div></td><td rowspan="1" colspan="1"><div class="cell">661749911</div></td><td rowspan="1" colspan="1"><div class="cell"></div></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="paging-bar">
+                <div class="paging-record-info">
+                    Hiển thị <b>1-10/1000</b> Khách hàng
+                </div>
+                <div class="paging-option">
+                    <div class="btn-select-page m-btn-firstpage"></div>
+                    <div class="btn-select-page m-btn-prev-page"></div>
+                    <div class="m-btn-list-page">
+                        <button class="btn-pagenumber btn-pagenumber-selected">1</button>
+                        <button class="btn-pagenumber">2</button>
+                        <button class="btn-pagenumber">3</button>
+                        <button class="btn-pagenumber">4</button>
+                    </div>
+                    <div class="btn-select-page m-btn-next-page"></div>
+                    <div class="btn-select-page m-btn-lastpage"></div>
+                </div>
+                <div class="paging-record-option">
+                    <b>10</b> Khách hàng/trang
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
