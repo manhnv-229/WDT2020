@@ -41,6 +41,223 @@
     margin-right: -10px;
 }
 
+#dialog-customer {
+}
+
+    #dialog-customer .dialog-inform1 {
+        max-width: 600px;
+        width: 500px;
+        height: 210px;
+        /*margin-left: 20px;*/
+    }
+
+    #dialog-customer .dialog-inform1 .dialog-avatar {
+        margin-top: 15px;
+        height: 210px;
+        width: 180px;
+    }
+
+        #dialog-customer .dialog-inform1 .dialog-avatar .avatar_dialog {
+            /*margin-left: 15px;*/
+            height: 150px;
+            width: 150px;
+            background-image: url('../../content/img/default-avatar.jpg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 0px;
+            border: 1px solid #BBBBBB;
+            border-radius: 50%;
+            outline: none;
+        }
+
+        #dialog-customer .dialog-inform1 .dialog-avatar p {
+            /*margin-left: 13px;*/
+     /*       font-size: 10px;
+            text-align: center;*/
+        }
+
+    #dialog-customer .dialog-inform1 .dialog-line1 {
+        
+        /*margin-left: 10px;*/
+        max-width: calc(100% - 180px);
+        position: absolute;
+        top: 0px;
+        left: 180px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+        #dialog-customer .dialog-inform1 .dialog-line1 input[type=text] {
+            margin-top: -30px;
+            width: 200px;
+            height: 30px;
+            border: 1px solid #BBBBBB;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .name-customer {
+            margin-right: 30px;
+        }
+
+
+#dialog-customer .dialog-inform1 .dialog-line2 {
+    /*    margin-left: 10px;*/
+    
+    position: absolute;
+    top: 70px;
+    left: 180px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 180px);
+    flex-direction: row;
+    justify-content: flex-start;
+}
+    #dialog-customer .dialog-inform1 .dialog-line2 input[type=text] {
+        margin-top: -30px;
+        width: 200px;
+        height: 30px;
+        border: 1px solid #BBBBBB;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+.GroupPeople-customer select {
+    margin-top: -10px;
+    width: 207px;
+    height: 35px;
+    line-height: 20px;
+    border: 1px solid #BBBBBB;
+    border-radius: 5px;
+    margin-right: 30px;
+}
+
+#dialog-customer .dialog-inform1 .dialog-line3 {
+    /*margin-left: 10px;*/
+    
+    position: absolute;
+    width: calc(100% - 180px);
+    top: 140px;
+    left: 180px;
+    height: 70px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+    #dialog-customer .dialog-inform1 .dialog-line3 input[type=date] {
+        height: 35px;
+        width: 184px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: -10px;
+        line-height: 20px;
+        border: 1px solid #BBBBBB;
+        border-radius: 5px;
+        margin-right: 30px;
+    }
+
+        #dialog-customer .dialog-inform1 .dialog-line3 .Gender-customer {
+           margin-left: -20px;
+        }
+    #dialog-customer .dialog-inform1 .dialog-line3 form {
+        margin-top: -10px;
+        align-items: center;
+        text-align: center;
+    }
+    #dialog-customer .dialog-inform1 .dialog-line3 input[type=radio] {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+    }
+
+#dialog-customer .dialog-inform1 .dialog-line3 label {
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+    #dialog-customer .dialog-inform2 {
+        height: 230px;
+    }
+
+        #dialog-customer .dialog-inform2 .dialog-line4 {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            /*background-color: yellow;*/
+        }
+
+.email-customer input[type=text] {
+    margin-top: -10px;
+    width: 380px;
+    height: 30px;
+    border: 1px solid #BBBBBB;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.phoneNumber-customer input[type=text] {
+    margin-top: -10px;
+    width: 200px;
+    height: 30px;
+    border: 1px solid #BBBBBB;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#dialog-customer .dialog-inform2 .dialog-line5 {
+    top: 70px;
+    height: 70px;
+    width: 100%;
+    display: flex;
+}
+
+.company-customer input[type=text] {
+    margin-top: -10px;
+    width: 380px;
+    height: 30px;
+    border: 1px solid #BBBBBB;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.taxNumber-customer input[type=text] {
+    margin-top: -10px;
+    width: 200px;
+    height: 30px;
+    border: 1px solid #BBBBBB;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+    #dialog-customer .dialog-inform2 .dialog-line6 {
+        top: 140px;
+        height: 70px;
+        width: 100%;
+    }
+
+.address-customer input[type=text] {
+    width: 595px;
+    height: 30px;
+    border: 1px solid #BBBBBB;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+
+#dialog .avatar_dialog {
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+}
+
 .content .content__function {
     display: flex;
     align-items: center;
@@ -62,7 +279,7 @@
     }
 
     .content .content__function .search__customer .search:focus {
-        
+        border: none;
         position: absolute;
         padding-left: 30px;
         color: #000000;

@@ -28,6 +28,7 @@
     }
 
     .btn:focus {
+        border: 0px;
         background-color: #01B075;
     }
 
