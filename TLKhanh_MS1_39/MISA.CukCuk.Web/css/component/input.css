@@ -1,4 +1,5 @@
-﻿.input-search-container {
+﻿/* search field*/
+.input-search-container {
     position: relative;
     display: flex;
     align-items: center;
@@ -48,3 +49,21 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+/* require color*/
+.require-field {
+    color: #ff0000;
+}
+/* input field*/
+.m-input-label {
+    margin-bottom: 4px;
+}
+.m-input {
+    height: 40px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding-left: 16px;
+    outline: none;
+}
+    .m-input:focus {
+        border: 1px solid var(--default-color);
+    }

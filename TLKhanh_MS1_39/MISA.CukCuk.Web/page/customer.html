@@ -3,8 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <title>Misa CukCuk - Phần mềm quản lý nhà hàng</title>
+    <link href="../lib/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
     <link href="/css/common/main.css" rel="stylesheet" />
     <link href="/css/page/customer.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/content/icon/favicon.ico" />
 </head>
 <body>
     <div class="menu">
@@ -34,7 +36,7 @@
                 <div class="menu__text">Thiết lập hệ thống</div>
             </div>
         </div>
-      </div>
+    </div>
     <div class="header">
         <div class="header__title">
             <div class="header__title-text">Nhà hàng biển đông</div>
@@ -50,7 +52,7 @@
         <div class="content__top">
             <div class="content__heading">
                 <div class="content__heading-text">Danh sách khánh hàng</div>
-                <div class="content__heading-btn m-btn-icon">
+                <div id="btn-AddCustomer" class="content__heading-btn m-btn-icon">
                     <div class="content__heading-btn-icon"></div>
                     <div class="content__heading-btn-text">Thêm khách hàng</div>
                 </div>
@@ -67,125 +69,26 @@
         </div>
         <div class="content__bottom">
             <div class="content__table-customer table">
-                <table border="0" cellspacing="0">
+                <table id="tb-lisData" border="0" cellspacing="0">
                     <thead class="table-heading">
                         <tr>
                             <th>Mã khách hàng</th>
                             <th>Họ và tên</th>
                             <th>Giới tính</th>
                             <th>Ngày sinh</th>
-                            <th>Nhóm khách hàng</th>
-                            <th>Điện thoại</th>
+                            <th>Địa Chỉ</th>
+                            <th>Số Điện thoại</th>
                             <th>Email</th>
-                            <th>Địa chỉ</th>
+                            <th>Nhóm khách hàng</th>
+                            <th>Số Tiền Nợ</th>
+                            <th>Tên Công Ty</th>
                         </tr>
                     </thead>
                     <tbody class="table-body">
-                        <tr>
-                            <td>KH00001</td>
-                            <td>Tạ Long Khánh</td>
-                            <td>Nam</td>
-                            <td>02/09/2000</td>
-                            <td>Khách hàng tiềm năng</td>
-                            <td>0971018194</td>
-                            <td>longkhanh02092000@gmail.com</td>
-                            <td>Đoan Hùng, Phú Thọ</td>
-                        </tr>
-                        <tr>
-                            <td>KH00002</td>
-                            <td>Tạ Long Khánh</td>
-                            <td>Nam</td>
-                            <td>02/09/2000</td>
-                            <td>Khách hàng tiềm năng</td>
-                            <td>0971018194</td>
-                            <td>longkhanh02092000@gmail.com</td>
-                            <td>Đoan Hùng, Phú Thọ</td>
-                        </tr>
-                        <tr>
-                            <td>KH00003</td>
-                            <td>Tạ Long Khánh</td>
-                            <td>Nam</td>
-                            <td>02/09/2000</td>
-                            <td>Khách hàng tiềm năng</td>
-                            <td>0971018194</td>
-                            <td>longkhanh02092000@gmail.com</td>
-                            <td>Đoan Hùng, Phú Thọ</td>
-                        </tr>
-                        <tr>
-                            <td>KH00004</td>
-                            <td>Tạ Long Khánh</td>
-                            <td>Nam</td>
-                            <td>02/09/2000</td>
-                            <td>Khách hàng tiềm năng</td>
-                            <td>0971018194</td>
-                            <td>longkhanh02092000@gmail.com</td>
-                            <td>Đoan Hùng, Phú Thọ</td>
-                        </tr>
-                        <tr>
-                            <td>KH00005</td>
-                            <td>Tạ Long Khánh</td>
-                            <td>Nam</td>
-                            <td>02/09/2000</td>
-                            <td>Khách hàng tiềm năng</td>
-                            <td>0971018194</td>
-                            <td>longkhanh02092000@gmail.com</td>
-                            <td>Đoan Hùng, Phú Thọ</td>
-                        </tr>
-                        <tr>
-                            <td>KH00006</td>
-                            <td>Tạ Long Khánh</td>
-                            <td>Nam</td>
-                            <td>02/09/2000</td>
-                            <td>Khách hàng tiềm năng</td>
-                            <td>0971018194</td>
-                            <td>longkhanh02092000@gmail.com</td>
-                            <td>Đoan Hùng, Phú Thọ</td>
-                        </tr>
-                        <tr>
-                            <td>KH00007</td>
-                            <td>Tạ Long Khánh</td>
-                            <td>Nam</td>
-                            <td>02/09/2000</td>
-                            <td>Khách hàng tiềm năng</td>
-                            <td>0971018194</td>
-                            <td>longkhanh02092000@gmail.com</td>
-                            <td>Đoan Hùng, Phú Thọ</td>
-                        </tr>
-                        <tr>
-                            <td>KH00008</td>
-                            <td>Tạ Long Khánh</td>
-                            <td>Nam</td>
-                            <td>02/09/2000</td>
-                            <td>Khách hàng tiềm năng</td>
-                            <td>0971018194</td>
-                            <td>longkhanh02092000@gmail.com</td>
-                            <td>Đoan Hùng, Phú Thọ</td>
-                        </tr>
-                        <tr>
-                            <td>KH00009</td>
-                            <td>Tạ Long Khánh</td>
-                            <td>Nam</td>
-                            <td>02/09/2000</td>
-                            <td>Khách hàng tiềm năng</td>
-                            <td>0971018194</td>
-                            <td>longkhanh02092000@gmail.com</td>
-                            <td>Đoan Hùng, Phú Thọ</td>
-                        </tr>
-                        <tr>
-                            <td>KH00010</td>
-                            <td>Tạ Long Khánh</td>
-                            <td>Nam</td>
-                            <td>02/09/2000</td>
-                            <td>Khách hàng tiềm năng</td>
-                            <td>0971018194</td>
-                            <td>longkhanh02092000@gmail.com</td>
-                            <td>Đoan Hùng, Phú Thọ</td>
-                        </tr>
-                        
                     </tbody>
-                    
                 </table>
             </div>
+            <!-- paginate bar -->
             <div class="content__paginate-bar">
                 <div class="count-customer">Hiển thị 1-10/1000 Khách hàng</div>
                 <div class="paginate">
@@ -201,5 +104,175 @@
             </div>
         </div>
     </div>
+    <div class="add-customer-dialog" title="Thêm khách hàng">
+        <div class="dialog-content">
+            <div class="dialog-short-info">
+                <div class="dialog-img-wrapper">
+                    <div class="dialog-img"></div>
+                    <p class="dialog-img-detail">Vui lòng chọn ảnh có định dạng .jpg, .jpeg, .png, .gif.</p>
+                </div>
+                <div>
+                    <div class="dialog-flex-item">
+                        <div class="dialog-short-field">
+                            <label for="CustomerCode" class="m-input-label">Mã khách hàng (<span class="require-field">*</span>)</label>
+                            <input id="CustomerCode" name="CustomerCode" class="dialog-input m-input" type="text" />
+                        </div>
+                        <div class="dialog-short-field">
+                            <label for="FullName" class="m-input-label">Họ và tên (<span class="require-field">*</span>)</label>
+                            <input id="FullName" name="FullName" class="dialog-input m-input" type="text" />
+                        </div>
+                    </div>
+                    <div class="dialog-flex-item">
+                        <div class="dialog-short-field">
+                            <label for="MemberCardCode" class="m-input-label">Mã thẻ thành viên</label>
+                            <input id="MemberCardCode" name="MemberCardCode" class="dialog-input m-input" type="text" />
+                        </div>
+                        <div class="dialog-short-field">
+                            <label for="CustomerGroupName" class="m-input-label">Nhóm khách hàng</label>
+                            <select id="CustomerGroupName" name="CustomerGroupName" class="dialog-input m-select">
+                                <option value="1">Khách VIP</option>
+                                <option value="2">Khách Thường</option>
+                                <option value="3">Khách Hàng MISA</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="dialog-flex-item">
+                        <div class="dialog-short-field">
+                            <label for="DateOfBirth" class="m-input-label">Ngày sinh</label>
+                            <input id="DateOfBirth" name="DateOfBirth" class="dialog-input m-input" type="date" />
+                        </div>
+                        <div class="dialog-short-field">
+                            <label class="m-input-label">Giới tính</label>
+                            <div class="m-radio">
+                                <input id="male" type="radio" name="GenderName" value="Nam" /> 
+                                <label class="radio-label" for="male">Nam</label>
+                                <input id="female" type="radio" name="GenderName" value="Nữ" /> 
+                                <label class="radio-label" for="female">Nữ</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dialog-long-info">
+                <div class="dialog-flex-item">
+                    <div class="dialog-long-field">
+                        <label class="m-input-label">Email</label>
+                        <input class="dialog-input m-input" type="text" />
+                    </div>
+                    <div class="dialog-short-field">
+                        <label class="m-input-label">Số điện thoại (<span class="require-field">*</span>)</label>
+                        <input class="dialog-input m-input" type="text" />
+                    </div>
+                </div>
+                <div class="dialog-flex-item">
+                    <div class="dialog-long-field">
+                        <label class="m-input-label">Tên công ty</label>
+                        <input class="dialog-input m-input" type="text" />
+                    </div>
+                    <div class="dialog-short-field">
+                        <label class="m-input-label">Mã số thuế</label>
+                        <input class="dialog-input m-input" type="text" />
+                    </div>
+                </div>
+                <div class="dialog-flex-item">
+                    <div class="dialog-long-field">
+                        <label class="m-input-label">Địa chỉ(<span class="require-field">*</span>)</label>
+                        <input class="dialog-input m-input" type="text" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dialog-footer">
+            <div id="btn-cancel" class="m-btn-secondary">Hủy</div>
+            <div id="btn-save" class="m-btn">Lưu</div>
+        </div>
+
+    </div>
+    <div class="info-customer-dialog" title="Thông tin khách hàng">
+        <div class="dialog-content">
+            <div class="dialog-short-info">
+                <div class="dialog-img-wrapper">
+                    <div class="dialog-img"></div>
+                    <p class="dialog-img-detail">Vui lòng chọn ảnh có định dạng .jpg, .jpeg, .png, .gif.</p>
+                </div>
+                <div>
+                    <div class="dialog-flex-item">
+                        <div class="dialog-short-field">
+                            <label for="CustomerCode" class="m-input-label">Mã khách hàng (<span class="require-field">*</span>)</label>
+                            <input id="CustomerCode" name="CustomerCode" class="dialog-input m-input" type="text" />
+                        </div>
+                        <div class="dialog-short-field">
+                            <label for="FullName" class="m-input-label">Họ và tên (<span class="require-field">*</span>)</label>
+                            <input id="FullName" name="FullName" class="dialog-input m-input" type="text" />
+                        </div>
+                    </div>
+                    <div class="dialog-flex-item">
+                        <div class="dialog-short-field">
+                            <label for="MemberCardCode" class="m-input-label">Mã thẻ thành viên</label>
+                            <input id="MemberCardCode" name="MemberCardCode" class="dialog-input m-input" type="text" />
+                        </div>
+                        <div class="dialog-short-field">
+                            <label for="CustomerGroupName" class="m-input-label">Nhóm khách hàng</label>
+                            <select id="CustomerGroupName" name="CustomerGroupName" class="dialog-input m-select">
+                                <option value="1">Khách VIP</option>
+                                <option value="2">Khách Thường</option>
+                                <option value="3">Khách Hàng MISA</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="dialog-flex-item">
+                        <div class="dialog-short-field">
+                            <label for="DateOfBirth" class="m-input-label">Ngày sinh</label>
+                            <input id="DateOfBirth" name="DateOfBirth" class="dialog-input m-input" type="date" />
+                        </div>
+                        <div class="dialog-short-field">
+                            <label class="m-input-label">Giới tính</label>
+                            <div class="m-radio">
+                                <input id="male" type="radio" name="GenderName" value="Nam" />
+                                <label class="radio-label" for="male">Nam</label>
+                                <input id="female" type="radio" name="GenderName" value="Nữ" />
+                                <label class="radio-label" for="female">Nữ</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dialog-long-info">
+                <div class="dialog-flex-item">
+                    <div class="dialog-long-field">
+                        <label class="m-input-label">Email</label>
+                        <input class="dialog-input m-input" type="text" />
+                    </div>
+                    <div class="dialog-short-field">
+                        <label class="m-input-label">Số điện thoại (<span class="require-field">*</span>)</label>
+                        <input class="dialog-input m-input" type="text" />
+                    </div>
+                </div>
+                <div class="dialog-flex-item">
+                    <div class="dialog-long-field">
+                        <label class="m-input-label">Tên công ty</label>
+                        <input class="dialog-input m-input" type="text" />
+                    </div>
+                    <div class="dialog-short-field">
+                        <label class="m-input-label">Mã số thuế</label>
+                        <input class="dialog-input m-input" type="text" />
+                    </div>
+                </div>
+                <div class="dialog-flex-item">
+                    <div class="dialog-long-field">
+                        <label class="m-input-label">Địa chỉ(<span class="require-field">*</span>)</label>
+                        <input class="dialog-input m-input" type="text" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dialog-footer">
+            <div id="btn-cancel" class="m-btn-secondary">Hủy</div>
+            <div id="btn-save" class="m-btn">Lưu</div>
+        </div>
+    </div>
+    <script src="/lib/jquery/jquery.js"></script>
+    <script src="../lib/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="/js/page/customer.js"></script>
 </body>
 </html>
