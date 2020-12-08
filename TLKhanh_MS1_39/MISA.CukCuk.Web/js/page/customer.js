@@ -49,34 +49,26 @@ function formatDate(date) {
  * Author Tạ Long Khánh (8/12/2020)
  * */
 function initEvens() {
-    addCustomerDialogShow();
-    infoCustomerDialogShow();
+    customerDialogShow();
 }
 /**
  * Hiển thị dialog thêm khách hàng mới
  * Author Tạ Long Khánh (8/12/2020)
  * */
-function addCustomerDialogShow() {
-    var dialog = $(".add-customer-dialog").dialog({
+function customerDialogShow() {
+    var dialog = $(".customer-dialog").dialog({
         autoOpen: false,
         width: 700,
         modal: true,
     });
     $("#btn-AddCustomer").click(function () {
         dialog.dialog("open");
-    })
-}
-/**
- * Hiển thị dialog thông tin khách hàng
- * Author Tạ Long Khánh (8/12/2020)
- * */
-function infoCustomerDialogShow(){
-    var dialog = $(".info-customer-dialog").dialog({
-        autoOpen: false,
-        width: 700,
-        modal: true,
     });
-    $('#tb-lisData').on('dblclick', '.cell-content', function () {
+    $("#tb-lisData").on('dblclick', '.cell-content', function () {
+        dialog.dialog('option', 'title', 'Thông tin khách hàng');
         dialog.dialog("open");
+    })
+    $("#btn-cancel").click(function () {
+        dialog.dialog("close");
     })
 }
