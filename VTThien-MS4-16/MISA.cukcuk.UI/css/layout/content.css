@@ -1,10 +1,12 @@
-﻿.content{
-    position:absolute;
+﻿.content {
+    position: absolute;
     top: 48px;
-    left:200px;
-    bottom:0;
-    right:0;
+    left: 200px;
+    bottom: 0;
+    right: 0;
     border: solid 1px #808080;
+    overflow-x: auto;
+    height:auto;
 }
 
     .content .line1 {
@@ -31,6 +33,7 @@
             margin-right:10px;
             display:flex;
             align-items:center;
+            cursor:pointer;
             
         }
 
@@ -77,6 +80,7 @@
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-image: url('../../content/icon/search.png');
+                cursor:pointer;
             }
             .content .line2 .content_search .placeholder{
                 margin-left:8px;
@@ -107,7 +111,10 @@
 
 table {
     width: 100%;
-    height: calc(100%-120px);
+    height: 400px;
+    height:inherit;
+    margin-top:10px;
+    margin-bottom: 100px;
 }
 
 td, th {
@@ -116,12 +123,65 @@ td, th {
     padding: 8px;
 }
 tr:nth-child(even) {
-    background-color: rgba(223, 222, 222, 0.95);
+    background-color: rgba(223, 222, 222, 0.7);
 }
 
+.content_footer {
+    position: absolute;
+    display: flex;
+    width: 98%;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding:10px;
+}
+ .content_footer .page_footer{
+     width:300px;
+     display:flex;
+     justify-content:space-between;
+     align-items:center;
+
+ }
+
+    .content_footer .page_footer .iconpage{
+        height:30px;
+        width:30px;
+        background-size:contain;
+        background-repeat:no-repeat;
+    }
 
 
 
+        
+.iconpage1 {
+    background-image: url('../../content/icon/btn-firstpage.svg');
+}
+.iconpage2 {
+    background-image: url('../../content/icon/btn-prev-page.svg');
+}
+.iconpage3 {
+    background-image: url('../../content/icon/btn-next-page.svg');
+}
+.iconpage4 {
+    background-image: url('../../content/icon/btn-lastpage.svg');
+}
+
+.content_footer .page_footer .numberpage {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 26px;
+    color: #000000;
+    text-align: center;
+    background: #808080;
+}
+
+.content_footer .page_footer .numberpage:hover{
+    background:#019160;
+    color:azure;
+  
+}
 
 
 
