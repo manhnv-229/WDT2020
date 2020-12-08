@@ -7,21 +7,20 @@
     bottom: 0;
     right: 0;
     background-color: #ffffff;*/
-    
-    top: 76px;
-    left: 216px;
-    bottom: 0px;
-    right: 0px;    
     position: absolute;
+    top: 61px;
+    left: 200px;
+    width: calc(100% - 236px);
+    background-color: #ffffff;
+    padding: 16px 16px 0 16px;
 }
 /*Page Title*/
-.content .header-content{
-    padding: 16px;
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-   
-}
+    .content .header-content {
+        padding: 8px 0 16px 0;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+    }
     .content .header-content .title {
         font-size: 20px;
         font-weight: bold;
@@ -33,8 +32,7 @@
        
         /*Filter-bar*/
         .content .filter-bar {
-            display: flex;
-            padding: 12px;
+            display: flex;            
             background-color:#ffffff;
         }
             .content .filter-bar .filter-left{               
@@ -54,19 +52,21 @@
     }
 
     .content .toolbar {
+        position: relative;
         border-top: 1px solid #bbbbbb;
-        align-items: center;        
+        align-items: center;
         display: flex;
         height: 56px;
         background-color: #ffffff;
+        padding: 0 16px;
     }
     .content .toolbar .toolbar-left{
-        padding: 16px;
+        left: 16px;
     }
         .content .toolbar .toolbar-right {
             position: absolute;
             padding: 12px;
-            right: 0;
+            right: 16px;
         }
         .content .toolbar .toolbar-center {  
             

@@ -1,11 +1,13 @@
 ﻿.grid {
-    width: 100%;  
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
-table th,td{
-    border-bottom: 1px solid #bbbbbb; 
+table th, td {
+    border-bottom: 1px solid #bbbbbb;
     padding-left: 16px;
     padding-right: 16px;
-    padding: 24px 16px;
+    padding: 15px 16px;
     text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;

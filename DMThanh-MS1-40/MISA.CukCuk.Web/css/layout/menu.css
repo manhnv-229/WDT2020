@@ -1,9 +1,10 @@
 ﻿.menu {
-    position: absolute;
-    width: 200px;
+    position: relative;
+    float: left;
+    width: 199px;
     height: 100vh;
-    border-right: 1px solid #e5e5e5;
     background-color: #ffffff;
+    border-right: 1px solid #bbbbbb;
 }
 /*Logo*/
 .menu .logo{
