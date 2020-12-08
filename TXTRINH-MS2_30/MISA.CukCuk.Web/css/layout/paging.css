@@ -1,0 +1,60 @@
+﻿.paging{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin-top: 15px;
+    font-size: 12px;
+}
+.paging .paging-left{
+    float: left;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+.paging .paging-center {
+    display: flex;
+    margin-left: 28%;
+    width: 20%;
+    height: 100%;
+}
+    .paging .paging-center .icon {
+        width: 30px;
+        height: 20px;
+        margin-top: 10px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .paging .paging-center .icon-1 {
+        background-image: url('../../content/icon/btn-firstpage.svg');
+    }
+    .paging .paging-center .icon-2 {
+        background-image: url('../../content/icon/btn-prev-page.svg');
+    }
+    .paging .paging-center .icon-3 {
+        margin-left: 15px;
+        background-image: url('../../content/icon/btn-next-page.svg');
+    }
+    .paging .paging-center .icon-4 {
+        background-image: url('../../content/icon/btn-lastpage.svg');
+    }
+
+    .paging .paging-center .radio {
+        width: 30px;
+        height: 25px;
+        margin-left: 15px;
+        margin-top: 5px;
+        padding-left: 10px;
+        padding-top: 5px;
+        border-radius: 50%;
+        background-color: #cecece;
+    }
+    .paging .paging-center .active{
+        background-color: #02bc28;
+    }
+
+.paging .paging-right {
+    float: right;
+    margin-left: 25%; 
+    padding-top: 10px;
+    padding-left: 5px;
+}

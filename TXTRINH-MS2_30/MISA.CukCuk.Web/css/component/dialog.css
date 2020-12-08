@@ -1,0 +1,121 @@
+﻿.dialog-modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #000000;
+    opacity: 0.4;
+}
+
+.dialog {
+    display: none;
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    border-radius: 5px;
+    top: calc(50% - 200px);
+    right: 0;
+    left: calc(50% - 300px);
+    bottom: 0;
+    background-color: #fff;
+}
+
+    .dialog .dialog-title {
+        height: 40px;
+        line-height: 25px;
+        display: flex;
+    }
+        .dialog .dialog-title .title-text {
+            padding: 10px;
+            font-size: 25px;
+        }
+        .dialog .dialog-title .title-close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 16px;
+        height: 16px;
+        color: #ccc;
+        background-image: url('../../content/icon/x.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+        .dialog .dialog-title .title-close-button :hover {
+            background-color: #dfdddf;
+            cursor: pointer;
+        }
+
+.dialog .dialog-body {
+    padding: 10px;
+    height: calc(100% - 100px);
+}
+
+.dialog-footer {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    border-top: 2px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    background-color: #dfdddf;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+input {
+    border: 1px solid #0973b9;
+    height: 25px;
+    padding: 0 4px;
+}
+
+    input:focus {
+        border: 1px solid #0973b9;
+        outline: none;
+    }
+
+.row {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+}
+
+.button-icon {
+    width: 100px;
+    height: 40px;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.dialog-footer #btnSave {
+    background-color: #019160;
+    cursor: pointer;
+}
+
+.dialog-footer #btnSaveAdd {
+    width: 150px;
+    background-color: #019160;
+    cursor: pointer;
+}
+
+.dialog-footer #btnCancel {
+    background-color: #ccc;
+    color: #000000;
+    cursor: pointer;
+}
+
+.require-error, .require-error:focus {
+    border: 1px solid #ff0505;
+}
