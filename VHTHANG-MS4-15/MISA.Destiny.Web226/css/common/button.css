@@ -1,4 +1,70 @@
-﻿.btn-pagenumber {
+﻿.m-btn {
+    display: flex;
+    align-items: center;
+    background-color: #019160;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 13px;
+    color: #ffffff;
+    font-family: GoogleSans-Regular;
+    padding-left: 16px;
+    padding-right: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    min-width: 100px;
+    justify-content: center;
+}
+
+    .m-btn:hover, .m-btn:focus {
+        background-color: #2FBE8E;
+    }
+
+    .m-btn .m-btn-icon {
+        background-position: center;
+    }
+
+    .m-btn .btn-text {
+        margin-left: 8px;
+    }
+
+    .m-btn .m-btn-text {
+    }
+
+.m-second-button {
+    border: 1px solid #bbbbbb;
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 40px;
+    color: #000000;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+}
+
+    .m-second-button:hover {
+        background-color: #e9ebee;
+    }
+
+.m-btn-refresh {
+    background-image: url('/content/icon/refresh.png');
+    background-repeat: no-repeat;
+    width: 40px;
+    background-position: center;
+}
+
+.m-btn-cancel {
+    color: #000000;
+    background-color: transparent;
+}
+
+    .m-btn-cancel:hover, .m-btn-cancel:focus {
+        background-color: #BBBBBB;
+    }
+
+.btn-pagenumber {
     width: 30px;
     height: 30px;
     margin: 0 4px;
@@ -51,3 +117,6 @@
 .m-btn-lastpage {
     background-image: url('/content/icon/btn-lastpage.svg');
 }
+
+
+/*input label*/

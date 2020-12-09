@@ -1,16 +1,16 @@
 ﻿/* Grid */
-.infomation-table{
-    padding:0px 20px 0px 20px;
-}
+
 .grid {
-    width: 100%;
+    width: 100vh
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: auto;
+    padding: 0px 20px 0px 20px;
+    height: calc(100vh - 230px);
 }
 
 
 .grid .grid-header {
-        height: 50px;
+        height: 56px;
     }
 
 .grid .grid-content, .tablescroll_wrapper, .tablescroll {
@@ -38,7 +38,7 @@
     text-align: left;
     white-space: nowrap;
     box-sizing: border-box;
-    overflow: hidden;
+    
     text-overflow: ellipsis;
     word-break: break-all;
 }
