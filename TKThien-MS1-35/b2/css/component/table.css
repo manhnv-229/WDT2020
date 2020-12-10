@@ -1,2 +1,50 @@
-﻿body {
+﻿table {
+    border-collapse: collapse;
+}
+
+td, th {
+    height: 40px;
+    text-align: left;
+    padding-left: 10px;
+    border-bottom: solid 1px #cdcdcd;
+}
+
+.table__id {
+    min-width: 150px;
+}
+
+.table__name {
+    min-width: 200px;
+}
+
+.table__gender {
+    min-width: 100px;
+}
+
+.table__date {
+    min-width: 100px;
+}
+
+.table__group {
+    min-width: 200px;
+}
+
+.table__phone {
+    min-width: 150px;
+}
+
+.table__email {
+    min-width: 200px;
+}
+
+.table__address {
+    min-width: 250px;
+}
+
+.table__debt {
+    min-width: 100px;
+}
+
+.table__card {
+    min-width: 150px;
 }

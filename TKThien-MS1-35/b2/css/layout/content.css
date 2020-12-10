@@ -27,7 +27,8 @@
             border-radius: 5px;
             height: 36px;
             text-align: center;
-            padding: 0 16px
+            padding: 0 16px;
+            cursor: pointer;
         }
 
             .content .content__heading .heading__button:hover {
@@ -38,7 +39,7 @@
                 margin-right: 8px;
                 width: 20px;
                 height: 20px;
-                background-image: url('../../content/icon/add.png');
+                background-image: url('/content/icon/add.png');
                 background-size: contain;
                 background-repeat: no-repeat;
             }
@@ -111,58 +112,6 @@
         overflow-x: scroll;
         overflow-y: visible;
     }
-
-        .content .content__table table {
-            border-collapse: collapse;
-        }
-
-        .content .content__table table td,
-        .content .content__table table th {
-            height: 40px;
-            text-align: left;
-            padding-left: 10px;
-            border-bottom: solid 1px #cdcdcd;
-        }
-
-        .content .content__table .table__id {
-            min-width: 150px;
-        }
-
-        .content .content__table .table__name {
-            min-width: 200px;
-        }
-
-        .content .content__table .table__gender {
-            min-width: 100px;
-        }
-
-        .content .content__table .table__date {
-            min-width: 100px;
-        }
-
-        .content .content__table .table__group {
-            min-width: 200px;
-        }
-
-        .content .content__table .table__phone {
-            min-width: 150px;
-        }
-
-        .content .content__table .table__email {
-            min-width: 200px;
-        }
-
-        .content .content__table .table__address {
-            min-width: 250px;
-        }
-
-        .content .content__table .table__debt {
-            min-width: 100px;
-        }
-
-        .content .content__table .table__card {
-            min-width: 150px;
-        }
 
     .content .content__footer {
         display: flex;

@@ -1,0 +1,164 @@
+﻿
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 24px;
+}
+
+    form span {
+        color: #ff0000;
+    }
+
+    form > .form-1 {
+        width: 652px;
+        height: 200px;
+    }
+
+    form .form-1 .avatar {
+        width: 240px;
+        height: 240px;
+        margin-right: -10px;
+    }
+
+        form .form-1 .avatar .avatar__image {
+            border: solid 1px #bdbec0;
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            background-image: url('../../content/img/default-avatar.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 0 calc( ( 100% - 182px ) / 2 );
+        }
+
+        form .form-1 .avatar .avatar__description {
+            text-align: center;
+        }
+
+    form .form-1 .basic-info {
+        width: calc( 100% - 240px - 29px - 29px );
+        height: 240px;
+        position: absolute;
+        left: calc(240px + 29px);
+        top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+        form .form-1 .basic-info div {
+            flex: 1 0 50%;
+        }
+
+            form .form-1 .basic-info div .form_input {
+                width: 95%;
+            }
+
+            form .form-1 .basic-info div.customer-dob .form_input,
+            form .form-1 .basic-info div.customer-card .form_input,
+            form .form-1 .basic-info div.customer-code .form_input {
+                width: 90%;
+            }
+
+            form .form-1 .basic-info div select.form_input {
+                width: 100%;
+                height: 44px;
+            }
+
+
+        /*form .form-1 .basic-info input.form_input {
+    margin-right: 10px;
+    width: 178px;
+}
+
+form .form-1 .basic-info select.form_input {
+    height: 44px;
+    width: 192px;
+}*/
+
+        form .form-1 .basic-info .customer-gender input {
+            margin-top: 10px;
+        }
+
+    form > .form-2 {
+        position: absolute;
+        top: 240px;
+        width: calc( 100% - 29px - 29px );
+        height: 240px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+        form > .form-2 .customer-company,
+        form > .form-2 .customer-email {
+            flex: 0 1 70%;
+        }
+
+            form > .form-2 .customer-company input.form_input,
+            form > .form-2 .customer-email input.form_input {
+                width: 95%;
+            }
+
+        form > .form-2 .customer-taxcode,
+        form > .form-2 .customer-phone {
+            flex: 0 1 30%;
+        }
+
+            form > .form-2 .customer-taxcode input.form_input,
+            form > .form-2 .customer-phone input.form_input {
+                width: 100%;
+            }
+
+        form > .form-2 .customer-address {
+            width: 100%;
+        }
+
+            form > .form-2 .customer-address input.form_input {
+                width: 100%;
+            }
+
+    form > .dialog-footer {
+        position: absolute;
+        background-color: #e9ebee;
+        bottom: 0;
+        left: 0;
+        width: calc(100% - 24px - 24px);
+        height: 60px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 24px;
+        border-radius: 0 0 5px 5px;
+    }
+
+        form > .dialog-footer > button {
+            height: 40px;
+            width: 80px;
+            background-color: #01B075;
+            color: #ffffff;
+            border: 0;
+            outline: 0;
+            text-align: center;
+            padding: 0 16px;
+            border-radius: 5px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+
+            form > .dialog-footer > button#btnCancel {
+                color: black;
+                background-color: #e9ebee;
+            }
+
+                form > .dialog-footer > button#btnCancel:hover {
+                    background-color: #bdbec0;
+                }
+
+            form > .dialog-footer > button#btnSave:hover {
+                background-color: #019160;
+            }
+
+            form > .dialog-footer > button#btnSave i {
+                margin-right: 5px;
+            }

@@ -1,10 +1,11 @@
 ﻿@import url('layout/menu.css');
 @import url('layout/header.css');
 @import url('layout/content.css');
-@import url('button.css');
-@import url('combobox.css');
-@import url('input.css');
-@import url('table.css');
+@import url('component/input.css');
+@import url('component/button.css');
+@import url('component/table.css');
+@import url('component/combobox.css');
+@import url('component/dialog.css');
 @import url('common/font.css');
 
 body {

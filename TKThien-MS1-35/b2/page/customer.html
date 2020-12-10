@@ -3,8 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <title>Danh sách khách hàng</title>
-    <link href="../css/main.css" rel="stylesheet" />
-    <link href="../css/page/customer.css" rel="stylesheet" />
+    <link href="../content/font/fontawesome-5.15.1/css/all.min.css" rel="stylesheet" />
+    <link href="/lib/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
+    <link href="/css/main.css" rel="stylesheet" />
+    <link href="/css/page/customer.css" rel="stylesheet" />
 </head>
 <body>
     <div class="menu">
@@ -46,284 +48,35 @@
     <div class="content">
         <div class="content__heading">
             <h2 class="heading__title">Danh sách khách hàng</h2>
-            <button class="heading__button"><div class="add__icon"></div>Thêm khách hàng</button>
+            <button id="btnAdd" class="heading__button"><div class="add__icon"></div>Thêm khách hàng</button>
         </div>
         <div class="content__filter">
             <div class="filter__search">
                 <label for="filter" class="filter__icon"></label>
-                <input type="text" class="filter__input" name="filter" placeholder="Tìm kiếm theo Mã, Tên khác"/>
+                <input type="text" class="filter__input" name="filter" placeholder="Tìm kiếm theo Mã, Tên khác" />
             </div>
             <div class="filter__refresh">
                 <div class="refresh__icon"></div>
             </div>
         </div>
         <div class="content__table">
-            <table class="content__table">
-                <tr>
-                    <th class="table__id">Mã khách hàng</th>
-                    <th class="table__name">Họ và tên</th>
-                    <th class="table__gender">Giới tính</th>
-                    <th class="table__date">Ngày sinh</th>
-                    <th class="table__group">Nhóm khách hàng</th>
-                    <th class="table__phone">Điện thoại</th>
-                    <th class="table__email">Email</th>
-                    <th class="table__address">Địa chỉ</th>
-                    <th class="table__debt">Số tiền nợ</th>
-                    <th class="table__card">Mã thẻ thành viên</th>
-                </tr>
-
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
-                <tr>
-                    <td class="table__id">KH0441943</td>
-                    <td class="table__name">Bùi Khánh Loan</td>
-                    <td class="table__gender"></td>
-                    <td class="table__date">15/03/1965</td>
-                    <td class="table__group"></td>
-                    <td class="table__phone">094413864334</td>
-                    <td class="table__email">huonghoan@misa.com</td>
-                    <td class="table__address">970 Riddle Hill Pkwy</td>
-                    <td class="table__debt"></td>
-                    <td class="table__card">206225549</td>
-                </tr>
+            <table id="table" class="content__table">
+                <thead>
+                    <tr>
+                        <th class="table__id">Mã khách hàng</th>
+                        <th class="table__name">Họ và tên</th>
+                        <th class="table__gender">Giới tính</th>
+                        <th class="table__date">Ngày sinh</th>
+                        <th class="table__group">Nhóm khách hàng</th>
+                        <th class="table__phone">Điện thoại</th>
+                        <th class="table__email">Email</th>
+                        <th class="table__address">Địa chỉ</th>
+                        <th class="table__debt">Số tiền nợ</th>
+                        <th class="table__card">Mã thẻ thành viên</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
             </table>
         </div>
         <div class="content__footer">
@@ -341,5 +94,81 @@
             <div>10 Khách hàng/trang</div>
         </div>
     </div>
+    <div class="customer-dialog" title="Thông tin khách hàng">
+        <form action="" method="post">
+            <div class="form-1">
+                <div class="avatar">
+                    <div id="avatar" class="avatar__image"></div>
+                    <input type="file" id="avatarUpload" name="avatar" accept="image/x-png,image/gif,image/jpeg,image/jpg" hidden />
+                    <div class="avatar__description">Vui lòng chọn ảnh có định dạng .jpg, .jpeg, .png, .gif.</div>
+                </div>
+                <div class="basic-info">
+                    <div class="customer-code">
+                        <label for="customer_code">Mã khách hàng (<span>*</span>)</label><br />
+                        <input type="text" class="form_input" name="customer_code" required />
+                    </div>
+                    <div class="customer-name">
+                        <label for="customer_name">Họ và tên (<span>*</span>)</label><br />
+                        <input type="text" class="form_input" name="customer_name" required />
+                    </div>
+                    <div class="customer-card">
+                        <label for="customer_card">Mã thẻ thành viên</label><br />
+                        <input type="text" class="form_input" name="customer_card" />
+                    </div>
+                    <div class="customer-group">
+                        <label for="customer_group">Nhóm khách hàng</label><br />
+                        <!--<input type="text" name="customer_group" />-->
+                        <select class="form_input" name="customer_group">
+                            <option value="0">Khách VIP</option>
+                            <option value="1">Nhóm khách hàng MISA</option>
+                            <option value="2">Nhóm khách hàng MISA 2</option>
+                            <option value="3">Khách vãng lai</option>
+                        </select>
+                    </div>
+                    <div class="customer-dob">
+                        <label for="customer_dob">Ngày sinh</label><br />
+                        <input type="date" class="form_input" name="customer_dob" />
+                    </div>
+                    <div class="customer-gender">
+                        <label for="customer_gender">Giới tính</label><br />
+                        <input type="radio" name="customer_gender" id="male" value="1" />
+                        <label for="male">Nam</label>
+                        <input type="radio" name="customer_gender" id="female" value="0" />
+                        <label for="female">Nữ</label>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="form-2">
+                <div class="customer-email">
+                    <label for="customer_email">Email</label><br />
+                    <input type="text" class="form_input" name="customer_email" />
+                </div>
+                <div class="customer-phone">
+                    <label for="customer_phone">Số điên thoại(<span>*</span>)</label><br />
+                    <input type="tel" class="form_input" name="customer_phone" pattern="[0-9]{10}" required />
+                </div>
+                <div class="customer-company">
+                    <label for="customer_company">Tên công ty</label><br />
+                    <input type="text" class="form_input" name="customer_company" />
+                </div>
+                <div class="customer-taxcode">
+                    <label for="customer_taxcode">Mã số thuế</label><br />
+                    <input type="text" class="form_input" name="customer_taxcode" />
+                </div>
+                <div class="customer-address">
+                    <label for="customer_address">Địa chỉ</label><br />
+                    <input type="text" class="form_input" name="customer_address" />
+                </div>
+            </div>
+            <div class="dialog-footer" >
+                <button type="button" id="btnCancel">Hủy</button><button type="button" id="btnSave"><i class="far fa-save"></i>Lưu</button>
+            </div>
+        </form>
+    </div>
+    <script src="/lib/jquery-3.5.1.min.js"></script>
+    <script src="/lib/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="/js/page/customers.js"></script>
 </body>
 </html>

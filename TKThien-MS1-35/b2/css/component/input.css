@@ -1,2 +1,10 @@
-﻿body {
+﻿.form_input {
+    border: solid 1px #bdbec0;
+    border-radius: 4px;
+    outline: 0;
+    padding-left: 10px;
+    height: 40px;
 }
+    .form_input:focus {
+        border: solid 1px #019160;
+    }
