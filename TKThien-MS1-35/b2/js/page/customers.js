@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     dialog = $(".customer-dialog").dialog({
-        autoOpen: true,
+        autoOpen: false,
         height: 600,
         width: 700,
         modal: true,
