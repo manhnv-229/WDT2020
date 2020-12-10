@@ -1,0 +1,83 @@
+﻿.menu {
+    width: 200px;
+    height: 100vh;
+    border-right: 1px solid #ccc;
+}
+
+    .menu .logo {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+        /* Logo */
+        .menu .logo .icon-bar {
+            width: 30px;
+            height: 30px;
+            background-image: url('/content/img/toggle.png');
+            background-size: contain;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .menu .logo .logo-page {
+            width: 130px;
+            height: 30px;
+            background-size: contain;
+            background-image: url('/content/img/cukcuk-logo.png');
+            background-repeat: no-repeat;
+        }
+
+    /* Menu content*/
+    .menu .menu__content {
+        position: relative;
+        width: 100%;
+        height: 200px;
+    }
+
+        .menu .menu__content .menu__item {
+            display: flex;
+            box-sizing: border-box;
+            width: 100%;
+            height: 40px;
+            align-items: center;
+            padding-left: 19px;
+            cursor: pointer;
+        }
+
+            .menu .menu__content .menu__item:hover {
+                background: #e5e5e5;
+            }
+
+            .menu .menu__content .menu__item .menu__icon {
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 20px;
+                height: 20px;
+            }
+
+            .menu .menu__content .menu__item .menu__text {
+                padding-left: 10px;
+            }
+
+.icon__home {
+    background-image: url('../../content/icon/dashboard.png');
+}
+
+.icon__report {
+    background-image: url('../../content/icon/report.png');
+}
+
+.icon__customer {
+    background-image: url('../../content/icon/dic-employee.png');
+}
+
+.icon__staff {
+    background-image: url('../../content/icon/document-online.png');
+}
+
+.icon__system {
+    background-image: url('../../content/icon/setting.png');
+}

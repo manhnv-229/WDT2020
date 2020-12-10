@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MISA phần mềm quản lý nhà hàng</title>
+    <link href="/lib/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
+    <link href="/css/main.css" rel="stylesheet" />
+    <link href="/css/page/customer.css" rel="stylesheet" />
+</head>
+<body>
+    <!--menu-->
+    <div class="menu">
+        <div class="logo">
+            <div class="icon-bar"></div>
+            <div class="logo-page"></div>
+        </div>
+        <div class="menu__content">
+            <div class="menu__item">
+                <div class="menu__icon icon__home"></div>
+                <div class="menu__text">Tổng quan</div>
+            </div>
+            <div class="menu__item">
+                <div class="menu__icon icon__report"></div>
+                <div class="menu__text">Báo cáo</div>
+            </div>
+            <div class="menu__item">
+                <div class="menu__icon icon__staff"></div>
+                <div class="menu__text">Danh mục nhân viên</div>
+            </div>
+            <div class="menu__item">
+                <div class="menu__icon icon__customer"></div>
+                <div class="menu__text">Danh mục khách hàng</div>
+            </div>
+            <div class="menu__item">
+                <div class="menu__icon icon__system"></div>
+                <div class="menu__text">Thiết lập hệ thống</div>
+            </div>
+        </div>
+    </div>
+    <!--end menu-->
+
+    <!--header-->
+    <div class="header">
+        <div class="restaurant">
+            <select class="nh">
+                <option>
+                    Nhà hàng Biển Đông&nbsp;&nbsp;
+                </option>
+            </select>
+        </div>
+        <div class="admin">
+            <div class="icon__admin"></div>
+            <div class="admin__text">Lê Quang Ngân</div>
+            <div class="icon__option"></div>
+        </div>
+    </div>
+    <!--end header-->
+
+    <!--content-->
+    <div class="content">
+        <!--top-->
+        <div class="top">
+            <div class="list__customer">Danh sách khách hàng</div>
+            <div class="add__customer">
+                <div class="icon__add"></div>
+                <div class="text__add">Thêm khách hàng</div>
+            </div>
+        </div>
+        <!--end top-->
+
+        <!--search-->
+        <div class="search">
+            <div class="input">
+                <input type="text" placeholder="Tìm kiếm theo mã, tên khác" name="name" value="" />
+                <div class="icon__search"></div>
+            </div>
+            <div class="refresh">
+                <div class="ref"></div>
+            </div>
+        </div>
+        <!--end search-->
+
+        <!--table data-->
+        <div class="content_table">
+            <table id="tblist">
+                <thead>
+                    <tr>
+                        <th>Mã khách hàng</th>
+                        <th>Họ và tên</th>
+                        <th>Giới tính</th>
+                        <th>Ngày sinh</th>
+                        <th>Nhóm khách hàng</th>
+                        <th>Điện thoại</th>
+                        <th>Email</th>
+                        <th>Địa chỉ</th>
+                        <th>Số tiền nợ</th>
+                        <th>Mã thành viên</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+        <!--end table data-->
+
+        <!--navigations-->
+        <div class="navigations">
+
+            <div class="hide__customer">
+                Hiển thị 1-10/1000 Khách hàng
+            </div>
+
+            <div class="pani">
+
+                <div class="first"></div>
+                <div class="prev"></div>
+
+                <div class="box__firstpage">
+                    <div class="one">1</div>
+                </div>
+                <div class="box__firstpage">
+                    <div class="two">2</div>
+                </div>
+                <div class="box__firstpage">
+                    <div class="three">3</div>
+                </div>
+                <div class="box__firstpage">
+                    <div class="four">4</div>
+                </div>
+
+                <div class="next"></div>
+                <div class="last"></div>
+            </div>
+
+            <div class="number__customer">
+                10 Khách hàng/trang
+            </div>
+
+        </div>
+        <!--end navigations-->
+
+    </div>
+    <!--end content-->
+
+    <!--dialog (add user)--> 
+    <div class="customer-dialog">
+        <div style="padding:10px;">
+            <div class="tt_user">
+                <div class="card-1">
+                    <div class="img_adduser"></div>
+                    <p class="text_jpg" style="text-align:center;">Vui lòng chọn ảnh có định dạng .jpg .jpeg .png .gif</p>
+                </div>
+                <div class="card-2">
+                    <div class="c1">
+                        <div class="mkh">Mã khách hàng</div>
+                        <input type="text" name="name" value="" />
+                    </div>
+                    <div class="c1">
+                        <div class="mkh">Mã thẻ thành viên</div>
+                        <input type="text" name="name" value="" />
+                    </div>
+                    <div class="c1">
+                        <div class="mkh">Ngày sinh</div>
+                        <input type="date" name="name" value="" />
+                    </div>
+                </div>
+                <div class="card-2">
+                    <div class="c1">
+                        <div class="mkh">Họ và tên</div>
+                        <input type="text" name="name" value="" />
+                    </div>
+                    <div class="c1">
+                        <div class="mkh">Nhóm khách hàng</div>
+                        <select style="width:103%; padding-left:10px; height:37px; border:1px solid #ccc;border-radius:5px;">
+                            <option>Khách VIP</option>
+                        </select>
+                    </div>
+                    <div class="c2">
+                        <div class="mkh" style="font-weight:600;">Giới tính</div>
+                        <input style="width:26px; height:11px;" type="radio" name="name" value="" />Nam
+                        <input style="width:26px; height:11px;" type="radio" name="name" value="" />Nữ
+                    </div>
+                </div>
+            </div>
+            <div class="tt_e">
+                <div class="cr_1">
+                    <div class="card_one" style="width:66%; height:100px;">
+                        <div class="txt">Email</div>
+                        <input class="ip" type="text" name="name" value="" />
+                        <div class="txt">Tên công ty</div>
+                        <input class="ip" type="text" name="name" value="" />
+                    </div>
+                    <div class="card_two" style="width:33%; height:100px;">
+                        <div class="txt">Số điện thoại</div>
+                        <input style="width:95%;" class="ip" type="text" name="name" value="" />
+                        <div class="txt">Mã số thuế</div>
+                        <input style="width:95%;" class="ip" type="text" name="name" value="" />
+                    </div>
+                </div>
+
+                <div style="width:98%;" class="cr_2">
+                    <div style="font-weight:600;">Địa chỉ</div>
+                    <input style="width:100%; height:35px;" type="text" name="name" value="" />
+                </div>
+
+            </div>
+        </div>
+        <div class="tt_bottom">
+            <button id="cancel" style="background:#ccc; color:#000000;" class="b1">Hủy</button>
+            <div class="b1">
+                <div class="icon_save"></div>
+                <button id="save">Lưu</button>
+            </div>
+            <button id="add_save" class="b1" style="margin-right:15px;">Lưu và thêm mới</button>
+        </div>
+    </div>
+    <!--end dialog (add users)-->
+    <script src="/lib/jquery.min.js" type="text/javascript"></script>
+    <script src="/lib/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="/js/page/customer.js"></script>
+</body>
+</html>
