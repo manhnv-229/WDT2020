@@ -1,5 +1,5 @@
 ﻿.dialog-modal {
-    display: none;
+    /*display: none;*/
     position: absolute;
     top: 0;
     right: 0;
@@ -10,12 +10,12 @@
 }
 
 .dialog {
-    display: none;
+    /*display: none;*/
     position: absolute;
     width: 600px;
-    height: 400px;
+    height: 500px;
     border-radius: 5px;
-    top: calc(50% - 200px);
+    top: calc(50% - 250px);
     right: 0;
     left: calc(50% - 300px);
     bottom: 0;
@@ -78,14 +78,6 @@ input {
         border: 1px solid #0973b9;
         outline: none;
     }
-
-.row {
-    margin-bottom: 10px;
-}
-
-label {
-    display: block;
-}
 
 .button-icon {
     width: 100px;

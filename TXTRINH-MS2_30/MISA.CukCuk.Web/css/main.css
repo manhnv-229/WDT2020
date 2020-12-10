@@ -6,6 +6,7 @@
 @import url('layout/table.css');
 @import url('layout/paging.css');
 @import url('component/dialog.css');
+@import url('component/form-dialog.css');
 
 body {
     font-family: GoogleSans-Regular, GoogleSans-Italic, GoogleSans-Bold;
