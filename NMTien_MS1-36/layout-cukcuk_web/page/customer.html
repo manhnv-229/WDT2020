@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <title>MISA CukCuk- Phần mềm quản lí nhà hàng</title>
+    <link href="../jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
+    <link href="../content/font/fontawesome-free/css/all.min.css" rel="stylesheet" />
     <link href="/css/main.css" rel="stylesheet" />
-    
 </head>
 <body>
     <div class="menu">
@@ -50,16 +51,191 @@
             <div class="account-option"></div>
         </div>
     </div>
-    <div class="line"></div>
     <div class="content">
         <div class="top">
-            <div class="title">Danh sách khách hàng</div>
-            <div class="add-user">
+            <div class="title">Danh sách khách hàng </div>
+            <button class="add-user" id="btnAdd">
                 <div class="icon-add"></div>
                 <div class="text">Thêm khách hàng</div>
+            </button>
+        </div>
+        <div class="filter-bar">
+            <div class="filter-left">
+                <span class="icon-search">
+                    <i class="fa fa-search" aria-hidden="true" style="color: #757575;cursor:pointer"></i>
+                </span>
+                <input type="text" placeholder="Tìm kiếm theo Mã, Tên khác" id="searchBox" />
+            </div>
+            <div class="filter-right">
+                <button class="m-btn-refresh m-btn-refresh-icon"></button>
             </div>
         </div>
-    </div>
+        <div class="clear-both" style="clear:both;"></div>
+        <div class="center">
+            <table cellpadding="5" id="tbListData">
+                <thead>
+                    <tr style="text-align:left;">
+                        <th rowspan="1" colspan="1" style="width:80px;">Mã khách hàng</th>
+                        <th rowspan="1" colspan="1" style="width:150px;">Họ và tên</th>
+                        <th rowspan="1" colspan="1" style="width:100px;">Giới tính</th>
+                        <th rowspan="1" colspan="1" style="width:110px;">Ngày sinh</th>
+                        <th rowspan="1" colspan="1" style="width:190px;">Nhóm khách hàng</th>
+                        <th rowspan="1" colspan="1" style="width:230px;">Điện thoại</th>
+                        <th rowspan="1" colspan="1" style="width:400px;">Email</th>
+                        <th rowspan="1" colspan="1" style="width:150px;">Địa chỉ</th>
+                        <th rowspan="1" colspan="1" style="width:90px;">Số tiền nợ</th>
+                        <th rowspan="1" colspan="1" style="width:90px;">Mã thẻ thành viên</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="1" colspan="1" style="width:90px;">KH719263</td>
+                        <td rowspan="1" colspan="1" style="width:200px;">Nguyễn Mạnh Tiến</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">Nam</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">24/03/2000</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">VIP</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">0842432000</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">tienhga@gmail.com</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">56 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội</td>
+                        <td rowspan="1" colspan="1" style="width:120px;"></td>
+                        <td rowspan="1" colspan="1" style="width:150px;">719263</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1" colspan="1" style="width:90px;">KH719263</td>
+                        <td rowspan="1" colspan="1" style="width:200px;">Nguyễn Mạnh Tiến</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">Nam</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">24/03/2000</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">VIP</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">0842432000</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">tienhga@gmail.com</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">56 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội</td>
+                        <td rowspan="1" colspan="1" style="width:120px;"></td>
+                        <td rowspan="1" colspan="1" style="width:150px;">719263</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1" colspan="1" style="width:90px;">KH719263</td>
+                        <td rowspan="1" colspan="1" style="width:200px;">Nguyễn Mạnh Tiến</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">Nam</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">24/03/2000</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">VIP</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">0842432000</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">tienhga@gmail.com</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">56 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội</td>
+                        <td rowspan="1" colspan="1" style="width:120px;"></td>
+                        <td rowspan="1" colspan="1" style="width:150px;">719263</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1" colspan="1" style="width:90px;">KH719263</td>
+                        <td rowspan="1" colspan="1" style="width:200px;">Nguyễn Mạnh Tiến</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">Nam</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">24/03/2000</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">VIP</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">0842432000</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">tienhga@gmail.com</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">56 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội</td>
+                        <td rowspan="1" colspan="1" style="width:120px;"></td>
+                        <td rowspan="1" colspan="1" style="width:150px;">719263</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1" colspan="1" style="width:90px;">KH719263</td>
+                        <td rowspan="1" colspan="1" style="width:200px;">Nguyễn Mạnh Tiến</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">Nam</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">24/03/2000</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">VIP</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">0842432000</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">tienhga@gmail.com</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">56 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội</td>
+                        <td rowspan="1" colspan="1" style="width:120px;"></td>
+                        <td rowspan="1" colspan="1" style="width:150px;">719263</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1" colspan="1" style="width:90px;">KH719263</td>
+                        <td rowspan="1" colspan="1" style="width:200px;">Nguyễn Mạnh Tiến</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">Nam</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">24/03/2000</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">VIP</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">0842432000</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">tienhga@gmail.com</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">56 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội</td>
+                        <td rowspan="1" colspan="1" style="width:120px;"></td>
+                        <td rowspan="1" colspan="1" style="width:150px;">719263</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1" colspan="1" style="width:90px;">KH719263</td>
+                        <td rowspan="1" colspan="1" style="width:200px;">Nguyễn Mạnh Tiến</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">Nam</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">24/03/2000</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">VIP</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">0842432000</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">tienhga@gmail.com</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">56 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội</td>
+                        <td rowspan="1" colspan="1" style="width:120px;"></td>
+                        <td rowspan="1" colspan="1" style="width:150px;">719263</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1" colspan="1" style="width:90px;">KH719263</td>
+                        <td rowspan="1" colspan="1" style="width:200px;">Nguyễn Mạnh Tiến</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">Nam</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">24/03/2000</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">VIP</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">0842432000</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">tienhga@gmail.com</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">56 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội</td>
+                        <td rowspan="1" colspan="1" style="width:120px;"></td>
+                        <td rowspan="1" colspan="1" style="width:150px;">719263</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1" colspan="1" style="width:90px;">KH719263</td>
+                        <td rowspan="1" colspan="1" style="width:200px;">Nguyễn Mạnh Tiến</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">Nam</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">24/03/2000</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">VIP</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">0842432000</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">tienhga@gmail.com</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">56 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội</td>
+                        <td rowspan="1" colspan="1" style="width:120px;"></td>
+                        <td rowspan="1" colspan="1" style="width:150px;">719263</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1" colspan="1" style="width:90px;">KH719263</td>
+                        <td rowspan="1" colspan="1" style="width:200px;">Nguyễn Mạnh Tiến</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">Nam</td>
+                        <td rowspan="1" colspan="1" style="width:70px;">24/03/2000</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">VIP</td>
+                        <td rowspan="1" colspan="1" style="width:150px;">0842432000</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">tienhga@gmail.com</td>
+                        <td rowspan="1" colspan="1" style="width:220px;">56 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội</td>
+                        <td rowspan="1" colspan="1" style="width:120px;"></td>
+                        <td rowspan="1" colspan="1" style="width:150px;">719263</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="paging-bar">
+            <div class="left">
+                <span>Hiển thị</span> <span>1-10/1000</span> <span>Khách hàng</span>
+            </div>
+            <div class="pagination">
+                <a href="#"><img src="../content/icon/btn-firstpage.svg" /></a>
+                <a href="#"><img src="../content/icon/btn-prev-page.svg" /></a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#"><img src="../content/icon/btn-next-page.svg" /> </a>
+                <a href="#"><img src="../content/icon/btn-lastpage.svg" /></a>
+            </div>
+            <div class="right">
+                10 Khách hàng/trang
+            </div>
+        </div>
+            <!--<div class="customer-dialog">
+                nmtien
+            </div>-->
+        </div>
+    <script src="../lib/plugin/jquery-3.5.1.min.js"></script>
+    <script src="../jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="../js/page/customer.js"></script>
 
 </body>
 </html>
