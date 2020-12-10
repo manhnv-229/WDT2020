@@ -69,7 +69,7 @@
         </div>
         <div class="content__bottom">
             <div class="content__table-customer table">
-                <table id="tb-lisData" border="0" cellspacing="0">
+                <table id="tb-listDataCustomer" border="0" cellspacing="0">
                     <thead class="table-heading">
                         <tr>
                             <th>Mã khách hàng</th>
@@ -144,10 +144,18 @@
                         <div class="dialog-short-field">
                             <label class="m-input-label">Giới tính</label>
                             <div class="m-radio">
-                                <input id="male" type="radio" name="GenderName" value="Nam" /> 
-                                <label class="radio-label" for="male">Nam</label>
-                                <input id="female" type="radio" name="GenderName" value="Nữ" /> 
-                                <label class="radio-label" for="female">Nữ</label>
+                                 
+                                <label class="radio-label" for="male">
+                                    <input id="male" type="radio" name="GenderName" value="Nam" />
+                                    <span>Nam</span>
+                                    <span class="radio-icon"></span>
+                                </label>
+                                 
+                                <label class="radio-label" for="female">
+                                    <input id="female" type="radio" name="GenderName" value="Nữ" />
+                                    <span>Nữ</span>
+                                    <span class="radio-icon"></span>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -156,7 +164,7 @@
             <div class="dialog-long-info">
                 <div class="dialog-flex-item">
                     <div class="dialog-long-field">
-                        <label class="m-input-label">Email</label>
+                        <label class="m-input-label">Email(<span class="require-field">*</span>)</label>
                         <input class="dialog-input m-input" type="text" />
                     </div>
                     <div class="dialog-short-field">
@@ -176,7 +184,7 @@
                 </div>
                 <div class="dialog-flex-item">
                     <div class="dialog-long-field">
-                        <label class="m-input-label">Địa chỉ(<span class="require-field">*</span>)</label>
+                        <label class="m-input-label">Địa chỉ</label>
                         <input class="dialog-input m-input" type="text" />
                     </div>
                 </div>

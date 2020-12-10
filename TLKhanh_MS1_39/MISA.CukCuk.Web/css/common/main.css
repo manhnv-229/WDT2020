@@ -8,7 +8,6 @@
 @import url('../component/input.css');
 @import url('../component/table.css');
 @import url('../component/select.css');
-@import url('../component/radio.css');
 
 html {
     box-sizing: border-box;

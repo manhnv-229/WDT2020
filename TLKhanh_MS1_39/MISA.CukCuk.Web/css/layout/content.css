@@ -53,6 +53,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        border-top: 2px solid var(--border-color);
     }
         .content .content__bottom .content__paginate-bar .paginate {
             flex: 1;

@@ -64,7 +64,7 @@ function customerDialogShow() {
     $("#btn-AddCustomer").click(function () {
         dialog.dialog("open");
     });
-    $("#tb-lisData").on('dblclick', '.cell-content', function () {
+    $("#tb-listDataCustomer").on('dblclick', '.cell-content', function () {
         dialog.dialog('option', 'title', 'Thông tin khách hàng');
         dialog.dialog("open");
     })

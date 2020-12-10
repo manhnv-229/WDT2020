@@ -38,6 +38,9 @@ tbody tr td:nth-child(5) {
         margin-left: auto;
         margin-right: 8px;
         border: 1px solid var(--border-color);
+        background-image: url('../../content/img/default-avatar.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
     .dialog-content .dialog-img-detail {
