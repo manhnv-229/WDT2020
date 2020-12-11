@@ -5,8 +5,8 @@
 
     dialog = $(".customer-dialog").dialog({
         autoOpen: false,
-        height: 400,
-        width: 350,
+        height: 650,
+        width: 700,
         modal: true,
        
     });
@@ -14,7 +14,7 @@
         dialog.dialog('open');
     })
 
-    $.ajax({
+   /* $.ajax({
         url: 'http://api.manhnv.net/api/customers',
         method: 'GET',
         async: false
@@ -29,10 +29,10 @@
         }
       
       
-        debugger;
+        
     }).fail(function (response) {
-    });
-    debugger;
+    });*/
+  
     //B2. xu ly du lieu
    
 

@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <title>MISA CukCuk- Phần mềm quản lí nhà hàng</title>
-    <link href="../jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
+    <link href="../lib/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
+    <link href="../lib/plugin/bootstrap.min.css" rel="stylesheet" />
     <link href="../content/font/fontawesome-free/css/all.min.css" rel="stylesheet" />
     <link href="/css/main.css" rel="stylesheet" />
 </head>
@@ -208,6 +209,7 @@
                         <td rowspan="1" colspan="1" style="width:120px;"></td>
                         <td rowspan="1" colspan="1" style="width:150px;">719263</td>
                     </tr>
+
                 </tbody>
             </table>
         </div>
@@ -215,7 +217,7 @@
             <div class="left">
                 <span>Hiển thị</span> <span>1-10/1000</span> <span>Khách hàng</span>
             </div>
-            <div class="pagination">
+            <div class="page-number">
                 <a href="#"><img src="../content/icon/btn-firstpage.svg" /></a>
                 <a href="#"><img src="../content/icon/btn-prev-page.svg" /></a>
                 <a href="#" class="active">1</a>
@@ -229,12 +231,101 @@
                 10 Khách hàng/trang
             </div>
         </div>
-            <!--<div class="customer-dialog">
-                nmtien
-            </div>-->
+    </div>
+    <div class="customer-dialog">
+        <div class="title">THÔNG TIN KHÁCH HÀNG</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="add-img">
+                        <label for="file"><img src="../content/img/default-avatar.jpg" /></label>
+                        <input type="file" class="inputfile" name="file" id="file" />
+                        <div class="notice">Vui lòng chọn ảnh có định dạng .jpg, .jpeg, .png , .gif</div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="id-customer">Mã khách hàng (*)</label>
+                            <input type="text" name="id-customer" id="id-customer">
+                        </div>
+                        <div class="col-md">
+                            <label for="fullname-customer">Họ và tên (*)</label>
+                            <input type="text" name="fullname-customer" id="fullname-customer">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="id1">Mã thẻ thành viên (*)</label><br />
+                            <input type="text" name="id1" id="id1">
+                        </div>
+                        <div class="col-md">
+                            <label for="group-customer">Nhóm khách hàng</label>
+                            <select id="group-customer">
+                                <option>Khách VIP</option>
+                                <option>Khách thường</option>
+                                <option>Khách đặc biệt</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="birth-date">Ngày sinh</label><br />
+                            <input type="date" name="birth-date" id="birth-date">
+                        </div>
+                        <div class="col-md">
+                            <label style="margin-bottom:20px;">Giới tính</label><br />
+                            <input type="radio" name="gender" id="male" value="male">
+                            <label for="male" style="font-size:15px;">Nam</label>
+                            <input type="radio" name="gender" id="female" value="female">
+                            <label for="female" style="font-size:15px;">Nữ</label><br>
+                        </div>
+                    </div>
+                </div>
+            </div><br />
+            <div class="row">
+                <div class="col-md-8">
+                    <label for="email">Email</label><br />
+                    <input type="email" name="email" id="email" />
+                </div>
+                <div class="col-md">
+                    <label for="phonenumber">Số điện thoại (*)</label><br />
+                    <input type="number" name="phonenumber" id="phonenumber" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <label for="email">Tên công ty</label><br />
+                    <input type="text" name="company-name" id="company-name" />
+                </div>
+                <div class="col-md">
+                    <label for="tax-number">Mã số thuế</label><br />
+                    <input type="text" name="tax-number" id="tax-number" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="address">Địa chỉ</label><br />
+                    <input type="text" name="address" id="address" />
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                </div>
+            </div>
+           
+            <div class="row" style="background-color: #e9ebee;height: 56px;border-radius: 5px; margin-top:18px;">
+                <span class="status"><Button id="unset">Hủy</Button></span>
+                <span>
+                    <input type="submit" name="save" value="Lưu" class="btn btn-success save" />
+                </span>
+                <span> <input type="submit" name="save-add" value="Lưu và thêm mới" class="btn btn-success save-add" /></span>
+            </div>
+            
         </div>
+    </div>
     <script src="../lib/plugin/jquery-3.5.1.min.js"></script>
-    <script src="../jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="../lib/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
     <script src="../js/page/customer.js"></script>
 
 </body>

@@ -60,15 +60,15 @@
 .filter-bar .filter-left .icon-search  {
     height:16px; width:16px;
     position:absolute;
-    top: 10px;
+    top: 11px;
     margin-left: 16px;
     z-index:11;
     
 }
 
 .filter-bar .filter-left input#searchBox {
-    height: 30px;
-    width: 180px;
+    height: 40px;
+    width: 210px;
     padding-left:35px;
     border-radius: 4px;
     border: 2px solid #e5e5e5;
@@ -80,7 +80,7 @@
 
 .m-btn-refresh {
     border-radius: 4px;
-    height: 30px;
+    height: 40px;
     border: 1px solid #c4c4c4;
     padding: 0 20px;
     text-align: center;
@@ -133,27 +133,28 @@
     float: left;
 }
 /*pagination*/
-.paging-bar .pagination{
+.paging-bar .page-number{
     float:left;
     margin-left:300px;
     display:inline-block;
 }
-.paging-bar .pagination img{width:20px; height:20px;}
-.paging-bar .pagination a {
+.paging-bar .page-number img{width:20px; height:20px;}
+.paging-bar .page-number a {
     font-size: 20px;
-    border-radius: 18px;
+    border-radius: 19px;
     float: left;
-    padding: 7px 15px;
+    padding: 5px 16px;
     text-decoration: none;
     transition: background-color .3s;
     margin: 0 5px;
+    color:black;
 }
-.paging-bar .pagination a.active {
-    background-color: #4CAF50;
+.paging-bar .page-number a.active {
+    background-color: #019160;
     color: white;
 }
 
-.paging-bar .pagination a:hover:not(.active) {
+.paging-bar .page-number a:hover:not(.active) {
     background-color: #ddd;
 }
 

@@ -1,0 +1,58 @@
+﻿.customer-dialog .title{font-weight:bold; font-size:20px; margin-left:20px; margin-bottom:20px;}
+
+.customer-dialog .add-img{max-width:200px;}
+.customer-dialog .add-img label img  {
+    
+    width: 200px; height:200px;
+    border:1px solid #ddd;
+    border-radius:200px;
+    background-image: url('../../content/img/default-avatar.jpg');
+    background-size:contain;
+    background-repeat:no-repeat;
+    cursor:pointer;
+}
+.customer-dialog .add-img .inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.customer-dialog #id-customer, #fullname-customer,#id1,#birth-date , #group-customer , #phonenumber, #tax-number{
+    border-radius: 6px;
+    height: 40px;
+    width:200px;
+    border: 1px solid #ddd;
+    outline-color: #019160;
+}
+.customer-dialog #email, #company-name {
+    width: 435px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    outline-color: #019160;
+}
+.customer-dialog #address {
+    border-radius: 6px;
+    height: 40px;
+    width: 665px;
+    border: 1px solid #ddd;
+    outline-color: #019160;
+    
+}
+
+.customer-dialog .status{
+    margin-left:400px;
+    margin-top:15px;
+}
+.customer-dialog #unset {
+    border: none;
+    outline-color: #e9ebee;
+}
+
+.customer-dialog  .btn-success {
+    margin-top:10px;
+    margin-left:34px;
+}
