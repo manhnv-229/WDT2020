@@ -1,7 +1,7 @@
-﻿.menu{
-    width:200px;
-    height:100vh;
-    border:solid 1px #e6e6e6;
+﻿.page .menu{
+    width: 198px;
+    height: calc(100% - 2px);
+    border: solid 1px #e6e6e6;
 }
 /*logo*/
     .menu .logo {
@@ -29,8 +29,9 @@
         }
 /*menu content*/
 .menu .menu__content{
-    position:relative;
-    width:100%;
+    position: relative;
+    width: 100%;
+    height: calc(100% - 50px);
 }
     .menu .menu__content .menu__item {
         height: 44px;

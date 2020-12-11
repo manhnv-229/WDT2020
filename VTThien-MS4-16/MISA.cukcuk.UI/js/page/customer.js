@@ -1,4 +1,15 @@
-﻿$(document).ready(function(){
+﻿$(document).ready(function () {
+
+    $("#btn-add").on("click", function () {
+        dialog.dialog("open");
+    });
+
+    dialog = $(".customer-dialog").dialog({
+        autoOpen: false,
+        height: 475,
+        width: 630,
+        modal: true
+    });
     //load du lieu:
     //b1: goi service lay du lieu
 
