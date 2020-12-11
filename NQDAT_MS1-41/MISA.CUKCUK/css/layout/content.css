@@ -18,7 +18,7 @@
     .content .content__header .content-title {
         font-size: 25px;
         font-weight: bold;
-        cursor: pointer;
+        cursor: default;
         margin: 16px;
     }
 
@@ -33,7 +33,9 @@
         background-color: #019160;
         cursor: pointer;
     }
-
+        .content .content__header .btn--add-customer:hover{
+            background-color: #2FBE8E;
+        }
         .content .content__header .btn--add-customer .btn--add-customer__icon {
             width: 16px;
             height: 16px;
@@ -41,7 +43,7 @@
             margin-right: 8px;
             background-size: contain;
             background-repeat: no-repeat;
-            background-image: url('../../content/icon/add.png');
+            background-image: url('/content/icon/add.png');
         }
 
         .content .content__header .btn--add-customer .btn--add-customer__text {
@@ -69,7 +71,7 @@
                 width: 16px;
                 height: 16px;
                 margin: 0px 8px 0px 16px;
-                background-image: url('../../content/icon/search.png');
+                background-image: url('/content/icon/search.png');
                 cursor: pointer;
             }
 
@@ -91,7 +93,9 @@
             margin-right: 16px;
             cursor: pointer;
         }
-
+            .content .content__filter .btn--refesh:hover{
+                background-color: #E5E5E5;
+            }
             .content .content__filter .btn--refesh .btn--refesh__img {
                 width: 20px;
                 height: 20px;
@@ -114,17 +118,19 @@
         align-items: center;
     }
 
-        .content .content-footer .count-customer {
+        .content .content-footer .record-info {
             width: 200px;
             font-size: 13px;
             font-weight: bold;
+            cursor: default;
         }
 
-        .content .content-footer .total-page {
+        .content .content-footer .record-option {
             width: 200px;
             font-size: 13px;
             font-weight: bold;
             text-align: right;
+            cursor: default;
         }
 
         .content .content-footer .paginate {
@@ -158,11 +164,13 @@
                 border: none;
                 cursor: pointer;
             }
-
-            .content .content-footer .paginate .active-page {
-                background-color: #019160;
-                color: #ffffff;
-            }
+                .content .content-footer .paginate .page-control:hover {
+                    border: 1px solid #D2D2D2;
+                }
+                .content .content-footer .paginate .active-page {
+                    background-color: #019160;
+                    color: #ffffff;
+                }
 
             .content .content-footer .paginate .first-page {
                 background-size: contain;

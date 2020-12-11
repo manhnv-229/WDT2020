@@ -1,13 +1,15 @@
 ﻿.grid {
-    width: 600px;
+    width: 100%;
     overflow: auto;
 }
 
     .grid table {
         width: 100%;
     }
+
     .grid::-webkit-scrollbar {
         width: 8px;
+        height: 8px;
     }
 
     .grid::-webkit-scrollbar-track {
@@ -30,5 +32,8 @@
         height: 38px;
         overflow: hidden;
         text-overflow: ellipsis;
+        cursor: default;
     }
-   
+    .grid table td {
+        cursor: pointer;
+    }

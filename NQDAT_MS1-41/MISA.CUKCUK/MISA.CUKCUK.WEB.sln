@@ -3,24 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MISA.CUKCUK", ".", "{C097DB9C-2F70-4CF5-AF4F-8A7BB6CEC2D8}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MISA.CUKCUK", "http://localhost:54214", "{50066334-38E3-4E78-A06F-2C925D6030D2}"
 	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_52901"
-		Debug.AspNetCompiler.PhysicalPath = "..\WDT2020\NQDAT_MS1-41\MISA.CUKCUK\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52901\"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54214"
+		Debug.AspNetCompiler.PhysicalPath = "D:\OneDrive\Workspace\MISA_WDT2020\Projects\NQDAT_MS1-41\MISA.CUKCUK\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54214\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_52901"
-		Release.AspNetCompiler.PhysicalPath = "..\WDT2020\NQDAT_MS1-41\MISA.CUKCUK\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52901\"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54214"
+		Release.AspNetCompiler.PhysicalPath = "D:\OneDrive\Workspace\MISA_WDT2020\Projects\NQDAT_MS1-41\MISA.CUKCUK\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54214\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "52901"
+		SlnRelativePath = "D:\OneDrive\Workspace\MISA_WDT2020\Projects\NQDAT_MS1-41\MISA.CUKCUK\"
 	EndProjectSection
 EndProject
 Global
@@ -28,13 +29,13 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C097DB9C-2F70-4CF5-AF4F-8A7BB6CEC2D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C097DB9C-2F70-4CF5-AF4F-8A7BB6CEC2D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50066334-38E3-4E78-A06F-2C925D6030D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50066334-38E3-4E78-A06F-2C925D6030D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E05D9A61-FDE7-4C6A-8560-BAC1678A305B}
+		SolutionGuid = {39E25D92-B50A-4BE0-A7E2-D973E4A09663}
 	EndGlobalSection
 EndGlobal
