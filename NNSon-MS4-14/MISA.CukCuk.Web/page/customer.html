@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Quản lý khách hàng</title>
+    <link href="../lib/jquery-ui-1.12.1.custom/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
+    <link href="../css/main.css" rel="stylesheet" />
+    <link href="../content/font/fontawesome-5.15.1/css/fontawesome.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="panel-left">
+        <div class="logo">
+            <div class="expand-icon"></div>
+            <div class="logo-page"></div>
+        </div>
+        <div class="menu">
+            <div class="menu__item">
+                <div class="menu__item--icon icon-dashboard"></div>
+                <div class="menu__item--text">
+                    Tổng quan
+                </div>
+            </div>
+            <div class="menu__item">
+                <div class="menu__item--icon icon-report"></div>
+                <div class="menu__item--text">
+                    Báo cáo
+                </div>
+            </div>
+            <div class="menu__item">
+                <div class="menu__item--icon icon-dashboard"></div>
+                <div class="menu__item--text">
+                    Mua hàng
+                </div>
+            </div>
+            <div class="menu__item">
+                <div class="menu__item--icon icon-dic-employee"></div>
+                <div class="menu__item--text">
+                    Danh mục khách hàng
+                </div>
+            </div>
+            <div class="menu__item">
+                <div class="menu__item--icon icon-dic-employee"></div>
+                <div class="menu__item--text">
+                    Danh mục khách hàng
+                </div>
+            </div>
+            <div class="menu__item">
+                <div class="menu__item--icon icon-setting"></div>
+                <div class="menu__item--text">
+                    Thiết lập hệ thống
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-right">
+        <div class="header">
+            <div class="left-header">
+                <select class="select">
+                    <option>Nhà hàng biển Đông</option>
+                </select>
+            </div>
+            <div class="right-header">
+                <div class="avatar"></div>
+                <div class="name">
+                    Nguyễn Ngọc Sơn
+                </div>
+                <div class="icon"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="heading">
+                <div class="heading-left">
+                    <div class="title">
+                        Danh sách khách hàng
+                    </div>
+                    <div class="search">
+                        <div class="search-icon"></div>
+                        <div>
+                            <input type="text" class="search-field" placeholder="Tìm kiếm theo mã, tên khách hàng">
+                        </div>
+                    </div>
+                </div>
+                <div class="heading-right">
+                    <div id="btn-add" class="add-user">
+                        <div class="icon">
+
+                        </div>
+                        <div class="text">
+                            Thêm khách hàng
+                        </div>
+                    </div>
+                    <div class="refresh"></div>
+                </div>
+            </div>
+            <div class="table-content">
+                <table class="table" id="tbListData">
+                    <thead>
+                        <tr>
+                            <th rowspan="1" colspan="1" style="width: 120px;">
+                                <div class="cell">Mã khách hàng</div>
+                            </th>
+                            <th rowspan="1" colspan="1" style="width: 143px;">
+                                <div class="cell">Họ và tên</div>
+                            </th>
+                            <th rowspan="1" colspan="1" style="width: 70px;">
+                                <div class="cell">Giới tính</div>
+                            </th>
+                            <th rowspan="1" colspan="1" style="width: 100px;">
+                                <div class="cell">Ngày sinh</div>
+                            </th>
+                            <th rowspan="1" colspan="1" style="width: 130px;">
+                                <div class="cell">Nhóm khách hàng</div>
+                            </th>
+                            <th rowspan="1" colspan="1" style="width: 90px;">
+                                <div class="cell">Điện thoại</div>
+                            </th>
+                            <th rowspan="1" colspan="1" style="width: 197px;">
+                                <div class="cell">Email</div>
+                            </th>
+                            <th rowspan="1" colspan="1" style="width: 232px;">
+                                <div class="cell">Địa chỉ</div>
+                            </th>
+                            <th rowspan="1" colspan="1" style="width: 75px;">
+                                <div class="cell">Số tiền nợ</div>
+                            </th>
+                            <th rowspan="1" colspan="1" style="width: 140px;">
+                                <div class="cell">Mã thẻ thành viên</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="navigation-bar">
+                <div class="left-text">
+                    Hiển thị 1-10/1000 Khách hàng
+                </div>
+                <div class="navigator">
+                    <div class="btn-first-page"></div>
+                    <div class="btn-prev-page"></div>
+                    <div class="btn-page-chosen">1</div>
+                    <div class="btn-page-number">2</div>
+                    <div class="btn-page-number">3</div>
+                    <div class="btn-page-number">4</div>
+                    <div class="btn-next-page"></div>
+                    <div class="btn-last-page"></div>
+                </div>
+                <div class="right-text">
+                    10 Khách hàng/trang
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="customer-dialog" title="Thông tin khách hàng">
+        <div class="dialog-content">
+            <div style="width:100%">
+                <div style="width:100%; display:flex">
+                    <div class="avatar-label">
+                        <div class="avatar"></div>
+                        <div class="avatar-txt">Vui lòng chọn ảnh có định  dạng</div>
+                        <div class="avatar-txt">.jpg .jpeg .png .gif</div>
+                    </div>
+                    <div style="width: 207px; margin-right: 16px;">
+                        <label>Mã khách hàng (*)</label>
+                        <br />
+                        <input type="text" class="text-field" />
+                        <label>Mã thẻ thành viên</label>
+                        <br />
+                        <input type="text" class="text-field" />
+                        <label>Ngày sinh</label>
+                        <br />
+                        <input type="date" class="date-field" />
+                    </div>
+                    <div style="width: 207px;">
+                        <label>Họ và tên (*)</label>
+                        <br />
+                        <input type="text" class="text-field" />
+                        <label>Nhóm khách hàng</label>
+                        <br />
+                        <input type="text" class="text-field" />
+                        <label>Giới tính</label>
+                        <br />
+                        <input type="text" class="text-field" />
+                    </div>
+                </div>
+                <div style="width:100%; display: flex;">
+                    <div style="width: 429px; margin-right: 16px;">
+                        <label>Email</label>
+                        <br />
+                        <input type="text" class="text-field" placeholder="example@domain.com"/>
+                        <label>Tên công ty</label>
+                        <br />
+                        <input type="text" class="text-field" />
+                    </div>
+                    <div style="width: 207px;">
+                        <label>Số điện thoại (*)</label>
+                        <br />
+                        <input type="text" class="text-field" />
+                        <label>Mã số thuế</label>
+                        <br />
+                        <input type="text" class="text-field" placeholder="Mã số thuế của công ty"/>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label>Địa chỉ</label>
+                <br />
+                <input type="text" class="text-field" />
+            </div>
+        </div>
+        <div class="dialog-footer">
+            <div class="btnCancel" id="btn-cancel">Hủy</div>
+            <div class="btnSubmit" id="btn-submit">Lưu</div>
+        </div>
+    </div>
+    <script src="../lib/jquery-3.5.1.min.js"></script>
+    <script src="../lib/jquery-ui-1.12.1.custom/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="../js/page/customer.js"></script>
+</body>
+</html>
