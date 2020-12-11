@@ -1,0 +1,100 @@
+﻿.customer-dialog {
+}
+
+    .customer-dialog .dialog_first_division {
+        display: inline-flex;
+    }
+
+.dialog_first_division .user_img {
+    margin-left: 20px;
+    width: 150px;
+    height: 120px;
+    background-image: url('../../content/icon/avatar-default.png');
+    background-size: contain;
+    background-repeat:no-repeat;
+}
+
+.dia_cusName_cusCode {
+    display: inline-flex;
+}
+
+    .dia_cusName_cusCode .cus_fullName {
+        margin-left: 30px;
+    }
+
+.dia_memCode_memCat {
+    display: inline-flex;
+}
+
+    .dia_memCode_memCat .cus_category {
+        margin-left: 30px;
+    }
+
+.dia_dob_gen {
+    display: inline-flex;
+}
+
+    .dia_dob_gen .cus_gender {
+        margin-left: 30px;
+    }
+
+.dia_e_phone {
+    display: inline-flex;
+}
+
+.dia_firmName_taxCode {
+    display: inline-flex;
+}
+
+.footer {
+    height: 50px;
+    padding-left: 400px;
+    display: inline-flex;
+    background-color: cornsilk;
+    text-align: center;
+    align-items: center;
+}
+
+    .footer .dia_cancel_bttn {
+        height: 35px;
+        width: 50px;
+        border-radius: 3px;
+        border: 1px solid black;
+        background-color: lawngreen;
+    }
+
+.dia_cancel_bttn_content {
+    padding-top: 8px;
+}
+
+.dia_save_bttn {
+    height: 35px;
+    width: 50px;
+    border-radius: 3px;
+    border: 1px solid black;
+    background-color: lawngreen;
+    margin-left: 30px;
+}
+
+.dia_save_add_bttn {
+    height: 35px;
+    width: 130px;
+    margin-left: 30px;
+    border-radius: 3px;
+    border: 1px solid black;
+    background-color: lawngreen;
+}
+
+.dia_save_bttn_content {
+    padding-top: 8px;
+}
+
+.dia_save_add_bttn_content {
+    padding-top: 8px;
+}
+.dia_user_info{
+    margin-left:40px;
+}
+.dob{
+    margin-left:0px;
+}
