@@ -3,9 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <title>Quan ly khach hang - Misa.CukCuk</title>
+    <link href="../lib/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/main.css">
     <style>
     </style>
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <body>
@@ -76,7 +78,7 @@
                         </div>
                     </div>
                     <div class="list">
-                        <table class="scroll">
+                        <table class="scroll" id="tbListData">
                             <thead>
                                 <tr>
                                     <th>Mã khach hàng</th>
@@ -102,7 +104,7 @@
                                     <td style="width: 122.4px;">loan@gmail.com</td>
                                     <td style="width: 148.8px;">Tran quoc hoan</td>
                                     <td style="width: 78.4px;"></td>
-                                    <td style="width: 139.2px;">1234567890</td>                              
+                                    <td style="width: 139.2px;">1234567890</td>
                                 </tr>
 
                                 <tr>
@@ -328,13 +330,11 @@
                 </div>
             </div>
         </div>
-        <div class="dialog">
-            <div class="full"></div>
+        <div class="thuan"></div>
+        <div class="dialog" title="Thong tin khach hang"style="display: none;">
+            
             <div class="form-info">
-                <div class="title">
-                    <h2 style="margin-left: 16px;">Thong tin khach hang</h2>
-                    <div class="exit icon-x"></div>
-                </div>
+               
                 <div class="grid-container" style="margin: 16px;">
                     <div class="ava item1 grid-item">
 
@@ -411,14 +411,16 @@
                         </div>
 
 
-                        <div class="cancel text"><span>Huy</span></div>
+                        <div class="cancel text btnCancel"><span>Huy</span></div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../lib/plugin/jquery-3.5.1.min.js"></script>
+    <script src="../lib/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+
     <script src="../js/page/customer.js"></script>
     <script>
         var table = $('table.scroll'), bodyCells = table.find('tbody tr:first').children(), colWidth;
@@ -433,12 +435,7 @@
                 $(v).width(colWidth[i]);
             });
         }).resize();
-        $('.icon-x').click(function () {
-            $('.dialog')[0].style.display = 'none';
-        });
-        $('.button-add').click(function () {
-            $('.dialog')[0].style.display = 'block';
-        })
+        
     </script>
 
 </body>
