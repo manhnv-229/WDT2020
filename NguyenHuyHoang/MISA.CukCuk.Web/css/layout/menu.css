@@ -2,8 +2,75 @@
 	float: left;
 	width: 200px;
 	height: 100vh;
-	background-color:aquamarine;
 }
-,menu .logo{
 
+	.menu .logo {
+		position: relative;
+		width: 100%;
+		height: 60px;
+		align-items: center;
+		justify-content: center;
+		display: flex;
+		cursor: pointer;
+	}
+		.menu .logo .icon-bar {
+			width: 30px;
+			height: 30px;
+			background-image: url('../../content/img/toggle.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			margin-right:10px;
+		}
+		.menu .logo .logo-page {
+			width: 120px;
+			height: 30px;
+			background-image: url('../../content/img/cukcuk-logo.png');
+			background-size: contain;
+			background-repeat:no-repeat;
+		}
+
+.menu .menu-content{
+	position: relative;
+	width:100%;
+	
+
+
+}
+	.menu .menu-content .menu-item {
+		width: 100%;
+		height: 60px;
+		align-items: center;
+		justify-content: center;
+		display: flex;
+		cursor: pointer;
+	}
+		.menu .menu-content .menu-item:hover {
+			background-color: crimson;
+		}
+
+		.menu .menu-content .menu-item .menu-icon {
+			width: 30px;
+			height: 30px;
+			background-color: coral;
+			background-size:contain;
+		}
+
+		.menu .menu-content .menu-item .menu-text {
+			margin-left:10px;
+			width: 120px;
+			height: 30px;
+			background-color: darkslategray;
+		}
+
+.icon-Baocao {
+	background-image: url('../../content/icon/report.png');
+}
+.icon-Tongquan {
+	background-image: url('../../content/icon/dashboard.png');
+}
+.icon-Nhanvien {
+	background-image: url('../../content/icon/dic-employee.png');
+}
+.icon-Khachhang {
+	background-image: url('../../content/icon/dic-employee.png');
 }
