@@ -1,0 +1,39 @@
+﻿.header{
+    position: absolute;
+    top: 0px;
+    left: 200px;
+    width: calc(100% - 200px);
+    height: 60px;
+    border-left: 1px dashed black;
+    display: inline-flex;
+}
+.res__name {
+    margin-top: 10px;
+    margin-left: 40px;
+    font-size: 30px;
+   
+}
+.user__info {
+    margin-top: 15px;
+    margin-left: 800px;
+   display: inline-flex;
+}
+.user__info .avatar {
+    width: 30px;
+    height: 30px;
+    background-image: url('../../content/icon/avatar-default.png');
+    background-size: contain;
+    margin-right: 20px;
+}
+    .user__info .icon {
+        width: 20px;       
+        height: 20px;
+        background-image: url('../../content/icon/option.png');
+        margin-left: 15px;
+        margin-top: 5px;
+    }
+    .user__info .user__name{
+        margin-top: 5px;
+    }
+
+

@@ -1,0 +1,77 @@
+﻿.menu{
+    width: 200px;
+    height: 100vh; 
+}
+.menu .logo{
+    position:relative;
+    width: 100%;
+    height: 60px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu .logo .icon-bar {
+    width: 30px;
+    height: 30px;      
+    background-image: url('../../content/img/toggle.png');
+    background-size: contain;
+}
+.menu .logo .logo-page {
+    width: 110px;
+    height: 30px;
+    
+    background-image: url('../../content/img/cukcuk-logo.png');
+    background-size: contain;
+       
+}
+.menu .menu__content{
+    position: relative;
+    width: 100%;
+    height: 220px;
+    margin-top: 30px;
+}
+    .menu .menu__content .menu__item {
+        display: flex;
+        margin-left: 15px;
+        height: 80px;
+        width: 100%;
+        
+    }
+.menu .menu__content .menu__item .menu__icon1 {
+    width: 30px;
+    height: 30px;
+    background-image: url('../../content/icon/dashboard.png');
+    background-size: contain;
+}
+.menu .menu__content .menu__item .menu__icon2 {
+    width: 30px;
+    height: 30px;
+    background-image: url('../../content/icon/report.png');
+    background-size: contain;
+}
+.menu .menu__content .menu__item .menu__icon3 {
+    width: 30px;
+    height: 30px;
+    background-image: url('../../content/icon/dashboard.png');          
+    background-size: contain;
+}
+.menu .menu__content .menu__item .menu__icon4 {
+    width: 30px;
+    height: 30px;
+    background-image: url('../../content/icon/dic-employee.png');
+           
+    background-size: contain;
+}
+.menu .menu__content .menu__item .menu__icon5 {
+    width: 30px;
+    height: 30px;
+    background-image: url('../../content/icon/setting.png');
+           
+    background-size: contain;
+}
+.menu .menu__content .menu__item .menu__content1{
+    padding-top: 6px;
+    margin-left: 10px;
+}      

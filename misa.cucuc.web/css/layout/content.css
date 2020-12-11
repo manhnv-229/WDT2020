@@ -1,0 +1,162 @@
+﻿.content {
+    position: absolute;
+    top: 60px;
+    left: 200px;
+    bottom: 0px;
+    right: 0px;
+    border-left: 1px dashed black;
+    border-top: 1px dashed black;
+}
+.division1{
+    margin-top: 40px;
+    display: inline-flex;
+}
+.division1 .info{
+    font-size: 40px;
+    padding-left: 40px;
+}
+
+    .division1 .add {
+        width: 150px;
+        height: 30px;
+        background-color: #4caf50fa;    
+        margin-left: 700px;
+        border-radius: 2px;
+        display: inline-flex;
+    }
+.division1 .add .pop_up_window{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: blue;
+    visibility: hidden;
+}
+.division1 .add .
+    .division1 .add .content__icon1 {
+        width: 30px;
+        height: 30px;
+        background-image: url('../../content/icon/add.png');
+        background-size: contain;
+    }
+    .division1 .add .function{
+        padding-top:5px;
+    }
+
+.division2 {
+    height: 100px;
+    display: inline-flex;
+   
+}
+    .division2 .finding {
+        width: 300px;
+        height: 30px;
+        display: inline-flex;
+        margin-top: 30px;
+        margin-left: 40px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        border-radius: 2px;
+        color: darkgrey;
+    }
+    .division2 .finding .content__icon2 {
+        width: 20px;
+        height: 20px;
+        background-image: url('../../content/icon/search.png');
+        background-size: contain;
+    }
+    .division2 .content__icon3 {         
+        margin-left: 900px;
+        margin-top: 30px;
+        width: 30px;
+        height: 30px;
+        background-image: url('../../content/icon/refresh.png');          
+        background-size: contain;
+        border: 1px solid black;
+        border-radius: 2px;  
+       
+    }
+
+#customer {
+    width: 1400px;
+    background-color: bisque;
+    height: 55vh;
+    border-collapse: collapse;
+   
+}
+.division3 {
+    Overflow-x: scroll;
+    Overflow-y: scroll;
+}
+     #customer  td{
+        padding-left: 40px;
+        border-top: 1px solid darkgray;       
+     }
+        
+        
+    .division4{
+    margin-top: 0;
+    width: 100%;
+    margin-top: 30px;
+    display: inline-flex;
+    border-top: 1px solid darkgray;
+}
+.text__left{
+    padding-top: 5px;
+    padding-left: 50px;
+    font-size: 12px;
+}
+.text__right {
+    padding-top: 5px;
+    padding-left: 50px;
+    font-size: 12px;
+}
+.funct{
+    margin-left: 300px;
+    margin-right: 300px;
+    display: inline-flex;
+}
+.funct .icon1 {
+    width: 30px;
+    height: 30px;
+    background-image: url('../../content/icon/btn-firstpage.svg');
+    background-size: contain;
+}
+    .funct .icon2 {
+        width: 30px;
+        height: 30px;
+        
+        background-image: url('../../content/icon/btn-prev-page.svg');
+        background-size: contain;
+    }
+    .funct .icon3 {
+        width: 30px;
+        height: 30px;
+        background-image: url('../../content/icon/btn-next-page.svg');
+    
+        background-size: contain;
+    }
+    .funct .icon4 {
+        width: 30px;
+        height: 30px;
+        background-image: url('../../content/icon/btn-lastpage.svg');
+       
+        background-size: contain;
+    }
+    .funct .pages{
+        display: inline-flex;
+    }
+.funct .pages .page1, .page2, .page3, .page4{
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    border-radius: 50%;
+    background-color: darkgray;
+    justify-content: center;
+    align-items: center; 
+}
+.page4{
+    margin-right:10px;
+}
+
