@@ -1,0 +1,65 @@
+﻿.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    border-bottom: solid;
+    border-color: #BBBBBB;
+    border-width: 1px;
+}
+
+.header .left-header{
+    position: absolute;
+    left: 16px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    border: none;
+}
+
+.header .left-header .select {
+    margin-left: 10px;
+    font-family: 'GoogleSans-Bold';
+    border: none;
+    height: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header .left-header .select:hover {
+    background-color: #e5e5e5;
+}
+
+.header .right-header {
+    position: absolute;
+    right: 16px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.header .right-header .icon {
+    width: 15px;
+    height: 15px;
+    background-image: url('../../content/icon/option.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.header .right-header .name{
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.header .right-header .avatar {
+    width: 40px;
+    height: 40px;
+    background-image: url('../../content/icon/avatar-default.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
