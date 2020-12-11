@@ -1,0 +1,73 @@
+﻿.header {
+     width: 100%;
+     height: 60px; 
+    
+   /*  display: flex;*/
+}
+/*.header .header-left {
+  
+    width: 83%;
+    height: 100%;
+}
+    .header .header-right {
+      
+        width: 18%;
+        height: 100%;
+    }*/
+    .header .header-left {
+        height: 100%;
+        float: left;
+    }
+
+        .header .header-left .branch {
+            width: 231px;
+            height: 100%;
+            align-items: center;
+            display: flex;
+        }
+
+            .header .header-left .branch .branch-content {
+                font-size: 15px;
+                font-weight: bold;
+                margin-left: 16px;
+                margin-right: 10px;
+            }
+
+            .header .header-left .branch .branch-icon {
+                width: 24px;
+                height: 24px;
+            }
+
+    .header .header-right {
+        float: right;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+        .header .header-right .avatar {
+            
+            background-image: url('../../content/icon/avatar-default.png');
+            background-position: -4px -2px;
+            background-size: 45px;
+            border-radius: 18px;
+            width: 39px;
+            height: 39px;
+            margin-right: 16px;
+            margin-left: 16px;
+        }
+
+        .header .header-right .name {
+            margin-right: 16px;
+        }
+
+            .header .header-right .name span {
+                font-size: 13px;
+                font-weight: bold;
+            }
+
+        .header .header-right .option {
+            width: 24px;
+            height: 24px;
+            margin-right: 16px;
+        }

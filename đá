@@ -1,0 +1,259 @@
+[33mcommit 394b07f3c659e5e740ff4e18d9f33c38a4f0f766[m[33m ([m[1;36mHEAD -> [m[1;32mHVToan-MS4-19[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Merge: cc67bc9 213f660
+Author: minhthanhhlht <minhthanhhlht@gmail.com>
+Date:   Tue Dec 8 13:12:40 2020 +0700
+
+    Merge branch 'main' of https://github.com/manhnv-229/WDT2020 into main
+
+[33mcommit cc67bc9e2e27436ef7f7f91f226c3f90d81fe60c[m
+Author: minhthanhhlht <minhthanhhlht@gmail.com>
+Date:   Tue Dec 8 13:11:38 2020 +0700
+
+    Update
+
+[33mcommit 17566e1023cf6ebd515d15c13d82cf88595b0636[m
+Author: minhthanhhlht <minhthanhhlht@gmail.com>
+Date:   Tue Dec 8 13:02:27 2020 +0700
+
+    Update Table, căn chỉnh lại một số thứ
+
+[33mcommit 213f66015ef148cca861e97cf9241ae85e72fc09[m
+Merge: d11c9b2 b7e2267
+Author: vanquanguetk63 <vanquang.3799@gmail.com>
+Date:   Mon Dec 7 12:55:16 2020 +0700
+
+    Merge branch 'main' of https://github.com/manhnv-229/WDT2020 into main
+
+[33mcommit d11c9b2984b165af7073855fd42e7d192df9a5a2[m
+Author: vanquanguetk63 <vanquang.3799@gmail.com>
+Date:   Mon Dec 7 12:54:28 2020 +0700
+
+    add
+
+[33mcommit b7e2267c428aa0b08bd756b2cee6ad2cbc5eafca[m
+Merge: c364ac9 ebfd06a
+Author: Vũ Thanh Thiên <44043610+VuThanhThien@users.noreply.github.com>
+Date:   Mon Dec 7 11:41:52 2020 +0700
+
+    Merge pull request #66 from manhnv-229/VTThien-MS4-0510
+    
+    footer
+
+[33mcommit ebfd06a278dcf09d440e048bdcd773f6483984f4[m[33m ([m[1;31morigin/VTThien-MS4-0510[m[33m)[m
+Author: Vũ Thanh Thiên <44043610+VuThanhThien@users.noreply.github.com>
+Date:   Mon Dec 7 11:41:31 2020 +0700
+
+    footer
+
+[33mcommit c364ac9ad22e65885bd3113e98d617b086eb1780[m
+Author: HoLySoi <toan.hv164103@sis.hust.edu.vn>
+Date:   Mon Dec 7 11:03:42 2020 +0700
+
+    Bat dau lap trinh Web
+
+[33mcommit c90c3a4c9bead744546cb4c9a00b9c6ac5a16aa6[m
+Author: minhthanhhlht <minhthanhhlht@gmail.com>
+Date:   Mon Dec 7 10:29:35 2020 +0700
+
+    test update
+
+[33mcommit eac8d43676b015211cfd007e1a1d65af80293e2d[m
+Merge: 6acc2f9 5679378
+Author: minhthanhhlht <minhthanhhlht@gmail.com>
+Date:   Mon Dec 7 10:23:32 2020 +0700
+
+    Merge branch 'main' of https://github.com/manhnv-229/WDT2020 into main
+
+[33mcommit 6acc2f9bbccae129c30f667511228ab83713e5c4[m
+Author: minhthanhhlht <minhthanhhlht@gmail.com>
+Date:   Mon Dec 7 10:22:08 2020 +0700
+
+    Update
+
+[33mcommit 56793786578b7661a64efd844691dd70ec04b91c[m
+Merge: 20f03bd 5c27fcd
+Author: Vũ Thanh Thiên <44043610+VuThanhThien@users.noreply.github.com>
+Date:   Mon Dec 7 10:18:29 2020 +0700
+
+    Merge pull request #65 from manhnv-229/VTThien-MS4-0510
+    
+    d
+
+[33mcommit 5c27fcd56911eecdb3fb240ef83a7bc4855f5248[m
+Author: Vũ Thanh Thiên <44043610+VuThanhThien@users.noreply.github.com>
+Date:   Mon Dec 7 10:18:05 2020 +0700
+
+    d
+
+[33mcommit 20f03bd24cb4cffe97d6095c9aecc9e837c85ad5[m
+Merge: 22edec0 72cb174
+Author: Vũ Thanh Thiên <44043610+VuThanhThien@users.noreply.github.com>
+Date:   Mon Dec 7 00:41:18 2020 +0700
+
+    Merge pull request #64 from manhnv-229/VTThien-MS4-0510
+    
+    content 1
+
+[33mcommit 72cb174332815c30623effaff8ec412bded73be1[m
+Author: Vũ Thanh Thiên <44043610+VuThanhThien@users.noreply.github.com>
+Date:   Mon Dec 7 00:40:58 2020 +0700
+
+    content 1
+
+[33mcommit 22edec0927c23d4f1158c4f8502a3e03e3dfa57f[m
+Merge: 6e45670 fd5bef9
+Author: Vũ Thanh Thiên <44043610+VuThanhThien@users.noreply.github.com>
+Date:   Sun Dec 6 23:06:04 2020 +0700
+
+    Merge pull request #63 from manhnv-229/VTThien-MS4-0510
+    
+    headerr
+
+[33mcommit fd5bef9ef135ebec592d651f2c1cf9bf8728dbd7[m
+Author: Vũ Thanh Thiên <44043610+VuThanhThien@users.noreply.github.com>
+Date:   Sun Dec 6 23:05:22 2020 +0700
+
+    headerr
+
+[33mcommit 6e4567061659b8485af7737e13cf2ee7d2a1eefc[m[33m ([m[1;31morigin/PTLHang-MS4-11[m[33m)[m
+Merge: ac3c181 5ec6185
+Author: Vũ Thanh Thiên <44043610+VuThanhThien@users.noreply.github.com>
+Date:   Sat Dec 5 15:14:27 2020 +0700
+
+    Merge pull request #58 from manhnv-229/VTThien-MS4-0510
+    
+    xóa file thừa
+
+[33mcommit 5ec6185162199895ffe82c7c68cfbd4bc397afd0[m
+Author: Vũ Thanh Thiên <44043610+VuThanhThien@users.noreply.github.com>
+Date:   Sat Dec 5 15:13:46 2020 +0700
+
+    xóa file thừa
+
+[33mcommit ac3c181e0923a000ffb822ca176304ea28f4d23e[m
+Merge: 7887277 80abd33
+Author: Vũ Thanh Thiên <44043610+VuThanhThien@users.noreply.github.com>
+Date:   Sat Dec 5 15:08:54 2020 +0700
+
+    Merge pull request #57 from manhnv-229/VTThien-MS4-0510
+    
+    Menu
+
+[33mcommit 80abd337819251ed49dcf49e131c647b56dbd9fc[m
+Author: Vũ Thanh Thiên <44043610+VuThanhThien@users.noreply.github.com>
+Date:   Sat Dec 5 15:07:32 2020 +0700
+
+    Menu
+
+[33mcommit 7887277bd1f9eb6b51bf9c1d8edbbce9004369a0[m[33m ([m[1;31morigin/LDDHieu-MS3[m[33m)[m
+Merge: 00da76b e5ff022
+Author: Vũ Thanh Thiên <44043610+VuThanhThien@users.noreply.github.com>
+Date:   Sat Dec 5 09:48:16 2020 +0700
+
+    Merge pull request #56 from manhnv-229/VTThien-MS4-0510
+    
+    Tạo trang html
+
+[33mcommit e5ff0223eabbcc670ad8a70b1eb4aa0cad63b092[m
+Author: Vũ Thanh Thiên <44043610+VuThanhThien@users.noreply.github.com>
+Date:   Sat Dec 5 09:47:02 2020 +0700
+
+    Tạo trang html
+
+[33mcommit 00da76b023c99d6d9c78d14eae94f31ea17d2116[m
+Author: camilacabello16 <55092388+camilacabello16@users.noreply.github.com>
+Date:   Fri Dec 4 21:13:04 2020 +0700
+
+    Delete test.txt
+
+[33mcommit 95267a469279d8714d1b5cc74ed3d5a8b1664fcb[m
+Merge: 0066711 7f604f5
+Author: nguyenhaidone <49014302+nguyenhaidone@users.noreply.github.com>
+Date:   Fri Dec 4 21:12:10 2020 +0700
+
+    Merge pull request #55 from manhnv-229/NHDang_MS0404
+    
+    Pull request
+
+[33mcommit 006671106ba9995c7319a55067c5de00af7d9226[m
+Author: camilacabello16 <55092388+camilacabello16@users.noreply.github.com>
+Date:   Fri Dec 4 21:07:30 2020 +0700
+
+    Delete test.txt
+
+[33mcommit 7f604f59024bd59b61174647205f7ee314b42b14[m[33m ([m[1;31morigin/NHDang_MS0404[m[33m)[m
+Author: nguyenhaidone <dang682000@gmail.com>
+Date:   Fri Dec 4 21:06:58 2020 +0700
+
+    Commit 3
+
+[33mcommit 1a0b9f9067e42d4d30b11181e2508e2108af5d8f[m
+Merge: 7188616 1b56a36
+Author: camilacabello16 <55092388+camilacabello16@users.noreply.github.com>
+Date:   Fri Dec 4 21:06:56 2020 +0700
+
+    Merge pull request #54 from manhnv-229/BDHieu_MS48
+    
+    Thích chị Hằng!!
+
+[33mcommit 1b56a368a8e12d25f4c9c0c9b1a3bfbaebb50eaa[m[33m ([m[1;31morigin/BDHieu_MS48[m[33m)[m
+Author: Bui Duc Hieu <buiduchieuuet16@gmail.com>
+Date:   Fri Dec 4 21:05:59 2020 +0700
+
+    Thích chị Hằng!!
+
+[33mcommit 297ee1971299fdcc12b31a964ddfc2d5a72f1c6b[m
+Author: nguyenhaidone <dang682000@gmail.com>
+Date:   Fri Dec 4 20:59:52 2020 +0700
+
+    Commit
+
+[33mcommit 5d320efab8f2692f56af9d49036f58759bede5f1[m
+Author: nguyenhaidone <dang682000@gmail.com>
+Date:   Fri Dec 4 20:48:23 2020 +0700
+
+    Enter the message
+
+[33mcommit 7188616b30f838b97b806554d20fefe0bb443f0b[m
+Author: nguyenhaidone <49014302+nguyenhaidone@users.noreply.github.com>
+Date:   Fri Dec 4 20:44:18 2020 +0700
+
+    Delete index.html
+
+[33mcommit 52e81eaca764ed283f3f765da98230cf505792d3[m
+Merge: 0fd08c0 8315ec5
+Author: nguyenhaidone <49014302+nguyenhaidone@users.noreply.github.com>
+Date:   Fri Dec 4 20:40:54 2020 +0700
+
+    Merge pull request #53 from manhnv-229/NHDang_MS0404
+    
+    First commit
+
+[33mcommit 8315ec5a263991b654b9c589ad1f456621c76b2a[m
+Author: nguyenhaidone <dang682000@gmail.com>
+Date:   Fri Dec 4 20:38:51 2020 +0700
+
+    First commit
+
+[33mcommit de817a89c1f2a6255df38ae3cf3c1b21da5a29b8[m
+Author: Bui Duc Hieu <buiduchieuuet16@gmail.com>
+Date:   Fri Dec 4 20:37:35 2020 +0700
+
+    Thích chị Hằng!!
+
+[33mcommit 0fd08c07def3692a4127f13c48dc486b7855943d[m
+Author: camilacabello16 <55092388+camilacabello16@users.noreply.github.com>
+Date:   Fri Dec 4 20:28:56 2020 +0700
+
+    Delete ThichChiHang.txt
+
+[33mcommit ed5ca2f622c5310f636887251d1bc284b17d1698[m
+Merge: 5009e6e 8d0322b
+Author: camilacabello16 <55092388+camilacabello16@users.noreply.github.com>
+Date:   Fri Dec 4 20:28:19 2020 +0700
+
+    Merge pull request #52 from manhnv-229/BDHieu_MS48
+    
+    Bd hieu ms48
+
+[33mcommit 8d0322b98ceb9ba583e221867a99f732e7ac3

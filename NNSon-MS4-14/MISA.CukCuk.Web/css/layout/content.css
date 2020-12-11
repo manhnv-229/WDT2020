@@ -1,0 +1,272 @@
+﻿.content {
+    width: 100%;
+    height: calc(100% - 60px);
+}
+
+.content .heading{
+    height: 110px;
+    display: flex;
+}
+
+.content .heading .heading-left{
+    margin-top: 26px;
+    position: absolute;
+    left: 16px;
+}
+
+.content .heading .heading-left .title{
+    font-family: 'GoogleSans-Bold';
+    font-size: 20px;
+}
+
+.content .heading .heading-left .search {
+    margin-top: 16px;
+    height: 36px;
+    width: 250px;
+    cursor: auto;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid #BBBBBB;
+    display: flex;
+    align-items: center;
+}
+
+.content .heading .heading-left .search:focus{
+    border: 2px solid #019160;
+}
+
+.content .heading .heading-left .search .search-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 16px;
+    background-image: url('../../content/icon/search.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content .heading .heading-left .search .search-field{
+    width: 210px;
+    margin-left: 8px;
+    color: #BBBBBB;
+    font-size: 13px;
+    border: none;
+}
+
+.content .heading .heading-left .search .search-field:focus{
+    font-size: 13px;
+    color: #000000;
+    outline: none;
+}
+
+.content .heading .heading-right {
+    margin-top: 16px;
+    position: absolute;
+    right: 16px;
+}
+
+.content .heading .heading-right .add-user{
+    height: 40px;
+    border-radius: 5px;
+    background-color: #019160;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.content .heading .heading-right .add-user:hover{
+    background-color: #2FBE8E;
+}
+
+.content .heading .heading-right .add-user .icon {
+    margin-left: 16px;
+    background-image: url('../../content/icon/add.png');
+    width: 15px;
+    height: 15px;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
+.content .heading .heading-right .add-user .text{
+    margin-left: 8px;
+    margin-right: 16px;
+}
+
+.content .heading .heading-right .refresh {
+    margin-top: 10px;
+    position: absolute;
+    right: 0px;
+    width: 45px;
+    height: 40px;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #BBBBBB;
+    background-image: url('../../content/icon/refresh.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.content .heading .heading-right .refresh:hover{
+    background-color: #e5e5e5;
+}
+
+.content .table-content {
+    height: calc(100% - 110px - 56px);
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.content .table-content .table {
+    height: 100%;
+    width: calc(100% - 16px);
+    margin-left: 16px;
+    border-collapse: collapse;
+}
+
+.content .table-content .table tr{
+    border-bottom: 1px solid #BBBBBB;
+    height: 40px;
+}
+
+.content .table-content .table tbody tr{
+    cursor: pointer;
+}
+
+.content .table-content .table .cell{
+    padding-left: 10px;
+    text-align: left;
+}
+
+.content .table-content .table tbody tr:nth-child(2n + 1){background-color: #f2f2f2}
+.content .table-content .table tbody tr:hover {
+    background-color: #e5e5e5;
+}
+
+.content .navigation-bar{
+    margin-left: 16px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .navigation-bar .left-text{
+    position: absolute;
+    left: 16px;
+}
+
+.content .navigation-bar .right-text{
+    position: absolute;
+    right: 16px;
+}
+
+.content .navigation-bar .navigator {
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.content .navigation-bar .navigator .btn-last-page {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    background-image: url('../../content/icon/btn-lastpage.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 16px;
+    cursor:pointer;
+}
+
+.content .navigation-bar .navigator .btn-last-page:hover {
+    background-color: #e5e5e5;
+}
+
+.content .navigation-bar .navigator .btn-first-page {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    background-image: url('../../content/icon/btn-firstpage.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.content .navigation-bar .navigator .btn-first-page:hover {
+    background-color: #e5e5e5;
+}
+
+.content .navigation-bar .navigator .btn-prev-page {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    background-image: url('../../content/icon/btn-prev-page.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.content .navigation-bar .navigator .btn-prev-page:hover {
+    background-color: #e5e5e5;
+}
+
+.content .navigation-bar .navigator .btn-next-page {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    background-image: url('../../content/icon/btn-next-page.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.content .navigation-bar .navigator .btn-next-page:hover {
+    background-color: #e5e5e5;
+}
+
+.content .navigation-bar .navigator .btn-page-number {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #BBBBBB;
+    color: #019160;
+    border-radius: 50%;
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.content .navigation-bar .navigator .btn-page-number:hover{
+    background-color: #ffffff;
+}
+
+.content .navigation-bar .navigator .btn-page-chosen {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #BBBBBB;
+    border-radius: 50%;
+    background-color: #019160;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    margin-left: 10px;
+    cursor: pointer;
+}

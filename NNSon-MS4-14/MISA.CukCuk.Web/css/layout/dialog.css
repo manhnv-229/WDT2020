@@ -1,0 +1,98 @@
+﻿.customer-dialog{
+}
+
+.customer-dialog .dialog-content{
+    margin: 24px 24px 8px 24px;
+}
+
+.customer-dialog .dialog-content .avatar-label{
+    width: 206px;
+    margin-right: 16px;
+}
+
+.customer-dialog .dialog-content .avatar-label .avatar {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background-image: url('../../content/img/default-avatar.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid #BBBBBB;
+    margin: auto;
+}
+
+.customer-dialog .dialog-content .avatar-label .avatar-txt{
+    text-align: center;
+}
+
+.customer-dialog .dialog-content .text-field {
+    margin-top: 4px;
+    margin-bottom: 16px;
+    height: 36px;
+    width: calc(100% - 16px);
+    border-radius: 5px;
+    border: 1px solid #BBBBBB;
+    padding-left: 16px;
+}
+
+.customer-dialog .dialog-content .text-field:focus{
+    outline-color: #01B075;
+}
+
+.customer-dialog .dialog-content .date-field {
+    margin-top: 4px;
+    margin-bottom: 16px;
+    height: 36px;
+    width: calc(100% - 32px);
+    border-radius: 5px;
+    border: 1px solid #BBBBBB;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.customer-dialog .dialog-content .date-field:focus {
+    outline-color: #01B075;
+}
+
+.customer-dialog .dialog-footer {
+    height: 60px;
+    width: 100%;
+    background-color: #f2f2f2;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    align-items: center;
+}
+
+.customer-dialog .dialog-footer .btnCancel {
+    position: absolute;
+    right: calc(69.61px + 24px + 16px);
+    height: 40px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 0 24px 0 24px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.customer-dialog .dialog-footer .btnCancel:hover{
+    background-color: #e5e5e5;
+}
+
+.customer-dialog .dialog-footer .btnSubmit {
+    position: absolute;
+    right: 24px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #019160;
+    padding: 0 24px 0 24px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.customer-dialog .dialog-footer .btnSubmit:hover {
+    background-color: #2FBE8E;
+}

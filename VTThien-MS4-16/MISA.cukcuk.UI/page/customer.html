@@ -3,161 +3,223 @@
 <head>
     <meta charset="utf-8" />
     <title>MISA cukcuk</title>
+    <link href="/lib/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
     <link href="/css/main.css" rel="stylesheet" />
     <link href="/css/page/customer.css" rel="stylesheet" />
+    <link href="/css/common/dialog.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="menu">
-        <div class="logo">
-            <div class="icon-bar"></div>
-            <div class="logo-page"></div>
+    <div class="page">
+        <div class="menu">
+            <div class="logo">
+                <div class="icon-bar"></div>
+                <div class="logo-page"></div>
+            </div>
+
+            <div class="menu__content">
+                <div class="menu__item">
+                    <div class="menu__icon icon_1"></div>
+                    <div class="menu__text">Lập hồ sơ điện tử</div>
+                </div>
+                <div class="menu__item">
+                    <div class="menu__icon icon_2"></div>
+                    <div class="menu__text">Lập hồ sơ giấy</div>
+                </div>
+                <div class="menu__item">
+                    <div class="menu__icon icon_3"></div>
+                    <div class="menu__text">Theo dõi chi</div>
+                </div>
+                <div class="menu__item">
+                    <div class="menu__icon icon_4"></div>
+                    <div class="menu__text">Theo dõi đóng</div>
+                </div>
+                <div class="menu__item">
+                    <div class="menu__icon icon_5"></div>
+                    <div class="menu__text">Quản lý lao động</div>
+                </div>
+                <div class="menu__item">
+                    <div class="menu__icon icon_6"></div>
+                    <div class="menu__text">Thiết lập</div>
+                </div>
+            </div>
         </div>
-        
-        <div class="menu__content">
-            <div class="menu__item">
-                <div class="menu__icon icon_1"></div>
-                <div class="menu__text">Lập hồ sơ điện tử</div>
+
+        <div class="page-right">
+            <div class="header">
+                <div class="header__adress">
+                    <div class="address_text">Nhà hàng Biển Đông</div>
+                    <div class="dropdownbtn"></div>
+                </div>
+                <div class="header__user">
+                    <div class="avatar"></div>
+                    <div class="username">Vu Thanh Thien</div>
+                    <div class="more"></div>
+                </div>
             </div>
-            <div class="menu__item">
-                <div class="menu__icon icon_2"></div>
-                <div class="menu__text">Lập hồ sơ giấy</div>
-            </div>
-            <div class="menu__item">
-                <div class="menu__icon icon_3"></div>
-                <div class="menu__text">Theo dõi chi</div>
-            </div>
-            <div class="menu__item">
-                <div class="menu__icon icon_4"></div>
-                <div class="menu__text">Theo dõi đóng</div>
-            </div>
-            <div class="menu__item">
-                <div class="menu__icon icon_5"></div>
-                <div class="menu__text">Quản lý lao động</div>
-            </div>
-            <div class="menu__item">
-                <div class="menu__icon icon_6"></div>
-                <div class="menu__text">Thiết lập</div>
-            </div>
+            <div class="content">
+                <div class="line1">
+                    <div class="content_heading">Danh sách khách hàng</div>
+                    <div id="btn-add" class="content_button">
+                        <div class="add_icon"></div>
+                        <div class="add_text">Thêm khách hàng</div>
+                    </div>
+
+                </div>
+                <div class="line2">
+                    <div class="content_search">
+                        <div class="search_icon"></div>
+                        <input class="placeholder" placeholder="Tìm kiếm theo mã, tên khách hàng"><br>
+                    </div>
+                    <div class="reload">
+                        <div class="icon_reload"></div>
+                    </div>
+                </div>
+                <div class="grid grid-employee">
+                    <table id="tblistdata" border="0" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Mã khách hàng</th>
+                                <th>Họ và tên</th>
+                                <th>Giới tính</th>
+                                <th>Ngày sinh</th>
+                                <th>Nhóm khách hàng</th>
+                                <th>Điện thoại</th>
+                                <th>Email</th>
+                                <th>Địa chỉ</th>
+                                <th>Mã thẻ thành viên</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="firstline">
+                                <td>KH000001</td>
+                                <td>Vu Thanh Thien</td>
+                                <td>Nam</td>
+                                <td>05/10/1999</td>
+                                <td>Sinh vien</td>
+                                <td>0123456789</td>
+                                <td>thudan.td@gmail.com</td>
+                                <td>Phù Cừ, Hưng Yen</td>
+                                <td>17021041</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="content_footer">
+                    <div class="toolbar-left">
+                        <div class="toolbar-customer">Hiển thị 1-10/1000 Khách hàng</div>
+                    </div>
+                    <div class="page_footer">
+                        <div class="iconpage iconpage1"></div>
+                        <div class="iconpage iconpage2"></div>
+                        <div class="numberpage ">1</div>
+                        <div class="numberpage ">2</div>
+                        <div class="numberpage ">3</div>
+                        <div class="iconpage iconpage3"></div>
+                        <div class="iconpage iconpage4"></div>
+                    </div>
+                    <div class="toolbar-right">
+                        <div class="toolbar-page">10 Khách hàng/trang</div>
+                    </div>
+                </div>
             </div>
         </div>
 
 
-    <div class="header">
-        <div class="header__adress">
-            <div class="address_text">Nhà hàng Biển Đông</div>
-            <div class="dropdownbtn"></div>
+    </div>
+
+    <div class="customer-dialog">
+        <div class="ui-dialog-titlebar">Thông tin khách hàng</div>
+        <div class="ui-dialog-content">
+            <div class="block">
+                <div class="block-1-3">
+                    <div class="dl-avatar"></div>
+                    <div class="avt-subtitle">Vui lòng chọn ảnh có định dạng <br /> <span>.jpg, .jpeg, .png, .gif</span></div>
+                </div>
+                <div class="block-1-3">
+                    <div class="item">
+                        <label for="customerCode">Mã khách hàng (<span>*</span>)</label>
+                        <input type="text" name="customerCode" id="customerCode" />
+                    </div>
+
+                    <div class="item">
+                        <label for="memberCode">Mã thẻ thành viên</label>
+                        <input type="text" name="memberCode" id="memberCode" />
+                    </div>
+
+                    <div class="item">
+                        <label for="birthDay">Ngày sinh</label>
+                        <input type="date" name="birthDay" id="birthDay" />
+                    </div>
+                </div>
+                <div class="block-1-3">
+                    <div class="item">
+                        <label for="fullName">Họ và tên (<span>*</span>)</label>
+                        <input type="text" name="fullName" id="fullName" />
+                    </div>
+
+                    <div class="item">
+                        <label for="group">Nhóm khách hàng</label>
+                        <select name="group" id="group">
+                            <option value="vip">Khách VIP</option>
+                            <option value="normal">Khách thường</option>
+                            <option value="...">...</option>
+                        </select>
+                    </div>
+
+                    <div class="item">
+                        <label>Giới tính</label>
+                        <div class="item-content">
+                            <input type="radio" name="male" id="gender-male" />
+                            <label>Nam</label>
+                            <input type="radio" name="fmale" id="gender-fmale" />
+                            <label>Nữ</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="block-2-3">
+                    <div class="item">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" />
+                    </div>
+                    <div class="item">
+                        <label for="company">Tên công ty</label>
+                        <input type="text" name="company" id="company" />
+                    </div>
+                </div>
+                <div class="block-1-3">
+                    <div class="item">
+                        <label for="phoneNumber">Số điện thoại (<span>*</span>)</label>
+                        <input type="text" name="phoneNumber" id="phoneNumber" />
+                    </div>
+                    <div class="item">
+                        <label for="faxCode">Mã số thuế</label>
+                        <input type="text" name="faxCode" id="faxCode" />
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="block-3-3">
+                    <div class="item">
+                        <label for="address">Địa chỉ</label>
+                        <input type="text" name="address" id="address" />
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="header__user">
-            <div class="avatar"></div>
-            <div class="username">Vu Thanh Thien</div>
-            <div class="more"></div>
+        <div class="ui-dialog-footer">
+            <div class="footer-content">
+                <button id="cancel">Hủy</button>
+                <button id="save">Lưu</button>
+                <button id="saveAdd">Lưu và thêm mới</button>
+            </div>
         </div>
     </div>
-    <div class="content">
-        <div class="line1">
-            <div class="content_heading">Danh sách khách hàng</div>
-            <div class="content_button">
-                <div class="add_icon"></div>
-                <div class="add_text">Thêm khách hàng</div>
-            </div>
 
-        </div>
-        <div class="line2">
-            <div class="content_search">
-                <div class="search_icon"></div>
-                <input class="placeholder" placeholder="Tìm kiếm theo mã, tên khác"><br>
-            </div>
-            <div class="reload">
-                <div class="icon_reload"></div>
-            </div>
-        </div>
-        <div class="content_table">
-            <table>
-                <tr>
-                    <th>Mã Khách Hàng</th>
-                    <th>Họ Và Tên</th>
-                    <th>Giới tính</th>
-                    <th>Ngày sinh</th>
-                    <th>Nhóm khách hàng</th>
-                    <th>Điện thoại</th>
-                    <th>email</th>
-                    <th>Địa chỉ</th>
-                </tr>
-                <tr>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td>Germany</td>
-                    <td>Germany</td>
-                    <td>Germany</td>
-                    <td>Germany</td>
-                    <td>Germany</td>
-                </tr>
-                <tr>
-                    <td>Centro comercial Moctezuma</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                    <td>Mexico</td>
-                    <td>Mexico</td>
-                    <td>Mexico</td>
-                    <td>Mexico</td>
-                    <td>Mexico</td>
-                </tr>
-                <tr>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                    <td>Austria</td>
-                    <td>Austria</td>
-                    <td>Austria</td>
-                    <td>Austria</td>
-                    <td>Austria</td>
-                </tr>
-                <tr>
-                    <td>Island Trading</td>
-                    <td>Helen Bennett</td>
-                    <td>UK</td>
-                    <td>UK</td>
-                    <td>UK</td>
-                    <td>UK</td>
-                    <td>UK</td>
-                    <td>UK</td>
-                </tr>
-                <tr>
-                    <td>Laughing Bacchus Winecellars</td>
-                    <td>Yoshi Tannamuri</td>
-                    <td>Yoshi Tannamuri</td>
-                    <td>Yoshi Tannamuri</td>
-                    <td>Yoshi Tannamuri</td>
-                    <td>Yoshi Tannamuri</td>
-                    <td>Yoshi Tannamuri</td>
-                    <td>Canada</td>
-                </tr>
-                <tr>
-                    <td>Magazzini Alimentari Riuniti</td>
-                    <td>Giovanni Rovelli</td>
-                    <td>Giovanni Rovelli</td>
-                    <td>Giovanni Rovelli</td>
-                    <td>Giovanni Rovelli</td>
-                    <td>Giovanni Rovelli</td>
-                    <td>Giovanni Rovelli</td>
-                    <td>Italy</td>
-                </tr>
-            </table>
-        </div>
-        <div class="content_footer">
-            <a>Hiển thị 1-10/1000 khách hàng</a>
-            <div class="page_footer">
-                <div class="iconpage iconpage1"></div>
-                <div class="iconpage iconpage2"></div>
-                <div class="numberpage ">1</div>
-                <div class="numberpage ">2</div>
-                <div class="numberpage ">3</div>
-                <div class="iconpage iconpage3"></div>
-                <div class="iconpage iconpage4"></div>
-            </div>
-            <a>10 khách hàng/trang</a>
-        </div>
-    </div>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../lib/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="../js/page/customer.js"></script>
 </body>
 </html>

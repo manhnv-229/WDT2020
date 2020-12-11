@@ -4,9 +4,11 @@
     <meta charset="utf-8" />
     <title></title>
     <link href="css/main.css" rel="stylesheet" />
+    <link href="lib/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
 </head>
 <body>
     <div class="menu">
+
         <div class="menu__logo">
             <div class="icon_bar"></div>
             <div class="logo"></div>
@@ -49,7 +51,7 @@
             <div class="edit__profile"></div>
         </div>
     </div>
-    
+
     <div class="content">
         <div class="content__title">
             <div class="text">Danh sách khách hàng</div>
@@ -57,6 +59,78 @@
                 <span class="btn__icon btn_add_icon"></span>
                 <p>Thêm khách hàng</p>
             </button>
+        </div>
+
+        <div styles="visibility:hidden" id="dialog-customer" title="Thông tin khách hàng" style="margin-left: 25px; margin-right: -10px; align-content: center;">
+            <div class="dialog-inform1">
+                <div class="dialog-avatar">
+                    <button class="avatar_dialog"></button>
+                    <p>Vui lòng chọn ảnh có định dạng .jpg, .jpeg, .png, .gif.</p>
+                </div>
+                <div class="dialog-line1">
+                    <div class="id-customer">
+                        <p>Mã khách hàng(*)</p>
+                        <input type="text" />
+                    </div>
+                    <div class="name-customer">
+                        <p>Họ và tên(*)</p>
+                        <input type="text" />
+                    </div>
+                </div>
+                <div class="dialog-line2">
+                    <div class="CardID-customer">
+                        <p>Mã thẻ thành viên</p>
+                        <input type="text" />
+                    </div>
+                    <div class="GroupPeople-customer">
+                        <p>Nhóm khách hàng</p>
+                        <select class="Group-People" type="text">
+                            <option>Khách VIP</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="dialog-line3">
+                    <div class="dob-customer">
+                        <p>Ngày sinh</p>
+                        <input type="date" />
+                    </div>
+                    <div class="Gender-customer">
+                        <p>Nhóm khách hàng</p>
+                        <form>
+                            <input type="radio" name="gender" value="Nam" /><label>Nam</label>
+                            <input type="radio" name="gender" value="Nu" /><label> Nữ</label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="dialog-inform2">
+                <div class="dialog-line4">
+                    <div class="email-customer">
+                        <p>Email</p>
+                        <input class="email" type="text" />
+                    </div>
+                    <div class="phoneNumber-customer">
+                        <p>Số điện thoại</p>
+                        <input type="text" />
+                    </div>
+                </div>
+                <div class="dialog-line5">
+                    <div class="company-customer">
+                        <p>Tên công ty</p>
+                        <input type="text" />
+                    </div>
+                    <div class="taxNumber-customer">
+                        <p>Mã số thuế</p>
+                        <input type="text" />
+                    </div>
+                </div>
+                <div class="dialog-line6">
+                    <div class="address-customer">
+                        <p>Địa chỉ</p>
+                        <input type="text" />
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="content__function">
             <div class="search__customer">
@@ -72,7 +146,7 @@
         </div>
 
         <div class="content__table">
-            <table border="0" cellspacing="0" cellpadding="10">
+            <table id="tabl" border="0" cellspacing="0" cellpadding="10">
                 <thead>
                     <tr>
                         <th>Mã khách hàng</th>
@@ -86,206 +160,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td style="max-width: 5px;">KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    </tr>
-                    <tr>
-                        <td>KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    </tr>
-                    <tr>
-                        <td>KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    </tr>
-                    <tr>
-                        <td>KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    </tr>
-                    <tr>
-                        <td>KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    </tr>
-                    <tr>
-                        <td>KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    </tr>
-                    <tr>
-                        <td>KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    </tr>
-                    <tr>
-                        <td>KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    </tr>
-                    <tr>
-                        <td>KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    </tr>
-                    <tr>
-                        <td>KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    </tr>
-                    <tr>
-                        <td>KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    </tr>
-                    <tr>
-                        <td>KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    <tr>
-                        <td>KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    </tr>
-                    <tr>
-                        <td>KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    </tr>
-                    <tr>
-                        <td>KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    </tr>
-                    <tr>
-                        <td>KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    </tr>
-                    <tr>
-                        <td>KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    </tr>
-                    <tr>
-                        <td>KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    </tr>
-                    <tr>
-                        <td>KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    </tr>
-                    <tr>
-                        <td>KH000000001</td>
-                        <td>Trần Văn Quang</td>
-                        <td>Nam</td>
-                        <td>04/12/1999</td>
-                        <td>Khách hàng</td>
-                        <td>0982669350</td>
-                        <td>vvqaf@gmail.com</td>
-                        <td style="max-width: 5px;">Khối 1, phường Thu Thủy, thị xã Cửa Lò, tỉnh Nghệ An</td>
-                    </tr>
-                    </tr>
                 </tbody>
             </table>
 
@@ -311,5 +185,9 @@
             </div>
         </div>
     </div>
+    <script src="lib/jquery-3.5.1.js"></script>
+
+    <script src="lib/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="js/customer.js"></script>
 </body>
 </html>

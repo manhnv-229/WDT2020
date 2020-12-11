@@ -1,5 +1,5 @@
 ﻿.header{
-    width: calc(100% - 200px);
+    width: calc(100% - 202px);
     height: 48px;
     position:absolute;
     top:0;
@@ -7,6 +7,8 @@
     display:flex ;
     justify-content: space-between;
     border:solid 0.5px #808080;
+    border-bottom: none;
+    border-top: none;
 }
 
     .header .header__adress {
