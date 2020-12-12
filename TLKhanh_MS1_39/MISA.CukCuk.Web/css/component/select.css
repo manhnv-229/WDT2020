@@ -6,3 +6,7 @@
     outline: none;
     cursor:pointer;
 }
+
+.m-select:focus {
+    border: 1px solid var(--default-color);
+}

@@ -24,7 +24,7 @@ function loadData() {
                             <td>${customer.Email}</td>
                             <td>${customer.CustomerGroupName}</td>
                             <td>${customer.DebitAmount || ''}</td>
-                            <td>${customer.CompanyName}</td>
+                            <td>${customer.CompanyName || ''}</td>
                         </tr>`;
             $('tbody').append(trHtml);
         }
