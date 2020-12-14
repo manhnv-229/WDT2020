@@ -23,7 +23,17 @@ body {
     width: calc(100% - 202px);
     height: 100%;
 }
+input {
+    border: #808080 solid 0.5px;
+    border-radius: 2px;
+    height: 30px;
+    outline: none;
+}
 
+select {
+    height: 30px;
+    outline:none;
+}
 @font-face {
     font-family: 'GoogleSans-Bold';
     src: url('../content/font/GoogleSans-Bold.otf') format('opentype');

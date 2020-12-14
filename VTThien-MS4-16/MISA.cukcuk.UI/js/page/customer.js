@@ -6,7 +6,7 @@
 
     dialog = $(".customer-dialog").dialog({
         autoOpen: false,
-        height: 475,
+        height: 520,
         width: 630,
         modal: true
     });

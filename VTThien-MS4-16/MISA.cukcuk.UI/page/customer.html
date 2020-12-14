@@ -47,12 +47,15 @@
         <div class="page-right">
             <div class="header">
                 <div class="header__adress">
-                    <div class="address_text">Nhà hàng Biển Đông</div>
-                    <div class="dropdownbtn"></div>
+                    <!--<div class="address_text">Nhà hàng Biển Đông</div>-->
+                    <select class="address_text">
+                        <option value="1">Nhà hàng Biển Đông</option>
+                        <option value="2">Nhà hàng biển Đen</option>
+                    </select>
                 </div>
                 <div class="header__user">
                     <div class="avatar"></div>
-                    <div class="username">Vu Thanh Thien</div>
+                    <div class="username">Vũ Thanh Thiên</div>
                     <div class="more"></div>
                 </div>
             </div>
@@ -163,17 +166,26 @@
                         <select name="group" id="group">
                             <option value="vip">Khách VIP</option>
                             <option value="normal">Khách thường</option>
-                            <option value="...">...</option>
+                            <option value="misa">Khách hàng MISA</option>
                         </select>
                     </div>
 
                     <div class="item">
-                        <label>Giới tính</label>
-                        <div class="item-content">
-                            <input type="radio" name="male" id="gender-male" />
-                            <label>Nam</label>
-                            <input type="radio" name="fmale" id="gender-fmale" />
-                            <label>Nữ</label>
+                        <label class="m-input-label">Giới tính</label>
+                        <div class="m-radio">
+
+                            <label class="radio-label" for="male">
+                                <input id="male" type="radio" name="Gender" value="1" checked="checked" />
+                                Nam
+                                <span class="radio-icon"></span>
+                            </label>
+
+                            <label class="radio-label" for="female">
+                                <input id="female" type="radio" name="Gender" value="0" />
+                                Nữ
+                                <span class="radio-icon"></span>
+                            </label>
+
                         </div>
                     </div>
                 </div>
