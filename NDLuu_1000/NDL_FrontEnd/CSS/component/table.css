@@ -1,7 +1,7 @@
 ﻿
 table{
-    width: 100%;
-    border-collapse: collapse
+    width: auto;
+    border-collapse: collapse;
 }
 th, td{
     text-align: center;

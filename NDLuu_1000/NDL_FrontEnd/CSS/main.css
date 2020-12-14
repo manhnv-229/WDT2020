@@ -1,9 +1,9 @@
 ﻿@import url('layout/menu.css');
 @import url('layout/content.css');
 @import url('layout/header.css');
-@import url('component/buttobox.css');
-@import url('component/inpuon.css');
-@import url('component/combt.css');
+@import url('component/button.css');
+@import url('component/input.css');
+@import url('component/combobox.css');
 @import url('component/table.css');
 
 body {
