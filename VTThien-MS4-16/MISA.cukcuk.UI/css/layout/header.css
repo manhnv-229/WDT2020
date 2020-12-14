@@ -23,9 +23,10 @@
 
         .header .header__adress .address_text {
             margin-left:10px;
+            border:none;
 
         }
-        .header .header__adress .dropdownbtn {
+/*        .header .header__adress .dropdownbtn {
             width: 20px;
             height: 20px;
             margin-left:12px;
@@ -33,7 +34,7 @@
             background-size: contain;
             background-repeat: no-repeat;
             background-image: url('../../content/icon/btn-lastpage.svg');
-        }
+        }*/
 
     .header .header__user {
         height: 44px;

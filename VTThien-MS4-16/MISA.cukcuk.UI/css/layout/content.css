@@ -64,7 +64,7 @@
 
         .content .line2 .content_search {
             height: 40px;
-            width: 180px;
+            width: 250px;
             border-radius: 4px;
             margin-left: 15px;
             display: flex;
@@ -87,6 +87,8 @@
                 color: #808080;
                 font-size: xx-small;
                 border: 0;
+                font-size: smaller;
+                width: 180px;
             }
 
         .content .line2 .reload {
