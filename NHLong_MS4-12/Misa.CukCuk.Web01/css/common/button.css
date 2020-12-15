@@ -1,0 +1,117 @@
+﻿.m-btn {
+    display: flex;
+    align-items: center;
+    background-color: #019160;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 13px;
+    color: #ffffff;
+    font-family: GoogleSans-Regular;
+    padding-left: 16px;
+    padding-right: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    min-width: 100px;
+    justify-content: center;
+}
+
+    .m-btn:hover,.m-btn:focus {
+        background-color: #2FBE8E;
+    }
+
+    .m-btn .m-btn-icon {
+        background-position: center;
+    }
+
+    .m-btn .btn-text {
+        margin-left: 8px;
+    }
+
+    .m-btn .m-btn-text{
+    }
+.m-second-button {
+    border: 1px solid #bbbbbb;
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 40px;
+    color: #000000;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+}
+
+    .m-second-button:hover {
+        background-color: #e9ebee;
+    }
+
+.m-btn-refresh {
+    background-image: url('/content/icon/refresh.png');
+    background-repeat: no-repeat;
+    width: 40px;
+    background-position: center;
+}
+
+.m-btn-cancel{
+    color: #000000;
+    background-color:transparent;
+}
+
+.m-btn-cancel:hover,.m-btn-cancel:focus {
+    background-color: #BBBBBB;
+}
+.btn-pagenumber {
+    width: 30px;
+    height: 30px;
+    margin: 0 4px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background-color: #e9ebee;
+    cursor: pointer !important;
+}
+
+    .btn-pagenumber:hover {
+        background-color: #ffffff;
+    }
+
+    .btn-pagenumber.btn-pagenumber-selected, .btn-pagenumber-selected:hover {
+        background-color: #019160;
+        color: #ffffff;
+    }
+
+.btn-select-page {
+    opacity:.7;
+    margin: 0 4px;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.00);
+}
+    .btn-select-page:hover {
+        opacity: 1;
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+    }
+
+    .m-btn-firstpage {
+        background-image: url('/content/icon/btn-firstpage.svg');
+    }
+
+.m-btn-prev-page {
+    background-image: url('/content/icon/btn-prev-page.svg');
+}
+
+.m-btn-next-page {
+    background-image: url('/content/icon/btn-next-page.svg');
+}
+
+.m-btn-lastpage {
+    background-image: url('/content/icon/btn-lastpage.svg');
+}
+

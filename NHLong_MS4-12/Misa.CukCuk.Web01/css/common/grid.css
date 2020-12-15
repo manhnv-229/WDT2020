@@ -1,0 +1,137 @@
+﻿
+/* Grid */
+.grid {
+    width: 100%;
+    overflow-x:auto;
+    overflow-y:hidden;
+}
+
+
+    .grid .grid-header {
+        height: 50px;
+    }
+
+    .grid .grid-content, .tablescroll_wrapper, .tablescroll {
+        height: calc(100% - 25px);
+    }
+
+.tablescroll {
+}
+
+.grid table th {
+    border-bottom: 1px solid #bbbbbb;
+    /*border-left: 1px solid #bbbbbb;*/
+    /*padding: 10px 16px !important;*/
+    text-align: left;
+}
+
+    .grid table th .cell {
+        padding: 15px 16px !important;
+    }
+
+.grid table td {
+    border-bottom: 1px solid #bbbbbb;
+    /*border-left: 1px solid #bbbbbb;*/
+    padding: 15px 16px !important;
+    text-align: left;
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+
+.grid table th {
+    /*z-index:1;
+    position:sticky;
+    background-color: #ffffff;
+    top:0px;
+    left:0;
+    padding-top: 22px !important;*/
+    font-weight: bold !important;
+}
+
+.grid tbody tr:nth-child(2n+1) {
+    background-color: #fafafa;
+}
+
+.grid tbody tr:hover {
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+
+.grid table td span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*define height and width of scrollable area. Add 16px to width for scrollbar*/
+div.tableContainer {
+    clear: both;
+    border: 1px solid #963;
+    height: 285px;
+    overflow: auto;
+    width: 900px;
+}
+/*Reset overflow value to hidden for all non-IE browsers.*/
+html > body div.tableContainer {
+    overflow: hidden;
+    width: 900px;
+}
+    /*define width of table. IE browsers only*/
+    div.tableContainer table {
+        float: left;
+        border-spacing: 0;
+    }
+
+        div.tableContainer table tr {
+            display: table;
+            width: 100%;
+        }
+/* set table header to a fixed position. WinIE 6.x only                                       
+ In WinIE 6.x, any element with a position property set to relative and is a child of       
+ an element that has an overflow property set, the relative value translates into fixed.    
+ Ex: parent element DIV with a class of tableContainer has an overflow property set to auto */
+thead.fixedHeader tr {
+    position: relative;
+}
+/* set THEAD element to have block level attributes. All other non-IE browsers            
+ this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers 
+ make the TH elements pretty */
+.grid thead.fixedHeader th {
+    border: 1px solid #ccc;
+    font-weight: normal;
+    text-align: left;
+}
+
+html > body .grid thead.fixedHeader {
+    display: table;
+    overflow: auto;
+    width: 100%;
+}
+
+html > body .grid tbody.scrollContent {
+    display: block;
+    height: 262px;
+    overflow: auto;
+    width: 100%;
+}
+    /*make TD elements pretty. Provide alternating classes for striping the table*/
+    .grid  tbody.scrollContent td, tbody.scrollContent tr.normalRow td {
+        background: #fff;
+        border-bottom: none;
+        border-left: none;
+        border-right: 1px solid #ccc;
+        border-top: 1px solid #ddd;
+    }
+
+.grid td div {
+    max-width: 200px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}

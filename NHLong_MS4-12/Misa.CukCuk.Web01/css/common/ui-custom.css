@@ -1,0 +1,69 @@
+﻿
+/*css định nghĩa lại thư viện jqueryUI*/
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br
+{
+    border-radius: 5px;
+}
+
+.ui-dialog{
+    padding:0;
+}
+
+    .ui-dialog .ui-dialog-titlebar {
+        padding: 24px 24px 0px 24px;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        background-color: #ffffff;
+        border: none;
+    }
+
+    .ui-dialog .ui-dialog-titlebar-close {
+        margin:unset;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 0 5px 0 0;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        opacity: .7;
+        background-color: #ffffff;
+        background-image: url('/content/icon/x.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px;
+    }
+
+        .ui-dialog .ui-dialog-titlebar-close:hover {
+            background-color: #ccc;
+            
+        }
+
+.ui-button .ui-icon, .ui-button .ui-icon:hover{
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+}
+
+.ui-dialog .ui-dialog-content{
+    padding:0;
+
+}
+.ui-widget.ui-widget-content{
+    border:unset;
+}
+
+.ui-button:hover .ui-icon{
+    background-image: none;
+}
+.ui-widget-overlay{
+    background-color: #000;
+    opacity:.5;
+}
