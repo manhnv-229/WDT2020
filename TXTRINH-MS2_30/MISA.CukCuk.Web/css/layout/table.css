@@ -86,14 +86,8 @@
     position: relative;
     margin-left: 5px;
     border: 0;
-    overflow: auto;
-    overflow-x: auto;
-    overflow-y: auto;
-    width: 100%;
 }
-.odd {
-    background-color: #e9e9e9;
-}
+
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
@@ -107,7 +101,13 @@ th{
 td{
     height: 25px;
 }
-tbody > tr:hover{
+#listCus tr:nth-child(even) {
+    background-color: #dddddd;
+}
+#listCus tr:hover {
     cursor: pointer;
-    background-color: #05c3fd;
+    background-color: #a1a1a1;
+}
+#listCus tr:first-child:hover{
+    background-color: #ffffff;
 }

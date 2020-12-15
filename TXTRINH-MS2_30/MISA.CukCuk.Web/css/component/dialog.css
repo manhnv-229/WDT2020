@@ -1,5 +1,5 @@
 ﻿.dialog-modal {
-    /*display: none;*/
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -10,7 +10,7 @@
 }
 
 .dialog {
-    /*display: none;*/
+    display: none;
     position: absolute;
     width: 600px;
     height: 500px;
@@ -27,32 +27,34 @@
         line-height: 25px;
         display: flex;
     }
+
         .dialog .dialog-title .title-text {
             padding: 10px;
             font-size: 25px;
         }
-        .dialog .dialog-title .title-close-button {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        width: 16px;
-        height: 16px;
-        color: #ccc;
-        background-image: url('../../content/icon/x.svg');
-        background-position: center;
-        background-repeat: no-repeat;
-        cursor: pointer;
-    }
 
-        .dialog .dialog-title .title-close-button :hover {
-            background-color: #dfdddf;
+        .dialog .dialog-title .title-close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 16px;
+            height: 16px;
+            color: #ccc;
+            background-image: url('../../content/icon/x.svg');
+            background-position: center;
+            background-repeat: no-repeat;
             cursor: pointer;
         }
 
-.dialog .dialog-body {
-    padding: 10px;
-    height: calc(100% - 100px);
-}
+            .dialog .dialog-title .title-close-button :hover {
+                background-color: #dfdddf;
+                cursor: pointer;
+            }
+
+    .dialog .dialog-body {
+        padding: 10px;
+        height: calc(100% - 100px);
+    }
 
 .dialog-footer {
     position: absolute;

@@ -61,10 +61,15 @@
     width: 100%;
     border-radius: 5px;
 }
+.row input[type=radio]{
+    height: 15px;
+}
 label {
     display: block;
 }
-
+.gender-label{
+    display: inline;
+}
 .select-groupCustomer {
     width: 180px;
     height: 30px;
