@@ -102,13 +102,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
                     </tbody>
                 </table>
             </div>
             <div class="content-footer">
                 <div class="record-info">
-                    
+
                 </div>
                 <div class="paginate">
                     <button class="page-control first-page"></button>
@@ -124,6 +123,43 @@
 
                 </div>
             </div>
+        </div>
+
+    </div>
+    <div class="dialog-modal">
+    </div>
+    <div class="dialog">
+        <div class="dialog-header">
+            <div class="dialog-header__title" >
+                <h1>Thông tin khách hàng</h1>
+            </div>
+            <div class="dialog-header__close-btn"></div>
+        </div>
+        <div class="dialog-content">
+            <div class="row">
+                <div class="col">
+                    <div class="avatar-customer"></div>
+                    <div class="avatar-note">
+                        <span>Vui lòng chọn ảnh có định dạng <b>.jpg, .jpeg, .png, .gif. </b></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="label">Mã khách hàng (<span class="label-required">*</span>)</div>
+                    <div class="control">
+                        <input id="txtCustomerCode" required type="text" />
+                    </div>
+                    <div class="label">Mã thẻ thành viên (<span class="label-required">*</span>)</div>
+                    <div class="control">
+                        <input id="txtMemberCardCode" required " type="text" />
+                    </div>
+                    <div class="label">Ngày sinh (<span class="label-required">*</span>)</div>
+                    <div class="control">
+                        <input id="txtDateOfBirth" required type="date" />
+                    </div>
+                </div>
+               
+            </div>
+            
         </div>
     </div>
     <script src="../js/lib/jquery-3.5.1.min.js"></script>

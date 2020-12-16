@@ -39,6 +39,14 @@ function loadData() {
     })
 }
 
+function initEvents() {
+    $('.btn--add-customer').click(function(){
+        $('.dialog-modal').show();
+        $('.dialog').show();
+    })
+}
+
+
 function dateFormat(date) {
     var a = new Date(date);
     // lấy ngày:
