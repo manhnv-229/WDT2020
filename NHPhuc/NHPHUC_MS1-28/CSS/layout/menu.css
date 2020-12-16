@@ -1,5 +1,6 @@
 /* css menu */
 .menu{
+    position: fixed;
     width: 228px;
     height: 100vh;
     background-color: #ffffff;
