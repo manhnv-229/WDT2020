@@ -66,3 +66,30 @@
         background-repeat: no-repeat;
         border: 1px solid #e5e5e5;
     }
+    .content .content__table{
+        margin-top: 10px;
+        margin-left: 20px;
+        width:1190px; 
+        height:400px; 
+        overflow:auto;
+    }
+
+    /* scrollbar table */
+    .content .content__table::-webkit-scrollbar {
+        width: 5px;
+      }
+      
+      /* Track */
+      .content .content__table::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+       
+      /* Handle */
+      .content .content__table::-webkit-scrollbar-thumb {
+        background: #888; 
+      }
+      
+      /* Handle on hover */
+      .content .content__table::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }

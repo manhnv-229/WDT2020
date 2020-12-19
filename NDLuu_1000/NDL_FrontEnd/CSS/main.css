@@ -25,3 +25,7 @@ body {
     font-family: 'GoogleSans-Regular';
     src: url('../Content/font/GoogleSans-Regular.otf') format('opentype');
 }
+a {
+    text-decoration: none;
+    color: black;
+}
