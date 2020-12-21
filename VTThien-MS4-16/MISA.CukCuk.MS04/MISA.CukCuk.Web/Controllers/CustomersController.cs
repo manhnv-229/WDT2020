@@ -1,49 +1,142 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Dapper;
+using Microsoft.AspNetCore.Mvc;
 using MISA.CukCuk.Web.Models;
+using MySql.Data.MySqlClient;
+using Nuke.Common.Tooling;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace MISA.CukCuk.Web.Controllers
 {
-    [Route("api/v1/[controller]")]
+    [Route("api/v1/")]
     [ApiController]
     public class CustomersController : ControllerBase
     {
         // GET: api/<CustomersController>
         [HttpGet]
-        public Customer Get()
+        /*public ActionServiceResult Get()
         {
-            var customer = new Customer();
-            return customer;
+            using (IDbConnection db = new MySqlConnection("Host=103.124.92.43; User Id=nvmanh; password=12345678; Database=MS4_16_VuThanhThien_CukCuk;port=3306; Character Set=utf8"))
+            {
+                var customers = db.Query<Customer>("Select * from Customer").ToList();
+                return new ActionServiceResult()
+                {
+                    Success = true,
+                    Message = "Thành công",
+                    Data = customers,
+                    MISAcode = Enumarations.MISAcode.Success
+
+                };
+        }
+            
+        }*/
+        ///get dữ liệu all
+        
+        [HttpGet]
+        public ActionServiceResult Get()
+        {
+            return new ActionServiceResult()
+            {
+                Success = true,
+                Message = "Thành công",
+                Data = Customer.Customers,
+                MISACode = Enumarations.MISACode.Success
+
+            };
         }
 
-        // GET api/<CustomersController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        /// <summary>
+        /// get dữ liệu theo id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("{id}")]
+        public ActionServiceResult Get(int id)
         {
-            return "value";
+            var customer = Customer.Customers.Where(p => p.CustomerId == id).FirstOrDefault();
+            return new ActionServiceResult()
+            {
+                Data = customer,
+                Message = "Thành công",
+                Success = true,
+                MISACode = Enumarations.MISACode.Success
+            };
         }
-
-        // POST api/<CustomersController>
+        [HttpGet]
+        [Route("filter")]
+        public ActionServiceResult Get2([FromQuery] int customerid, string customercode)
+            {
+                var find = Customer.Customers.Where(p => p.CustomerId == customerid && p.CustomerCode == customercode).FirstOrDefault();
+                return new ActionServiceResult()
+                {
+                    Success = true,
+                    Message = "Thành công",
+                    Data = find,
+                    MISACode = Enumarations.MISACode.Success
+                    
+                };
+            }
+        
+        /// <summary>
+        /// thêm dữ liệu
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <returns></returns>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public bool Post([FromBody] Customer customer)
         {
+            Customer.Customers.Add(customer);
+            return true;
         }
 
-        // PUT api/<CustomersController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        /// <summary>
+        /// sửa 
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <returns></returns>
+        [HttpPut]
+        public bool Put([FromBody] Customer customer)
         {
+            try
+            {
+                var findcustomer = Customer.Customers.Where(c => c.CustomerId == customer.CustomerId).FirstOrDefault();
+                findcustomer.CompanyTaxCode = customer.CompanyTaxCode;
+                findcustomer.FullName = customer.FullName;
+                findcustomer.CustomerCode = customer.CustomerCode;
+                findcustomer.MemberCardCode = customer.MemberCardCode;
+                findcustomer.Gender = customer.Gender;
+                findcustomer.Email = customer.Email;
+                findcustomer.PhoneNumber = customer.PhoneNumber;
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+            return true;
         }
 
-        // DELETE api/<CustomersController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        /// <summary>
+        /// xóa theo mảng id
+        /// </summary>
+        /// <param name="listID"></param>
+        /// <returns></returns>
+        [HttpDelete]
+        public bool Delete([FromBody] List<int> listID)
         {
+            foreach (var item in listID)
+            {
+                var finditem = Customer.Customers.Where(c => c.CustomerId == item).FirstOrDefault();
+                Customer.Customers.Remove(finditem);
+            }
+            return true;
         }
     }
 }
