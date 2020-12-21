@@ -16,43 +16,22 @@ namespace MISA.CukCuk.WebAPI.Controllers
     [ApiController]
     public class CustomersController : ControllerBase
     {
-        // GET: api/<CustomersController>
-       /* [HttpGet]
-        public IEnumerable<string> Get()
+        DbConnector db;
+        public CustomersController()
         {
-            return new string[] { "value1", "value2" };
-        }*/
+             db = new DbConnector();
+        }
 
-        // GET api/<CustomersController>/5
         [HttpGet]
-        public List<Customer> Get()
+        public IActionResult Get()
         {
-            List<Customer> customers = new List<Customer>();
-            String connectionString = "User Id=nvmanh;password = 12345678;Host=103.124.92.43;port = 3306;Database = MS_NVMANH_CukCuk;" +
-                "Character Set=compatibility";
-            using (IDbConnection db = new MySqlConnection(connectionString))
-            {
-                customers = db.Query<Customer>("Select CustomerID,CustomerCode,FullName,PhoneNumber from Customer").ToList();
-            }
-            return customers;
+            return Ok(db.GetAllData<Customer>().ToList());
         }
 
-        // POST api/<CustomersController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpGet("{id}")]
+        public IActionResult Get(string id)
         {
-        }
-
-        // PUT api/<CustomersController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<CustomersController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            return Ok(db.getByID<Customer>(id));
         }
 
     }

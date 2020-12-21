@@ -20,8 +20,8 @@ namespace MISA.CukCuk.WebAPI.Controllers
         }
 
         // GET api/<ValuesController>/5
-        [HttpGet("{id}/{name}")]
-        public string Get(int id, string name)
+        [HttpGet("{name}")]
+        public string Get(string name)
         {
             return name;
         }

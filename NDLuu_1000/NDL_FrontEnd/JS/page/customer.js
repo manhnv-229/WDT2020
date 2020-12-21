@@ -33,7 +33,7 @@ function loadData(response){
                   <td>${response[index].CustomerGroupName}</td>
                   <td>${response[index].PhoneNumber}</td>
                   <td>${response[index].Email}</td>
-                  <td class="add">${response[index].Address}</td>
+                  <td style="max-width:200px;">${response[index].Address}</td>
                   <td >${response[index].DebitAmount||""}</td>
                   <td >${response[index].MemberCardCode}</td>
                   </tr>`;
