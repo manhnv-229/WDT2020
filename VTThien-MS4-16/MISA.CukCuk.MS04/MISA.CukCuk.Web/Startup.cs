@@ -30,6 +30,7 @@ namespace MISA.CukCuk.Web
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MISA.CukCuk.Web", Version = "v1" });
+                c.CustomSchemaIds(type => type.ToString());
             });
         }
 
@@ -40,7 +41,10 @@ namespace MISA.CukCuk.Web
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MISA.CukCuk.Web v1"));
+                app.UseSwaggerUI(c => {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "MISA.CukCuk.Web v1");
+                    c.RoutePrefix = "Swagger";
+                    }); 
             }
 
             app.UseRouting();
