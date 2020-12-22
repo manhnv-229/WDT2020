@@ -14,31 +14,34 @@ using System.Threading.Tasks;
 
 namespace MISA.CukCuk.Web.Controllers
 {
-    [Route("api/v1/")]
+    [Route("api/v1/Customers")]
     [ApiController]
     public class CustomersController : ControllerBase
     {
         // GET: api/<CustomersController>
         [HttpGet]
-        /*public ActionServiceResult Get()
+        public IActionResult Get()
         {
-            using (IDbConnection db = new MySqlConnection("Host=103.124.92.43; User Id=nvmanh; password=12345678; Database=MS4_16_VuThanhThien_CukCuk;port=3306; Character Set=utf8"))
-            {
-                var customers = db.Query<Customer>("Select * from Customer").ToList();
-                return new ActionServiceResult()
+            var  customers = new List<Customer>();
+            string connectionstring = "User Id=nvmanh;Host=103.124.92.43;Database=MS4_16_VuThanhThien_CukCuk;port=3306;password=12345678; Character Set=utf8";
+            using (IDbConnection dbConnection = new MySqlConnection(connectionstring))
+            {   
+                //lay du lieu
+                customers = dbConnection.Query<Customer>("Select * from Customer").ToList();
+                return Ok(new ActionServiceResult()
                 {
                     Success = true,
                     Message = "Thành công",
                     Data = customers,
-                    MISAcode = Enumarations.MISAcode.Success
+                    MISACode = Enumarations.MISACode.Success
 
-                };
+                });
+            }
+                      /*      return customers;*/
         }
-            
-        }*/
         ///get dữ liệu all
-        
-        [HttpGet]
+
+        /*[HttpGet]
         public ActionServiceResult Get()
         {
             return new ActionServiceResult()
@@ -49,14 +52,14 @@ namespace MISA.CukCuk.Web.Controllers
                 MISACode = Enumarations.MISACode.Success
 
             };
-        }
+        }*/
 
         /// <summary>
         /// get dữ liệu theo id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet]
+        /*[HttpGet]
         [Route("{id}")]
         public ActionServiceResult Get(int id)
         {
@@ -137,6 +140,6 @@ namespace MISA.CukCuk.Web.Controllers
                 Customer.Customers.Remove(finditem);
             }
             return true;
-        }
+        }*/
     }
 }
