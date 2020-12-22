@@ -1,0 +1,82 @@
+﻿/*filter-bar*/
+    .filter-bar {
+        padding: 0 16px;
+    }
+
+    .filter-bar .filter-left {
+        position: relative;
+        float: left;
+    }
+
+    .filter-bar .filter-left .icon-search {
+        height: 16px;
+        width: 16px;
+        position: absolute;
+        top: 11px;
+        margin-left: 16px;
+        z-index: 11;
+    }
+
+    /*.filter-bar .filter-left input#searchBox {
+        height: 40px;
+        width: 210px;
+        padding-left: 35px;
+        border-radius: 4px;
+        border: 2px solid #e5e5e5;
+        outline-color: #019160;
+    }*/
+
+    .filter-bar .filter-right {
+        float: right;
+    }
+
+/*paging-bar*/
+    .paging-bar {
+        margin-top: 20px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    /*left*/
+    .paging-bar .left {
+        margin-top: 9px;
+        font-weight: bold;
+        float: left;
+    }
+    /*pagination*/
+    .paging-bar .page-number {
+        float: left;
+        margin-left: 300px;
+        display: inline-block;
+    }
+
+    .paging-bar .page-number img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .paging-bar .page-number a {
+        font-size: 20px;
+        border-radius: 18px;
+        float: left;
+        padding: 0 11px;
+        text-decoration: none;
+        transition: background-color .3s;
+        margin: 0 5px;
+        color: black;
+    }
+
+    .paging-bar .page-number a.active {
+        background-color: #019160;
+        color: white;
+    }
+
+    .paging-bar .page-number a:hover:not(.active) {
+        background-color: #ddd;
+    }
+
+    /*right*/
+    .paging-bar .right {
+        float: right;
+        font-weight: bold;
+        margin-top: 9px;
+    }

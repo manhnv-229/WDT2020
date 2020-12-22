@@ -1,2 +1,30 @@
-﻿body {
+﻿/*table*/
+
+#tbListData {
+    height: 500px;
+    border-collapse: collapse;
+    display: block;
+    white-space: nowrap;
+    overflow: auto;
+}
+
+#tbListData th, td {
+    max-height: 500px;
+    height: 40px;
+    border-bottom: 1px solid #bdbdbd;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#tbListData tr:nth-child(even) {
+    background-color: #e9ebee;
+}
+
+#tbListData tr:nth-child(odd) {
+    background-color: white;
+}
+
+#tbListData tr:hover {
+    background: #ddd;
+    cursor: pointer;
 }

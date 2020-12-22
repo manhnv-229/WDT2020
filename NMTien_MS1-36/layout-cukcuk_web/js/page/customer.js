@@ -10,11 +10,30 @@
         modal: true,
        
     });
-    $("#btnAdd").click(function () {
+    initEvens();
+})
+function initEvens() {
+    // Gán các sự kiện:
+    $('#btnAdd').click(function () {
         dialog.dialog('open');
     })
 
-   /* $.ajax({
+    $('#btnCancel').click(function () {
+        dialog.dialog('close');
+    })
+
+    //$('#tbListData').on('dblclick', 'tr', function () {
+    //    alert('á');
+    //})
+
+/*    $('#tbListData').on('dblclick', 'tr', function () {
+        // load dữ liệu chi tiết:
+
+        // Hiển thị dialog thông tin chi tiết:
+        dialog.dialog('open');
+    })*/
+}
+/* $.ajax({
         url: 'http://api.manhnv.net/api/customers',
         method: 'GET',
         async: false
@@ -27,13 +46,10 @@
             console.log(response[i]);
             var trHtml = ``;
         }
-      
-      
-        
+     
+     
+       
     }).fail(function (response) {
     });*/
-  
-    //B2. xu ly du lieu
-   
 
-})
+    //B2. xu ly du lieu

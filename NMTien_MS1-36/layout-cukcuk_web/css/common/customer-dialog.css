@@ -47,12 +47,17 @@
     margin-left:400px;
     margin-top:15px;
 }
-.customer-dialog #unset {
-    border: none;
-    outline-color: #e9ebee;
+.dialog-footer {
+    display: flex;
+  
+    height: 60px;
+    background-color: #e9ebee;
+    border-radius: 0 0 5px 5px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 12px 24px;
+    box-sizing: border-box;
 }
-
-.customer-dialog  .btn-success {
-    margin-top:10px;
-    margin-left:34px;
+.dialog-footer button {
+    margin-left: 16px;
 }

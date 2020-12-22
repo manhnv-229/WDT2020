@@ -6,20 +6,23 @@
     height: 60px;
     border-bottom: 1px solid #BBBBBB;
 }
-.header .left{position:absolute;}
+.header .left{position:absolute; margin-left:16px; margin-top:5px;}
+.header .left select {
+    height: 40px;
+    width: 200px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
 .header .right {
     position: absolute;
     right: 16px;
     display: flex;
     margin: 12px 0;
 }
-.header .left select{
-    border: none;
-    margin: 12px 0 12px 24px;   
-    font-size: 16px;
-    font-weight: bold;
-    outline:none;
-}
+
 .header .left option{
     font-weight: bold;
 }

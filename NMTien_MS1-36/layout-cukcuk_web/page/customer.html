@@ -16,26 +16,26 @@
             </div>
         </div>
         <div class="menu__content">
-            <div class="menu__item">
+            <a class="menu__item" href="#">
                 <div class="menu__icon-1"></div>
                 <div class="menu__text">Tổng quan</div>
-            </div>
-            <div class="menu__item">
+            </a>
+            <a class="menu__item" href="#">
                 <div class="menu__icon-2"></div>
                 <div class="menu__text">Báo cáo</div>
-            </div>
-            <div class="menu__item">
+            </a>
+            <a class="menu__item" href="#">
                 <div class="menu__icon-3"></div>
                 <div class="menu__text">Mua hàng</div>
-            </div>
-            <div class="menu__item">
+            </a>
+            <a class="menu__item" href="customer.html">
                 <div class="menu__icon-4"></div>
                 <div class="menu__text">Danh mục khách hàng</div>
-            </div>
-            <div class="menu__item">
+            </a>
+            <a class="menu__item" href="#">
                 <div class="menu__icon-5"></div>
                 <div class="menu__text">Thiết lập hệ thống</div>
-            </div>
+            </a>
         </div>
     </div>
     <div class="header">
@@ -232,6 +232,7 @@
             </div>
         </div>
     </div>
+    <!--customer-dialog-->
     <div class="customer-dialog">
         <div class="title">THÔNG TIN KHÁCH HÀNG</div>
         <div class="container">
@@ -314,12 +315,9 @@
                 </div>
             </div>
            
-            <div class="row" style="background-color: #e9ebee;height: 56px;border-radius: 5px; margin-top:18px;">
-                <span class="status"><Button id="unset">Hủy</Button></span>
-                <span>
-                    <input type="submit" name="save" value="Lưu" class="btn btn-success save" />
-                </span>
-                <span> <input type="submit" name="save-add" value="Lưu và thêm mới" class="btn btn-success save-add" /></span>
+            <div class="row dialog-footer" style="background-color: #e9ebee;height: 56px;border-radius: 5px; margin-top:18px;">
+                <button id="btnCancel" class="m-btn  m-btn-cancel">Hủy</button>
+                <button id="btnSave" class="m-btn"><i class="far fa-save"></i>&nbsp Lưu</button>
             </div>
             
         </div>

@@ -1,2 +1,8 @@
-﻿body {
+﻿input#searchBox {
+    height: 40px;
+    width: 210px;
+    padding-left: 35px;
+    border-radius: 4px;
+    border: 2px solid #e5e5e5;
+    outline-color: #019160;
 }

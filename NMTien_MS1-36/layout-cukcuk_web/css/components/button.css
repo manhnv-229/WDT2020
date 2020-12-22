@@ -1,2 +1,45 @@
-﻿body {
+﻿.m-btn {
+    display: flex;
+    align-items: center;
+    background-color: #019160;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 13px;
+    color: #ffffff;
+    font-family: GoogleSans-Regular;
+    padding-left: 16px;
+    padding-right: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    min-width: 100px;
+    justify-content: center;
+}
+
+/*refresh*/
+.m-btn-refresh {
+    border-radius: 4px;
+    height: 40px;
+    border: 1px solid #c4c4c4;
+    padding: 0 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+}
+
+.m-btn-refresh-icon {
+    height: 40px;
+    background-image: url('../../content/icon/refresh.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*btn-cancel*/
+.m-btn-cancel {
+    color: #000000;
+    background-color: transparent;
+}
+
+.m-btn-cancel:hover, .m-btn-cancel:focus {
+    background-color: #BBBBBB;
 }
