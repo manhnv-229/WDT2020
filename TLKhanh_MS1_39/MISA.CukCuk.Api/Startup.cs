@@ -6,6 +6,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MISA.BL;
+using MISA.BL.Intefaces;
+using MISA.DL;
+using MISA.DL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +35,10 @@ namespace MISA.CukCuk.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MISA.CukCuk.Api", Version = "v1" });
             });
+            services.AddScoped<ICustomerDL, CustomerDL>();
+            services.AddScoped<ICustomerBL, CustomerBL>();
+            services.AddScoped<ICustomerGroupDL, CustomerGroupDL>();
+            services.AddScoped<ICustomerGroupBL, CustomerGroupBL>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

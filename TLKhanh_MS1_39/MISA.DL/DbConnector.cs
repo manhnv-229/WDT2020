@@ -6,12 +6,12 @@ using System.Data;
 using MySql.Data.MySqlClient;
 using Dapper;
 
-namespace MISA.CukCuk.Api
+namespace MISA.DL
 {
-    public class DbConnector
+    public class DbConnector 
     {
-        string connectionString = "User Id=nvmanh;Host=103.124.92.43;port=3306;password=12345678;database=MS1_39_Khanh_CukCuk;Character Set=utf8";
-        IDbConnection dbConnection;
+        protected string connectionString = "User Id=nvmanh;Host=103.124.92.43;port=3306;password=12345678;database=MS1_39_Khanh_CukCuk;Character Set=utf8";
+        protected IDbConnection dbConnection;
         public DbConnector()
         {
             dbConnection = new MySqlConnection(connectionString);
