@@ -4,8 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+using System.Data;
+using MySql.Data.MySqlClient;
+using Dapper;
 
 namespace MISA.CukCuk.Api.Controllers
 {
@@ -13,37 +14,44 @@ namespace MISA.CukCuk.Api.Controllers
     [ApiController]
     public class CustomersController : ControllerBase
     {
+        DbConnector dbConnector;
+        public CustomersController()
+        {
+            dbConnector = new DbConnector();
+        }
         // GET: api/<CustomersController>
         [HttpGet]
-        public Customer Get()
+        public IActionResult Get()
         {
-            Customer customer = new Customer();
-            return customer;
+            return Ok(dbConnector.GetAllData<Customer>());
         }
 
         // GET api/<CustomersController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult Get(string id)
         {
-            return "value";
+            return Ok(dbConnector.GetById<Customer>(id));
         }
 
         // POST api/<CustomersController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody] Customer customer)
         {
+            return CreatedAtAction("POST",dbConnector.Insert<Customer>(customer));
         }
 
         // PUT api/<CustomersController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult Put(string id, [FromBody] Customer customer)
         {
+            return Ok(dbConnector.UpdateById<Customer>(id, customer));
         }
 
         // DELETE api/<CustomersController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(string id)
         {
+            return Ok(dbConnector.DeleteById<Customer>(id));
         }
     }
 }
