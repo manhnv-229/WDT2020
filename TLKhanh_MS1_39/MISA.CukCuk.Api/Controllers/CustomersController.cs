@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MISA.CukCuk.Api.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +6,9 @@ using System.Threading.Tasks;
 using System.Data;
 using MySql.Data.MySqlClient;
 using Dapper;
+using MISA.BL;
+using MISA.Common;
+using MISA.BL.Intefaces;
 
 namespace MISA.CukCuk.Api.Controllers
 {
@@ -14,44 +16,77 @@ namespace MISA.CukCuk.Api.Controllers
     [ApiController]
     public class CustomersController : ControllerBase
     {
-        DbConnector dbConnector;
-        public CustomersController()
+        ICustomerBL _customerBL;
+        public CustomersController(ICustomerBL customerBL)
         {
-            dbConnector = new DbConnector();
+            _customerBL = customerBL;
         }
         // GET: api/<CustomersController>
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(dbConnector.GetAllData<Customer>());
+            return Ok(_customerBL.GetAllCustomer<Customer>());
         }
 
         // GET api/<CustomersController>/5
         [HttpGet("{id}")]
         public IActionResult Get(string id)
         {
-            return Ok(dbConnector.GetById<Customer>(id));
+            var customer = _customerBL.GetCustomerById<Customer>(id);
+            if(customer == null)
+            {
+                return BadRequest("Khách hàng không tồn tại!");
+            }
+            else
+            {
+                return Ok(customer);
+            }
         }
 
         // POST api/<CustomersController>
         [HttpPost]
         public IActionResult Post([FromBody] Customer customer)
         {
-            return CreatedAtAction("POST",dbConnector.Insert<Customer>(customer));
+            var affectedRows = _customerBL.InsertCustomer(customer);
+            if(affectedRows == -1)
+            {
+                return BadRequest("Khách hàng này đã tồn tại!");
+            }
+            if(affectedRows == -2)
+            {
+                return BadRequest("Số điện thoại đã tồn tại!");
+            }
+            return Ok(affectedRows);
         }
 
         // PUT api/<CustomersController>/5
         [HttpPut("{id}")]
         public IActionResult Put(string id, [FromBody] Customer customer)
         {
-            return Ok(dbConnector.UpdateById<Customer>(id, customer));
+            var affectedRows = _customerBL.UpdateCustomer(id, customer);
+            if(affectedRows == 0)
+            {
+                return BadRequest("Khách hàng không tồn tại!");
+            }
+            else
+            {
+                return Ok("Cập nhật thông tin khách hàng thành công.");
+            }
         }
 
-        // DELETE api/<CustomersController>/5
+        //// DELETE api/<CustomersController>/5
         [HttpDelete("{id}")]
         public IActionResult Delete(string id)
         {
-            return Ok(dbConnector.DeleteById<Customer>(id));
+            var affectedRows = _customerBL.DeleteCustomer(id);
+            if (affectedRows == 0)
+            {
+                return BadRequest("Khách hàng không tồn tại!");
+            }
+            else
+            {
+                return Ok("Xóa khách hàng thành công.");
+            }
         }
     }
 }

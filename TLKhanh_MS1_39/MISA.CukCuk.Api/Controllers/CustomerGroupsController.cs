@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MISA.CukCuk.Api.Models;
+using MISA.BL.Intefaces;
+using MISA.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,44 +13,76 @@ namespace MISA.CukCuk.Api.Controllers
     [ApiController]
     public class CustomerGroupsController : ControllerBase
     {
-        DbConnector dbConnector;
-        public CustomerGroupsController()
+        ICustomerGroupBL _customerGroupBL;
+        public CustomerGroupsController(ICustomerGroupBL customerGroupBL)
         {
-            dbConnector = new DbConnector();
+            _customerGroupBL = customerGroupBL;
         }
         // GET: api/<CustomerGroupsController>
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(dbConnector.GetAllData<CustomerGroup>());
+            return Ok(_customerGroupBL.GetAllCustomerGroup<CustomerGroup>());
         }
 
         // GET api/<CustomerGroupsController>/5
         [HttpGet("{id}")]
         public IActionResult Get(string id)
         {
-            return Ok(dbConnector.GetById<CustomerGroup>(id));
+            var customerGroup = _customerGroupBL.GetCustomerGroupById<CustomerGroup>(id);
+            if(customerGroup == null)
+            {
+                return BadRequest("Nhóm khách hàng không tồn tại!");
+            }
+            else
+            {
+                return Ok(customerGroup);
+            }
         }
 
         // POST api/<CustomerGroupsController>
         [HttpPost]
         public IActionResult Post([FromBody] CustomerGroup customerGroup)
         {
-            return CreatedAtAction("POST", dbConnector.Insert<CustomerGroup>(customerGroup));
+            var affectedRows = _customerGroupBL.InsertCustomerGroup(customerGroup);
+            if (affectedRows == 0)
+            {
+                return BadRequest("Thêm thất bại!");
+            }
+            else
+            {
+                return Ok("Thêm thành công.");
+            }
         }
 
         // PUT api/<CustomerGroupsController>/5
         [HttpPut("{id}")]
         public IActionResult Put(string id, [FromBody] CustomerGroup customerGroup)
         {
-            return Ok(dbConnector.UpdateById<CustomerGroup>(id, customerGroup));
+            var affectedRows = _customerGroupBL.UpdateCustomerGroup(id, customerGroup);
+            if (affectedRows == 0)
+            {
+                return BadRequest("Sửa thất bại, Nhóm khách hàng không tồn tại!");
+            }
+            else
+            {
+                return Ok("Sửa thành công.");
+            }
         }
 
         // DELETE api/<CustomerGroupsController>/5
         [HttpDelete("{id}")]
         public IActionResult Delete(string id)
         {
-            return Ok(dbConnector.DeleteById<CustomerGroup>(id));
+            var affectedRows = _customerGroupBL.DeleteCustomerGroup(id);
+            if (affectedRows == 0)
+            {
+                return BadRequest("Xóa thất bại, Nhóm khách hàng không tồn tại!");
+            }
+            else
+            {
+                return Ok("Xóa thành công.");
+            }
         }
     }
 }
