@@ -2,15 +2,16 @@
 .m-btn {
     height: 40px;
     padding: 0 24px;
-    background-color: var(--default-color);
     display: flex;
     align-items: center;
     border-radius: 4px;
-    color: #ffffff;
     cursor: pointer;
 }
-
-    .m-btn:hover {
+.m-btn-primary {
+    background-color: var(--default-color);
+    color: #ffffff;
+}
+    .m-btn-primary:hover {
         background-color: var(--hover-color);
         transition: all ease 0.5s;
     }
@@ -32,18 +33,20 @@
     }
 /* btn secondary*/
 .m-btn-secondary {
-    padding: 0 24px;
-    height: 40px;
     border: 1px solid var(--border-color);
     background-color: var(--secondary-color);
-    display: flex;
-    align-items: center;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
     .m-btn-secondary:hover {
         border: 1px solid var(--secondary-hover-color);
         background-color: var(--secondary-hover-color);
+        transition: all ease 0.5s;
+    }
+.m-btn-danger {
+    background: var(--delete-color);
+    color: white;
+}
+    .m-btn-danger:hover {
+        background-color: #fc8080;
         transition: all ease 0.5s;
     }

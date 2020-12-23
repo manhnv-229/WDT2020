@@ -9,6 +9,7 @@ using Dapper;
 using MISA.BL;
 using MISA.Common;
 using MISA.BL.Intefaces;
+using Microsoft.AspNetCore.Cors;
 
 namespace MISA.CukCuk.Api.Controllers
 {

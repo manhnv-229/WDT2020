@@ -3,12 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <title>Misa CukCuk - Phần mềm quản lý nhà hàng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link href="../lib/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
     <link href="/css/common/main.css" rel="stylesheet" />
     <link href="/css/page/customer.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="/content/icon/favicon.ico" />
 </head>
 <body>
+    <div id="toat">
+
+    </div>
     <div class="menu">
         <div class="logo">
             <div class="icon-bar"></div>
@@ -80,7 +84,6 @@
                             <th>Số Điện thoại</th>
                             <th>Email</th>
                             <th>Nhóm khách hàng</th>
-                            <th>Số Tiền Nợ</th>
                             <th>Tên Công Ty</th>
                         </tr>
                     </thead>
@@ -105,105 +108,104 @@
         </div>
     </div>
     <div class="customer-dialog" title="Thêm khách hàng">
-        <div class="dialog-content">
-            <div class="dialog-short-info">
-                <div class="dialog-img-wrapper">
-                    <div class="dialog-img"></div>
-                    <p class="dialog-img-detail">Vui lòng chọn ảnh có định dạng .jpg, .jpeg, .png, .gif.</p>
-                </div>
-                <div>
-                    <div class="dialog-flex-item">
-                        <div class="dialog-short-field">
-                            <label for="CustomerCode" class="m-input-label">Mã khách hàng (<span class="require-field">*</span>)</label>
-                            <input id="CustomerCode" name="CustomerCode" class="dialog-input m-input" type="text" />
-                        </div>
-                        <div class="dialog-short-field">
-                            <label for="FullName" class="m-input-label">Họ và tên (<span class="require-field">*</span>)</label>
-                            <input id="FullName" name="FullName" class="dialog-input m-input" type="text" />
-                        </div>
+        <form>
+            <div class="dialog-content">
+                <div class="dialog-short-info">
+                    <div class="dialog-img-wrapper">
+                        <div class="dialog-img"></div>
+                        <p class="dialog-img-detail">Vui lòng chọn ảnh có định dạng .jpg, .jpeg, .png, .gif.</p>
                     </div>
-                    <div class="dialog-flex-item">
-                        <div class="dialog-short-field">
-                            <label for="MemberCardCode" class="m-input-label">Mã thẻ thành viên</label>
-                            <input id="MemberCardCode" name="MemberCardCode" class="dialog-input m-input" type="text" />
+                    <div>
+                        <div class="dialog-flex-item">
+                            <div class="dialog-short-field">
+                                <label for="CustomerCode" class="m-input-label">Mã khách hàng (<span class="require-field">*</span>)</label>
+                                <input id="CustomerCode" name="CustomerCode" class="dialog-input m-input" type="text" />
+                            </div>
+                            <div class="dialog-short-field">
+                                <label for="FullName" class="m-input-label">Họ và tên (<span class="require-field">*</span>)</label>
+                                <input id="FullName" name="FullName" class="dialog-input m-input" type="text" />
+                            </div>
                         </div>
-                        <div class="dialog-short-field">
-                            <label for="CustomerGroupName" class="m-input-label">Nhóm khách hàng</label>
-                            <select id="CustomerGroupName" name="CustomerGroupName" class="dialog-input m-select">
-                                <option value="1">Khách VIP</option>
-                                <option value="2">Khách Vãng Lai</option>
-                                <option value="3">Nhóm Khách Hàng MISA</option>
-                            </select>
+                        <div class="dialog-flex-item">
+                            <div class="dialog-short-field">
+                                <label for="MemberCardCode" class="m-input-label">Mã thẻ thành viên</label>
+                                <input id="MemberCardCode" name="MemberCardCode" class="dialog-input m-input" type="text" />
+                            </div>
+                            <div class="dialog-short-field">
+                                <label for="CustomerGroupName" class="m-input-label">Nhóm khách hàng</label>
+                                <select id="CustomerGroupId" name="CustomerGroupId" class="dialog-input m-select">
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="dialog-flex-item">
-                        <div class="dialog-short-field">
-                            <label for="DateOfBirth" class="m-input-label">Ngày sinh</label>
-                            <input id="DateOfBirth" name="DateOfBirth" class="dialog-input m-input" type="date" />
-                        </div>
-                        <div class="dialog-short-field">
-                            <label class="m-input-label">Giới tính</label>
-                            <div class="m-radio">
+                        <div class="dialog-flex-item">
+                            <div class="dialog-short-field">
+                                <label for="DateOfBirth" class="m-input-label">Ngày sinh</label>
+                                <input id="DateOfBirth" name="DateOfBirth" class="dialog-input m-input" type="date" />
+                            </div>
+                            <div class="dialog-short-field">
+                                <label class="m-input-label">Giới tính</label>
+                                <div class="m-radio">
 
-                                <label class="radio-label" for="male">
-                                    <input id="male" type="radio" name="Gender" value="1" checked="checked" />
-                                    <span>Nam</span>
-                                    <span class="radio-icon"></span>
-                                </label>
+                                    <label class="radio-label" for="male">
+                                        <input id="male" type="radio" name="Gender" value="1" checked="checked" />
+                                        <span>Nam</span>
+                                        <span class="radio-icon"></span>
+                                    </label>
 
-                                <label class="radio-label" for="female">
-                                    <input id="female" type="radio" name="Gender" value="0" />
-                                    <span>Nữ</span>
-                                    <span class="radio-icon"></span>
-                                </label>
+                                    <label class="radio-label" for="female">
+                                        <input id="female" type="radio" name="Gender" value="0" />
+                                        <span>Nữ</span>
+                                        <span class="radio-icon"></span>
+                                    </label>
 
-                                <label class="radio-label" for="another">
-                                    <input id="another" type="radio" name="Gender" value="2" />
-                                    <span>Khác</span>
-                                    <span class="radio-icon"></span>
-                                </label>
+                                    <label class="radio-label" for="another">
+                                        <input id="another" type="radio" name="Gender" value="2" />
+                                        <span>Khác</span>
+                                        <span class="radio-icon"></span>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="dialog-long-info">
+                    <div class="dialog-flex-item">
+                        <div class="dialog-long-field">
+                            <label class="m-input-label">Email</label>
+                            <input id="Email" name="Email" class="dialog-input m-input" type="text" />
+                        </div>
+                        <div class="dialog-short-field">
+                            <label class="m-input-label">Số điện thoại (<span class="require-field">*</span>)</label>
+                            <input id="PhoneNumber" name="PhoneNumber" class="dialog-input m-input" type="text" />
+                        </div>
+                    </div>
+                    <div class="dialog-flex-item">
+                        <div class="dialog-long-field">
+                            <label class="m-input-label">Tên công ty</label>
+                            <input id="CompanyName" name="CompanyName" class="dialog-input m-input" type="text" />
+                        </div>
+                        <div class="dialog-short-field">
+                            <label class="m-input-label">Mã số thuế</label>
+                            <input id="CompanyTaxCode" name="CompanyTaxCode" class="dialog-input m-input" type="text" />
+                        </div>
+                    </div>
+                    <div class="dialog-flex-item">
+                        <div class="dialog-long-field">
+                            <label class="m-input-label">Địa chỉ</label>
+                            <input id="Address" name="Address" class="dialog-input m-input" type="text" />
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="dialog-long-info">
-                <div class="dialog-flex-item">
-                    <div class="dialog-long-field">
-                        <label class="m-input-label">Email</label>
-                        <input class="dialog-input m-input" type="text" />
-                    </div>
-                    <div class="dialog-short-field">
-                        <label class="m-input-label">Số điện thoại (<span class="require-field">*</span>)</label>
-                        <input class="dialog-input m-input" type="text" />
-                    </div>
-                </div>
-                <div class="dialog-flex-item">
-                    <div class="dialog-long-field">
-                        <label class="m-input-label">Tên công ty</label>
-                        <input class="dialog-input m-input" type="text" />
-                    </div>
-                    <div class="dialog-short-field">
-                        <label class="m-input-label">Mã số thuế</label>
-                        <input class="dialog-input m-input" type="text" />
-                    </div>
-                </div>
-                <div class="dialog-flex-item">
-                    <div class="dialog-long-field">
-                        <label class="m-input-label">Địa chỉ</label>
-                        <input class="dialog-input m-input" type="text" />
-                    </div>
-                </div>
-            </div>
-        </div>
+        </form>
         <div class="dialog-footer">
-            <div id="btn-cancel" class="m-btn-secondary">Hủy</div>
-            <div id="btn-save" class="m-btn">Lưu</div>
+           
         </div>
 
     </div>
     <script src="/lib/jquery/jquery.js"></script>
     <script src="../lib/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="../js/common/toat.js"></script>
     <script src="/js/page/customer.js"></script>
 </body>
 </html>

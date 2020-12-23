@@ -1,0 +1,77 @@
+﻿
+#toat {
+    position: fixed;
+    top: 24px;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 999;
+}
+
+.toat {
+    height: 48px;
+    max-width: 400px;
+    min-width: 300px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    transition: all linear 0.3s;
+}
+
+.toat__icon, .toat__close {
+    font-size: 24px;
+    padding: 0 16px;
+}
+
+.toat__close {
+    cursor: pointer;
+}
+
+.toat + .toat {
+    margin-top: 16px;
+}
+
+.toat__body {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.toat--info .toat__icon,
+.toat--info .toat__close {
+    color: var(--info-color);
+}
+.toat--success .toat__icon,
+.toat--success .toat__close {
+    color: var(--success-color);
+}
+
+.toat--warning .toat__icon,
+.toat--warning .toat__close {
+    color: var(--warning-color);
+}
+
+.toat--danger .toat__icon,
+.toat--danger .toat__close {
+    color: var(--danger-color);
+}
+
+@keyframes topDown {
+    from {
+        transform: translateY(calc(-100% + -30px));
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

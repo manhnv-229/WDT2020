@@ -8,4 +8,9 @@
     --border-color: #bbbbbb;
     --table-cell-color: #e9ebee61;
     --table-cell-hover-color: #E9EBEE;
+    --danger-color: #FFCECE;
+    --warning-color: #FFE7AF;
+    --info-color: #D8EAFF;
+    --success-color: #BAFFE7;
+    --delete-color: #F65454;
 }

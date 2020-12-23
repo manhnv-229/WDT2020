@@ -11,6 +11,7 @@ namespace MISA.Common
         public string FullName { get; set; }
         public string MemberCardCode { get; set; }
         public Guid CustomerGroupId { get; set; }
+        public string CustomerGroupName { get; set; }
         public DateTime DateOfBirth { get; set; }
         public int? Gender { get; set; }
         public string Email { get; set; }
