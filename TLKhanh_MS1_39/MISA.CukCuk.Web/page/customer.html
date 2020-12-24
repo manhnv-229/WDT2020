@@ -31,10 +31,16 @@
                 <div class="menu__icon menu__icon--purcharse"></div>
                 <div class="menu__text">Mua hàng</div>
             </div>
-            <div class="menu__item">
-                <div class="menu__icon menu__icon--customer"></div>
-                <div class="menu__text">Danh mục khách hàng</div>
-            </div>
+            <a class="menu__link menu__link--active" href="/page/customer.html">
+
+                <div class="menu__item">
+                    <div class="menu__icon menu__icon--customer"></div>
+                    <div class="menu__text">
+                        Danh mục khách hàng
+                    </div>
+                </div>
+            </a>
+
             <div class="menu__item">
                 <div class="menu__icon menu__icon--setting"></div>
                 <div class="menu__text">Thiết lập hệ thống</div>
@@ -66,7 +72,7 @@
                     <div class="input-search-icon"></div>
                     <input class="input-search" placeholder="Tìm kiếm theo Mã, Tên Khác" />
                 </div>
-                <div class="content__filter-refresh m-btn-secondary">
+                <div class="content__filter-refresh m-btn m-btn-secondary">
                     <div class="content__filter-refresh-icon"></div>
                 </div>
             </div>
@@ -93,17 +99,11 @@
             </div>
             <!-- paginate bar -->
             <div class="content__paginate-bar">
-                <div class="count-customer">Hiển thị 1-10/1000 Khách hàng</div>
+                <div class="count-customer"></div>
                 <div class="paginate">
-                    <div class="page-control first-page"></div>
-                    <div class="page-control prev-page"></div>
-                    <div class="page page-active">1</div>
-                    <div class="page">2</div>
-                    <div class="page">3</div>
-                    <div class="page-control next-page"></div>
-                    <div class="page-control last-page"></div>
+                    
                 </div>
-                <div class="total-page">10 Khách hàng/Trang</div>
+                <div class="total-page"></div>
             </div>
         </div>
     </div>
@@ -199,7 +199,7 @@
             </div>
         </form>
         <div class="dialog-footer">
-           
+
         </div>
 
     </div>

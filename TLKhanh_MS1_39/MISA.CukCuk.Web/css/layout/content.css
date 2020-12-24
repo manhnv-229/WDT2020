@@ -47,12 +47,14 @@
         }
 
     /* paginate */
+
     .content .content__bottom .content__paginate-bar {
         margin-top: 10px;
-        height: 56px;
+        height: var(--paginate-height);
+        min-height: 0;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         border-top: 2px solid var(--border-color);
     }
         .content .content__bottom .content__paginate-bar .paginate {

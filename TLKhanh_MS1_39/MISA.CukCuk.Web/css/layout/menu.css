@@ -77,3 +77,13 @@
             .menu .menu__content .menu__item .menu__text {
                 margin-left: 10px;
             }
+
+.menu__link  {
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+.menu__link--active {
+    color: #fff;
+    background: var(--default-color);
+}

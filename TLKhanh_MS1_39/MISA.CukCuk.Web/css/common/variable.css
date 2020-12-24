@@ -13,4 +13,6 @@
     --info-color: #D8EAFF;
     --success-color: #BAFFE7;
     --delete-color: #F65454;
+    --paginate-height: 56px;
+    --header-height: 48px;
 }
