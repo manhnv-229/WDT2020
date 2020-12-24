@@ -49,6 +49,7 @@ namespace MISA.DL
             {
                 var propertyName = propertie.Name;
                 var propertyValue = propertie.GetValue(entity);
+
                 if(propertyName == "CustomerGroupId")
                 {
                     propertyValue = propertie.GetValue(entity).ToString();
