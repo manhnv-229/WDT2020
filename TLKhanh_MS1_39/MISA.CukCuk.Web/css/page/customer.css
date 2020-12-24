@@ -1,20 +1,25 @@
 ﻿tbody tr td:nth-child(1) {
-    max-width: 100px;
+    min-width: 100px;
+    max-width: 120px;
 }
 
 tbody tr td:nth-child(2) {
+    min-width: 150px;
     max-width: 170px;
 }
 
 tbody tr td:nth-child(3) {
+    min-width: 100px;
     max-width: 120px;
 }
 
 tbody tr td:nth-child(4) {
-    max-width: 170px;
+    min-width: 100px;
+    max-width: 120px;
 }
 
 tbody tr td:nth-child(5) {
+    min-width: 180px;
     max-width: 200px;
 }
 

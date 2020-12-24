@@ -31,11 +31,14 @@
         background-color: var(--hover-color);
         transition: all ease 0.5s;
     }
-/* btn secondary*/
-.m-btn-secondary {
-    border: 1px solid var(--border-color);
-    background-color: var(--secondary-color);
-}
+    .m-btn-icon:active {
+        background-color: var(--primary-color);
+    }
+    /* btn secondary*/
+    .m-btn-secondary {
+        border: 1px solid var(--border-color);
+        background-color: var(--secondary-color);
+    }
 
     .m-btn-secondary:hover {
         border: 1px solid var(--secondary-hover-color);

@@ -1,25 +1,39 @@
-﻿var dialog = $(".customer-dialog").dialog({
+﻿
+var dialog = $(".customer-dialog").dialog({
     autoOpen: false,
     width: 700,
     modal: true,
 });
+
+var currentPage = 1;
+var totalPages;
+var limit = 10;
 
 $(document).ready(function () {
     loadData();
     initEvens();
     addOrUpdateCustomer();
     deleteCustomer();
+    loadPaginate();
     
 })
+
+
 /**
  * Thực hiện load dữ liệu
  * Author Tạ Long Khánh (8/12/2020)
  * */
-function loadData() {
+function loadData(first) {
     $.ajax({
         url: 'http://localhost:57488/api/v1/Customers',
         method: 'GET',
     }).done(function (response) {
+        
+        if (first) {
+            response = response.slice(0, limit);
+        } else {
+            response = response.slice((currentPage - 1) * limit, currentPage * limit);
+        }
         $('tbody').empty();
         for (var customer of response) {
             var trHtml = `
@@ -56,6 +70,83 @@ function loadData() {
     });
 }
 /**
+ * Thực hiện load Phân trang
+ * Author Tạ Long Khánh (24/12/2020)
+ * */
+function loadPaginate() {
+    $.ajax({
+        url: 'http://localhost:57488/api/v1/Customers',
+        method: 'GET',
+    }).done(function (response) {
+        // paginate
+        totalRows = response.length;
+        $('.paginate').empty();
+
+        totalPages = Math.ceil(totalRows / limit);
+
+        var start = 1;
+        var page = currentPage;
+        var end = totalPages;
+        if (page > 2) {
+            start = page - 2;
+        }
+        if (page > 0 && page < totalPages - 2) {
+            end = page + 2;
+        }
+        if (totalPages < 2) {
+            $('.content__paginate-bar').remove();
+            $('.table').height(540);
+        }
+        if (totalPages > 2) {
+            var paginateHtml = `
+                         <div onclick="firstPageClick()" class="page-control first-page"></div>
+                         <div onclick="prevPageClick()" class="page-control prev-page"></div>
+                        `;
+        }
+        else {
+            var paginateHtml = '';
+        }
+
+        for (var i = start; i <= end; i++) {
+            if (i == currentPage) {
+                paginateHtml += `
+                    <div onclick="pageClick(${i})" class="page page-active">${i}</div>
+                    `;
+            }
+            else {
+                paginateHtml += `
+                    <div onclick="pageClick(${i})" class="page">${i}</div>
+                    `;
+            }
+
+        }
+        if (totalPages > 2) {
+            paginateHtml += `
+                        <div onclick="nextPageClick()" class="page-control next-page"></div>
+                        <div onclick="lastPageClick()" class="page-control last-page"></div>
+                        `;
+        }
+        
+        $('.paginate').append(paginateHtml)
+
+        // count
+        $('.count-customer').empty();
+        var start = (currentPage - 1) * limit;
+        var end = currentPage * limit;
+        if (end > response.length) {
+            end = response.length;
+        }
+        var html = `Hiển thị ${start}-${end}/${response.length} Khách hàng`;
+        $('.count-customer').append(html);
+        // total
+        $('.total-page').empty();
+        var html = `${limit} Khách hàng/Trang`;
+        $('.total-page').append(html);
+    }).fail(function (response) {
+    });
+    
+}
+/**
  * Thực hiện format ngày sinh
  * Author Tạ Long Khánh (8/12/2020)
  * @param {string} date
@@ -67,6 +158,11 @@ function formatDate(date) {
     var year = date.getFullYear();
     return `${day}/${month}/${year}`
 }
+/**
+ * Thực hiện format gioi tinh
+ * Author Tạ Long Khánh (23/12/2020)
+ * @param {int} gender
+ */
 function formatGender(gender) {
     var gender = parseInt(gender);
     var genderName = gender == 0 ? "Nữ" : (gender == 1 ? "Nam" : "Khác");
@@ -141,7 +237,8 @@ function addOrUpdateCustomer() {
                 data: JSON.stringify(customer)
             }).done(function (response) {
                 dialog.dialog("close");
-                loadData();
+                loadData(true);
+                loadPaginate();
                 toat({
                     message: "Thêm khách hàng thành công.",
                     type: 'success',
@@ -195,7 +292,8 @@ function deleteCustomer() {
             url: `http://localhost:57488/api/v1/Customers/${id}`,
             type: "delete",
         }).done(function (response) {
-            loadData();
+            loadData(true);
+            loadPaginate();
             dialog.dialog("close");
             toat({
                 message: "Xóa khách hàng thành công.",
@@ -255,4 +353,117 @@ function showCustomerInfo(customerId) {
 
     });
     
+}
+
+/**
+ * Thay đổi nội dung khách hàng theo trang
+ * Author Tạ Long Khánh (24/12/2020)
+ * @param {int} page
+ */
+function pageClick(page) {
+    if (page == currentPage) {
+        return;
+    }
+    else {
+        loadPaginate();
+        currentPage = page;
+        $('.paginate').on('click', '.page', function () {
+            var pages = $('.page');
+            pages.removeClass('page-active');
+            $(this).addClass('page-active')
+        })
+
+        $.ajax({
+            url: 'http://localhost:57488/api/v1/Customers',
+            method: 'GET',
+        }).done(function (response) {
+            $('tbody').empty();
+            response = response.slice((currentPage - 1) * limit, limit * currentPage);
+
+            for (var customer of response) {
+                var trHtml = `
+                        <tr class="cell-content" data-id='${customer.customerId}'>
+                            <td>${customer.customerCode}</td>
+                            <td>${customer.fullName}</td>
+                            <td>${formatGender(customer.gender)}</td>
+                            <td>${formatDate(customer.dateOfBirth)}</td>
+                            <td>${customer.address}</td>
+                            <td>${customer.phoneNumber}</td>
+                            <td>${customer.email}</td>
+                            <td>${customer.customerGroupName}</td>
+                            <td>${customer.companyName || ''}</td>
+                        </tr>`;
+                $('tbody').append(trHtml);
+            }
+        }).fail(function (response) {
+
+        });
+    }
+    
+}
+/**
+ * Xử lý logic khi nút next click
+ * Author Tạ Long Khánh (24/12/2020)
+ * */
+function nextPageClick() {
+    var page = currentPage + 1;
+    if (page > totalPages) {
+        page = totalPages;
+    }
+    if (currentPage == totalPages) {
+        return;
+    }
+    else {
+        $('.paginate').one('click', '.next-page', function () {
+            var next = $('.page-active').next();
+            var pages = $('.page');
+            pages.removeClass('page-active');
+            next.addClass('page-active');
+        })
+        pageClick(page);
+    }
+}
+/**
+ * Xử lý logic khi nút last click
+ * Author Tạ Long Khánh (24/12/2020)
+ * */
+function lastPageClick() {
+    pageClick(totalPages);
+    var pages = $('.page');
+    pages.removeClass('page-active');
+    $('.page').last().addClass('page-active')
+
+}
+/**
+ * Xử lý logic khi nút prev click
+ * Author Tạ Long Khánh (24/12/2020)
+ * */
+function prevPageClick() {
+    var page = currentPage - 1;
+    if (page < 1) {
+        page = 1;
+    }
+    if (currentPage == 1) {
+        return;
+    }
+    else {
+        $('.paginate').one('click', '.prev-page', function () {
+            var prev = $('.page-active').prev();
+            var pages = $('.page');
+            pages.removeClass('page-active');
+            prev.addClass('page-active');
+        })
+        pageClick(page);
+    }
+}
+/**
+ * Xử lý logic khi nút first click
+ * Author Tạ Long Khánh (24/12/2020)
+ * */
+function firstPageClick() {
+    pageClick(1);
+    var pages = $('.page');
+    pages.removeClass('page-active');
+    $('.page').first().addClass('page-active')
+
 }
