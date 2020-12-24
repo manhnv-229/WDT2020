@@ -88,11 +88,15 @@ namespace MISA.DL
             {
                 var propertyName = propertie.Name;
                 var propertyValue = propertie.GetValue(entity);
-                if (propertyName == "CustomerGroupId")
+                var propertyType = propertie.PropertyType;
+                if (propertyType == typeof(Guid) || propertyType == typeof(Guid?))
                 {
-                    propertyValue = propertie.GetValue(entity).ToString();
+                    dynamicParameters.Add($"@{propertyName}", propertyValue, DbType.String);
                 }
-                dynamicParameters.Add($"@{propertyName}", propertyValue);
+                else
+                {
+                    dynamicParameters.Add($"@{propertyName}", propertyValue);
+                }
             }
             dynamicParameters.Add($"@{tableName}Id", id);
 
