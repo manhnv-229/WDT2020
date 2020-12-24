@@ -8,6 +8,7 @@ var dialog = $(".customer-dialog").dialog({
 var currentPage = 1;
 var totalPages;
 var limit = 10;
+var data;
 
 $(document).ready(function () {
     loadData();
@@ -15,7 +16,7 @@ $(document).ready(function () {
     addOrUpdateCustomer();
     deleteCustomer();
     loadPaginate();
-    
+    sorting()
 })
 
 
@@ -28,8 +29,9 @@ function loadData(first) {
         url: 'http://localhost:57488/api/v1/Customers',
         method: 'GET',
     }).done(function (response) {
-        
+        data = response;
         if (first) {
+            currentPage = 1;
             response = response.slice(0, limit);
         } else {
             response = response.slice((currentPage - 1) * limit, currentPage * limit);
@@ -237,6 +239,7 @@ function addOrUpdateCustomer() {
                 data: JSON.stringify(customer)
             }).done(function (response) {
                 dialog.dialog("close");
+                currentPage = 1;
                 loadData(true);
                 loadPaginate();
                 toat({
@@ -466,4 +469,24 @@ function firstPageClick() {
     pages.removeClass('page-active');
     $('.page').first().addClass('page-active')
 
+}
+
+
+function sorting() {
+    $('th').on('click', function () {
+        var column = $(this).data('column');
+        var order = $(this).data('order');
+        if (order == 'desc') {
+            $(this).data('order', 'asc');
+            data = data.sort((a, b) => a[column] < b[column] ? 1 : -1);
+            
+        }
+        else {
+            $(this).data('order', 'desc');
+            data = data.sort((a, b) => a[column] > b[column] ? 1 : -1);
+        }
+        $('th span').removeAttr('class').addClass('sorting');
+        $(this).children().removeAttr(`class`)
+        $(this).children().addClass(`sorting-${order}`)
+    })
 }
