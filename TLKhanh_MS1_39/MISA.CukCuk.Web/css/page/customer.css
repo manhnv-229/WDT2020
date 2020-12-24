@@ -1,6 +1,6 @@
 ﻿tbody tr td:nth-child(1) {
-    min-width: 100px;
-    max-width: 120px;
+    min-width: 120px;
+    max-width: 140px;
 }
 
 tbody tr td:nth-child(2) {
@@ -97,3 +97,67 @@ tbody tr td:nth-child(5) {
     border: none;
     background: var(--secondary-hover-color);
 }
+
+/* table heading icon sorting*/
+
+th span {
+    position: relative;
+}
+    th span.sorting:hover:before {
+        border-color: var(--grey-color);
+        border-style: solid;
+        border-left-color: transparent;
+        border-top-color: transparent;
+        border-right-color: transparent;
+    }
+    th span.sorting:hover:after {
+        border-color: var(--grey-color);
+        border-style: solid;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+    }
+    th span.sorting:before, th span.sorting-asc:before {
+        content: '';
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        top: 0;
+        border-width: 4px;
+        right: -13px;
+        position: absolute;
+        border-color: var(--border-color);
+        border-style: solid;
+        border-left-color: transparent;
+        border-top-color: transparent;
+        border-right-color: transparent;
+    }
+    th span.sorting-asc:before {
+        border-color: var(--grey-color);
+        border-style: solid;
+        border-left-color: transparent;
+        border-top-color: transparent;
+        border-right-color: transparent;
+    }
+        th span.sorting::after, th span.sorting-desc:after {
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            top: 9px;
+            border-width: 4px;
+            right: -13px;
+            position: absolute;
+            border-color: var(--border-color);
+            border-style: solid;
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+            border-right-color: transparent;
+        }
+    th span.sorting-desc:after {
+        border-color: var(--grey-color);
+        border-style: solid;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+    }
