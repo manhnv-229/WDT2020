@@ -1,7 +1,9 @@
-﻿@import url('layout/menu.css');
+﻿@import url('component/button.css');
+@import url('layout/menu.css');
 @import url('layout/content.css');
 @import url('layout/header.css');
-@import url('component/button.css');
+@import url('layout/dialog.css');
+
 @import url('component/input.css');
 @import url('component/combobox.css');
 @import url('component/table.css');

@@ -13,3 +13,16 @@ input::placeholder{
 .input__search{
     padding-left: 34px;
 }
+
+input[type=radio] {
+    height: 20px;
+    width: 20px;
+}
+input[type=date] {
+    
+    width: 215px;
+}
+
+input:focus, select:focus {
+    border-color: #019160;
+}

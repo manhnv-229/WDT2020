@@ -2,7 +2,7 @@
     margin-top: 10px;
     margin-left: 20px;
     width:1190px; 
-    height:calc(100vh - 300px); 
+    height:calc(100vh - 250px); 
     overflow:auto;
 }
 
@@ -27,3 +27,32 @@
   .content__table::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
+
+  .grid-customer {
+    height: calc(100vh - 234px);
+}
+
+.el-avatar-customer{
+    width: 180px;
+}
+
+.el-left{
+    width: calc(100% - 180px);
+}
+
+.el-avatar-customer .el-avatar {
+    border: 1px solid #ccc;
+    width: 180px;
+    height: 180px;
+    margin:0 auto;
+    border-radius: 50%;
+    cursor: pointer;
+    background-image: url('/content/img/default-avatar.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.el-avatar-note{
+    font-size: 12px;
+}

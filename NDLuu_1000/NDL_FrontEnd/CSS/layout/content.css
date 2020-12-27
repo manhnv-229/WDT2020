@@ -88,3 +88,57 @@
         background-repeat: no-repeat;
     }
     
+
+    /* Paging Bar*/
+    
+.paging-bar {
+    border-top: 2px solid #bbbbbb;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    width: 95%;
+    margin-left: 15px;
+    border:none;
+    padding: 0 16px;
+}
+    .paging-bar .paging-record-info {
+        position: absolute;
+        left: 16px;
+    }
+
+    .paging-bar .paging-record-option {
+        position: absolute;
+        right: 16px;
+    }
+
+    .paging-bar .paging-option button{
+        outline: none;
+        cursor: pointer;
+    }
+    .paging-bar .paging-option{
+        display: flex;
+    }
+
+
+    .btn-pagenumber{
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background-color: #e9ebee;
+        color: #000000;
+        border: none;
+    }
+    .btn-pagenumber:hover{
+        background-color: #019160;
+        color: #ffffff;
+    }
+    .btn-pagenumber-selected{
+        background-color: #019160;
+        color: #ffffff;
+    }
+
+.m-btn-firstpage {
+    background-image: url('../../Content/icon/btn-firstpage.svg');
+}
