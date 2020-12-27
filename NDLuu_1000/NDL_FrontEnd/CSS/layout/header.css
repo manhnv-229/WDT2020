@@ -21,10 +21,10 @@
         font-size: 14px;
     }
     .header .header__title .title__icon {
-        width: 20px;
-        height: 20px;
+        width: 14px;
+        height: 14px;
         margin-left: 20px;
-        background-image: url('../../Content/icon/option.png');
+        background-image: url('../../Content/icon/expand-button.png');
         background-size: contain;
         background-repeat: no-repeat;
         

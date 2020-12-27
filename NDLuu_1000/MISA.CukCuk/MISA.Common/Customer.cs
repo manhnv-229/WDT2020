@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace MISA.CukCuk.WebAPI.Models
+namespace MISA.Common
 {
     public class Customer
     {
@@ -23,8 +20,5 @@ namespace MISA.CukCuk.WebAPI.Models
 
         public int? Gender { get; set; }
 
-        
-
-        
     }
 }

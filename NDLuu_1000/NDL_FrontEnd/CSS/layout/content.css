@@ -49,47 +49,42 @@
     display: flex;
     align-items: center;
 }
+.search{
+    position: relative;
+}
+.search__search{
+    position: absolute;
+    top: 13px;
+    left:  30px;
+    height: 16px;
+    width: 16px;
+    
+}
 .content .content__search .search .input__search{
     border-radius: 4px;
     height: 40px;
+    font-size: 12px;
     color: #bbbbbb;
     margin-left: 15px;
+    width: 200px;
 }
-    .content .content__search .content__refresh {
-        width: 40px;
+    .content__refresh {
+        width: 50px;
         height: 40px;
         right: 16px;
-        
+        cursor: pointer;
+        position: absolute;
+        border: 2px solid #e5e5e5;
+        border-radius: 3px;
+    }
+    .content__refresh__icon{
+        width: 20px;
+        height: 20px;
+        top: 10px;
+        left: 15px;
         position: absolute;
         background-image: url('../../Content/icon/refresh.png');
         background-size: contain;
         background-repeat: no-repeat;
-        border: 1px solid #e5e5e5;
     }
-    .content .content__table{
-        margin-top: 10px;
-        margin-left: 20px;
-        width:1190px; 
-        height:400px; 
-        overflow:auto;
-    }
-
-    /* scrollbar table */
-    .content .content__table::-webkit-scrollbar {
-        width: 5px;
-      }
-      
-      /* Track */
-      .content .content__table::-webkit-scrollbar-track {
-        background: #f1f1f1; 
-      }
-       
-      /* Handle */
-      .content .content__table::-webkit-scrollbar-thumb {
-        background: #888; 
-      }
-      
-      /* Handle on hover */
-      .content .content__table::-webkit-scrollbar-thumb:hover {
-        background: #555; 
-      }
+    

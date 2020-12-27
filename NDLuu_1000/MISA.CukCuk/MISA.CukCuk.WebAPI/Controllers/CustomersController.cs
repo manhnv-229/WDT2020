@@ -1,6 +1,8 @@
 ﻿using Dapper;
 using Microsoft.AspNetCore.Mvc;
-using MISA.CukCuk.WebAPI.Models;
+using MISA.BL;
+using MISA.Common;
+using MISA.DAO;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -16,7 +18,7 @@ namespace MISA.CukCuk.WebAPI.Controllers
     [ApiController]
     public class CustomersController : ControllerBase
     {
-        DbConnector db;
+       /* DbConnector db;
         public CustomersController()
         {
              db = new DbConnector();
@@ -25,13 +27,21 @@ namespace MISA.CukCuk.WebAPI.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(db.GetAllData<Customer>().ToList());
+            return Ok(db.GetAllData<Customer>());
         }
 
         [HttpGet("{id}")]
         public IActionResult Get(string id)
         {
             return Ok(db.getByID<Customer>(id));
+        }*/
+
+        [HttpPost]
+        public IActionResult Post(Customer customer)
+        {
+            CustomerBL customerBL = new CustomerBL();
+
+            return Ok();
         }
 
     }
