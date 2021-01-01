@@ -12,6 +12,12 @@ input::placeholder{
 }
 .input__search{
     padding-left: 34px;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 12px;
+    color: #bbbbbb;
+    margin-left: 15px;
+    width: 200px;
 }
 
 input[type=radio] {
@@ -22,7 +28,19 @@ input[type=date] {
     
     width: 215px;
 }
-
+select{
+    width: 215px;
+    height: 40px;
+    border-color: #bbbbbb;
+    border-radius: 4px ;
+}
 input:focus, select:focus {
+    
     border-color: #019160;
+}
+input.border-red{
+    border: 1px solid #ff0000;
+}
+select{
+    padding-left:  16px;
 }

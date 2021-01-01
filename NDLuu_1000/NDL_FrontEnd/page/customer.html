@@ -32,7 +32,7 @@
 
             <div class="menu__item">
                 <div class="menu__icon icon__customer"></div>
-                <div class="menu__text"><a href="">Danh Mục Khách Hàng</a> </div>
+                <div class="menu__text"><a href="">Danh Mục Nhân Viên</a> </div>
             </div>
 
             <div class="menu__item">
@@ -75,48 +75,48 @@
                 
                 <input class="input__search" type="text" placeholder="Tìm kiếm theo mã, tên khác">
             </div>
-            <div class="content__refresh">
+            <button id="btnRefresh" class="content__refresh">
                 <div class="content__refresh__icon"></div>
-            </div>
+            </button>
         </div>
         <div class="content__table">
             <table id="myTable">
                 <thead>
                     <tr>
-                        <th>
+                        <th fieldName="CustomerCode">
                             Mã Khách Hàng
                         </th>
-                        <th>
+                        <th fieldName="FullName">
                             Họ và tên
                         </th>
-                        <th>
+                        <th fieldName="GenderName">
                             Giới Tính
                         </th>
-                        <th>
+                        <th fieldName="DateOfBirth" formatType ="ddmmyyyy">
                             Ngày Sinh
                         </th>
-                        <th>
+                        <th fieldName="CustomerGroupName" >
                             Nhóm khách hàng
                         </th>
-                        <th>
+                        <th fieldName="PhoneNumber">
                             Điện thoại
                         </th>
-                        <th>
+                        <th fieldName="Email">
                             Email
                         </th>
-                        <th>
+                        <th fieldName="Address">
                             Địa chỉ
                         </th>
-                        <th>
+                        <th fieldName="DebitAmount" formatType = "MoneyVND">
                             Số Tiền Nợ
                         </th>
-                        <th>
+                        <th fieldName="MemberCardCode">
                             Mã Thẻ Thành Viên
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <!-- <tr>
                         <td>123456</td>
                         <td>Nguyen Van A</td>
                         <td>Nam</td>
@@ -165,7 +165,7 @@
                         <td>0912345678</td>
                         <td>ndl@gmail.com</td>
                         <td>Ha Noi</td>
-                    </tr>
+                    </tr> -->
                 </tbody>
 
 
@@ -197,6 +197,7 @@
     
     <div class="m-dialog dialog-detail" title="Thông tin khách hàng"  style="display: none">
         <!--<div class="dialog-modal"></div>-->
+        <form action="">
         <div class="dialog-content">
             <div class="dialog-body">
                 <div class="m-row  m-flex">
@@ -227,7 +228,7 @@
                             </div>
                             <div class="m-flex-1 mg-left-10px">
                                 <div class="m-label">Nhóm khách hàng</div>
-                                <select id="cbxCustomerGroup" fieldName="CustomerGroupName" fieldValue="CustomerGroupId" api="/api/customergroups" class="m-control">
+                                <select  id="cbxCustomerGroup" fieldName="CustomerGroupName" fieldValue="CustomerGroupId" api="/api/customergroups" class="m-control">
                                     <option value="19165ed7-212e-21c4-0428-030d4265475f">Khách VIP</option>
                                     <option selected class="selected"  value="7a0b757e-41eb-4df6-c6f8-494a84b910f4">Khách thường</option>
                                     <option value="3631011e-4559-4ad8-b0ad-cb989f2177da">Khách vãng lai</option>
@@ -289,9 +290,11 @@
                 <button id="btnSave" class="m-btn m-btn-default"><i class="far fa-save"></i><span class="btn-text">Lưu</span></button>
             </div>
         </div>
+        </form>
     </div>
     <script src="../lib/jquery-3.5.1.min.js"></script>
     <script src="../lib/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="../JS/page/base.js"></script>
     <script src="../JS/page/customer.js"></script>
 </body>
 </html>

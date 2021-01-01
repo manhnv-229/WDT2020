@@ -1,6 +1,6 @@
-﻿
+
 $(document).ready(function(){
-    new Customer();
+    new Employee();
       
     dialog = $(".m-dialog").dialog({
       autoOpen: false,
@@ -11,9 +11,7 @@ $(document).ready(function(){
     
 });
 
-
-
-class Customer extends BaseJS{
+class Employee extends BaseJS{
   constructor(){
     super();
   }
@@ -22,9 +20,6 @@ class Customer extends BaseJS{
   }
 }
 
-
-
-//format Date
 
 //set gender
 function setGender(gender){

@@ -1,6 +1,6 @@
 ﻿
 table{
-    width: auto;
+    width: 100%;
     border-collapse: collapse;
     height: 50px;
     
@@ -13,6 +13,9 @@ th, td{
 }
 th{
     white-space:nowrap;
+}
+tr{
+    cursor: pointer;
 }
 tr:nth-child(even) {background-color: #f2f2f2;}
 
@@ -29,3 +32,29 @@ table, td, tr{
   overflow: hidden;
   text-overflow: ellipsis;
 } */
+
+.text-align-right{
+    text-align: right;
+}
+
+/* scrollbar table */
+.content__table::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  /* Track */
+  .content__table::-webkit-scrollbar-track {
+      
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  .content__table::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  .content__table::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

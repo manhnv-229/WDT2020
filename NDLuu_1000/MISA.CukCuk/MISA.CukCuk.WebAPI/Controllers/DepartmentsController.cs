@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MISA.Common;
-using MISA.DAO;
+using MISA.BL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,44 +11,46 @@ namespace MISA.CukCuk.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CustomerGroupsController : ControllerBase
+    public class DepartmentsController : ControllerBase
     {
-        /*DbConnector dbConnector;
-        public CustomerGroupsController()
+
+        IDepartmentBL _departmentBL;
+        public DepartmentsController(IDepartmentBL departmentBL)
         {
-            dbConnector = new DbConnector();
+            _departmentBL = departmentBL;
         }
-        // GET: api/<CustomerGroups>
+
+        // GET: api/<Departments>
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(dbConnector.GetAllData<CustomerGroup>());
+            var entity = _departmentBL.getALLData();
+            return Ok(entity);
         }
 
-        // GET api/<CustomerGroups>/5
+        // GET api/<Departments>/5
         [HttpGet("{id}")]
-        public IActionResult Get(string id)
+        public string Get(int id)
         {
-            return Ok(dbConnector.getByID<CustomerGroup>(id));
+            return "value";
         }
 
-        // POST api/<CustomerGroups>
+        // POST api/<Departments>
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/<CustomerGroups>/5
+        // PUT api/<Departments>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<CustomerGroups>/5
+        // DELETE api/<Departments>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-        }*/
-
+        }
     }
 }

@@ -2,3 +2,15 @@
 Nguyễn Danh Lưu Chỉnh sửa File từ Visual Studio 2019
 :>
 Đổi lại đường dẫn :v
+
+Add class : js 9 - 43:41
+
+1:37:00 js10
+
+các phương thức ajax:
+post: Thêm
+put: Update
+delete: Xoá
+get: Lấy DL
+
+1:44:01

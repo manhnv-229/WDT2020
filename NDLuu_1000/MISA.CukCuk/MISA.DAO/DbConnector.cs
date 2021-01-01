@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using MISA.Common;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -18,22 +19,48 @@ namespace MISA.DAO
             db = new MySqlConnection(connectionString);
         }
 
+        /// <summary>
+        /// Lấy tất cả bản ghi của bảng
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns>Danh sách các bản ghi</returns>
+        /// CreatedBy NDLuu (29/12/2020)
         public IEnumerable<T> GetAllData<T>()
         {
             var tableName = typeof(T).Name;
             var store = $"Proc_Get{tableName}s";
-            var entity = db.Query<T>(store, commandType: CommandType.StoredProcedure);
+            var entity = db.Query<T>(store, commandType: CommandType.StoredProcedure).ToList();
             return entity;
         }
 
-        public IEnumerable<T> getByID<T>(string id){
+        /// <summary>
+        /// Lấy bản ghi theo mã
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="id"></param>
+        /// <returns>Một bản ghi</returns>
+        public T getByID<T>(string id){
             var tableName = typeof(T).Name;
             var store = $"Proc_Get{tableName}ByID";
             DynamicParameters dynamicParameters = new DynamicParameters();
             dynamicParameters.Add($"@{tableName}ID", id);
-            var entity = db.Query<T>(store, dynamicParameters, commandType: CommandType.StoredProcedure);
+            var entity = db.Query<T>(store, dynamicParameters, commandType: CommandType.StoredProcedure).FirstOrDefault();
             return entity;
 
+        }
+
+        /// <summary>
+        /// Thêm mới 1 bản ghi
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        public int Insert<T>(T entity)
+        {
+            var tableName = typeof(T).Name;
+            var store = $"Proc_Insert{tableName}";
+            var result = db.Execute(store , entity, commandType: CommandType.StoredProcedure);
+            return result;
         }
     }
 }

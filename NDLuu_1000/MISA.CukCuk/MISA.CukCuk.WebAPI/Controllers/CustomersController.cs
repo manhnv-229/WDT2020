@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using Microsoft.AspNetCore.Mvc;
 using MISA.BL;
+using MISA.BL.Interfaces;
 using MISA.Common;
 using MISA.DAO;
 using MySql.Data.MySqlClient;
@@ -18,18 +19,20 @@ namespace MISA.CukCuk.WebAPI.Controllers
     [ApiController]
     public class CustomersController : ControllerBase
     {
-       /* DbConnector db;
-        public CustomersController()
+        ICustomerBL _customerBL;
+        public CustomersController(ICustomerBL customerBL)
         {
-             db = new DbConnector();
+            _customerBL = customerBL;
         }
 
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(db.GetAllData<Customer>());
+            var entity = _customerBL.GetCustomers();
+            return Ok(entity);
         }
 
+        /* 
         [HttpGet("{id}")]
         public IActionResult Get(string id)
         {
@@ -39,9 +42,14 @@ namespace MISA.CukCuk.WebAPI.Controllers
         [HttpPost]
         public IActionResult Post(Customer customer)
         {
-            CustomerBL customerBL = new CustomerBL();
+            //CustomerBL customerBL = new CustomerBL();
+            var effectRow = _customerBL.InsertCustomer(customer);
+            if (effectRow==-1)
+            {
+                return BadRequest("Mã bị trùng");
+            }
 
-            return Ok();
+            return Ok(effectRow);
         }
 
     }

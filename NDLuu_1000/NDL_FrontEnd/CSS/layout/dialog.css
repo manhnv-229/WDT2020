@@ -1,7 +1,4 @@
 /*Dialog*/
-.m-dialog {
-}
-
     .m-dialog .dialog-modal {
         opacity:.5;
         position: fixed;
@@ -131,4 +128,7 @@
     border-radius: 0%;
     border:#e9ebee;
     cursor: pointer;
+}
+.m-label{
+    margin-bottom: 3px;
 }

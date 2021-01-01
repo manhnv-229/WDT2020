@@ -6,27 +6,7 @@
     overflow:auto;
 }
 
-/* scrollbar table */
-.content__table::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-  }
-  
-  /* Track */
-  .content__table::-webkit-scrollbar-track {
-      
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  .content__table::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
-  
-  /* Handle on hover */
-  .content__table::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
+
 
   .grid-customer {
     height: calc(100vh - 234px);
