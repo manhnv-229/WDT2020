@@ -7,6 +7,10 @@ namespace Misa.CukCuk.Web.Model
 {
     public class Customer
     {
+        public Customer()
+        {
+            CustomerId = Guid.NewGuid();
+        }
         public Guid CustomerId { get; set; }
         public string CustomerCode { get; set; }
         public string FullName { get; set; } 
