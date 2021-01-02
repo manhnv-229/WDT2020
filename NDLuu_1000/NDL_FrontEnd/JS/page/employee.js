@@ -16,15 +16,7 @@ class Employee extends BaseJS{
     super();
   }
   setDataUrl(){
-    this.getDataUrl = "http://api.manhnv.net/api/customers";
+    this.getDataUrl = "http://localhost:60381/api/Employees";
   }
 }
 
-
-//set gender
-function setGender(gender){
-  if(gender==0){
-    return "Nữ";
-  }
-  return "Nam";
-}

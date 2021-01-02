@@ -83,38 +83,38 @@
             <table id="myTable">
                 <thead>
                     <tr>
-                        <th fieldName="EmployeeCode">
+                        <th fieldName="employeeCode">
                             Mã Khách Hàng
                         </th>
-                        <th fieldName="FullName">
+                        <th fieldName="fullName">
                             Họ và tên
                         </th>
-                        <th fieldName="GenderName">
+                        <th fieldName="gender" formatType = "Gender">
                             Giới Tính
                         </th>
-                        <th fieldName="DateOfBirth" formatType ="ddmmyyyy">
+                        <th fieldName="dateOfBirth" formatType ="ddmmyyyy">
                             Ngày Sinh
                         </th>
-                        <th fieldName="PhoneNumber">
+                        <th fieldName="phoneNumber">
                             Điện thoại
                         </th>
-                        <th fieldName="Email">
+                        <th fieldName="email">
                             Email
                         </th>
 
-                        <th fieldName="PositionName" >
+                        <th fieldName="positionName" >
                             Chức Vụ
                         </th>
                         
-                        <th fieldName="DepartmentName" >
+                        <th fieldName="departmentName" >
                             Phòng Ban
                         </th>
                         
-                        <th fieldName="Salary" formatType = "MoneyVND">
+                        <th fieldName="salary" formatType = "MoneyVND">
                             Mức Lương Cơ Bản
                         </th>
 
-                        <th fieldName="WorkStatusName" >
+                        <th fieldName="workStatusName" >
                            Tình Trạng Công Việc
                         </th>
                         
@@ -289,17 +289,17 @@
                             <div class="m-flex-1 mg-left-10px">
                                 <div class="m-label">Vị trí</div>
                                 <div class="position">
-                                    <select   fieldName="PositionID" fieldValue="PositionID" api="/api/customergroups" class="m-control">
-                                        <option value="19165ed7-212e-21c4-0428-030d4265475f">Giám đốc</option>
+                                    <select id='position'   fieldName="PositionID" fieldValue="PositionID" api="/api/customergroups" class="m-control">
+                                        <!-- <option value="19165ed7-212e-21c4-0428-030d4265475f">Giám đốc</option>
                                         <option selected class="selected"  value="7a0b757e-41eb-4df6-c6f8-494a84b910f4">Thu ngân</option>
-                                        <option value="3631011e-4559-4ad8-b0ad-cb989f2177da">Nhân viên Marketing</option>
+                                        <option value="3631011e-4559-4ad8-b0ad-cb989f2177da">Nhân viên Marketing</option> -->
                                     </select>
                                 </div>
                             </div>
                             <div class="m-flex-1 mg-left-10px">
                                 <div class="m-label">Phòng Ban</div>
                                 <div class="department">
-                                    <select id='department'  fieldName="DepartmentID" fieldValue="departmentName" api="/api/customergroups" class="m-control">
+                                    <select id='department'  fieldName="departmentName" fieldValue="departmentName" api="/api/customergroups" class="m-control">
                                         <!-- <option value="19165ed7-212e-21c4-0428-030d4265475f">Phòng nhân sự</option>
                                         <option selected class="selected"  value="7a0b757e-41eb-4df6-c6f8-494a84b910f4">Phòng đào tạo</option>
                                         <option value="3631011e-4559-4ad8-b0ad-cb989f2177da">Phòng công nghệ</option> -->
@@ -330,10 +330,10 @@
                             <div class="m-flex-1 mg-left-10px">
                                 <div class="m-label">Tình trạng làm việc</div>
                                 <div class="gender">
-                                    <select   fieldName="WorkStatus" fieldValue="WorkStatus" api="/api/customergroups" class="m-control">
-                                        <option value="1">Đamg thử Việc</option>
+                                    <select id="WorkStatus"  fieldName="WorkStatus" fieldValue="WorkStatus" api="/api/customergroups" class="m-control">
+                                        <!-- <option value="1">Đamg thử Việc</option>
                                         <option selected class="selected"  value="2">Đang làm việc</option>
-                                        <option value="3">Đã nghỉ hưu</option>
+                                        <option value="3">Đã nghỉ hưu</option> -->
                                     </select>
                                 </div>
                             </div>

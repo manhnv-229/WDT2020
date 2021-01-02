@@ -4,6 +4,8 @@ class BaseJS{
         this.setDataUrl();
         this.loadData();
         this.loadDepartment();
+        this.loadPosition();
+        this.loadWorkStatus();
         this.initEvens();
     }
 
@@ -86,6 +88,8 @@ class BaseJS{
                                 td.addClass("text-align-right");
                                 value = formatMoney(value);
                                 break;
+                            case "Gender":
+                                value = setGender(value);
                             default:
                                 break;
                         }
@@ -111,8 +115,7 @@ class BaseJS{
                 url: "http://localhost:60381/api/Departments" ,
                 method:'GET',
             }).done(function(response){
-                console.log(response);
-               // $('.department').empty();
+                $('#department').empty();
                $.each(response, function(index, element){
                     var select = $('#department');
                     var departmentID = element['departmentID'];
@@ -125,6 +128,52 @@ class BaseJS{
                     $(select).append(opp);
                })
                 
+            }).fail(function (response){
+        
+            });
+        } catch (error) {
+            
+        }
+    }
+
+    loadPosition(){
+        try {
+            $.ajax({
+                url: "http://localhost:60381/api/Positions" ,
+                method:'GET',
+            }).done(function(response){
+                console.log(response);
+                $('#position').empty();
+               $.each(response, function(index, element){
+                    var select = $('#position');
+                    var positionID = element['positionID'];
+                    var opp = $(`<option value="${positionID}"></option>`);
+                    opp.append(element['positionName']);
+                    $(select).append(opp);
+               })
+            }).fail(function (response){
+        
+            });
+        } catch (error) {
+            
+        }
+    }
+
+    loadWorkStatus(){
+        try {
+            $.ajax({
+                url: "http://localhost:60381/api/WorkStatus" ,
+                method:'GET',
+            }).done(function(response){
+                console.log(response);
+                $('#WorkStatus').empty();
+               $.each(response, function(index, element){
+                    var select = $('#WorkStatus');
+                    var WorkStatusID = element['workStatusID'];
+                    var opp = $(`<option value="${WorkStatusID}"></option>`);
+                    opp.append(element['workStatusName']);
+                    $(select).append(opp);
+               })
             }).fail(function (response){
         
             });
@@ -153,11 +202,20 @@ function formatDate(date){
    */
   function formatMoney(money){
       if(money){
-          return money.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '.')+" đ";
+          return (money.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.") +"VND");
       }
       
     return "";
   }
 
   //load department name
+  function setGender(gender){
+    if(gender==0){
+      return "Nữ";
+    }else 
+        if(gender==1){
+            return "Nam";
+        }   
+    return "Khác";
+  }
   

@@ -45,9 +45,19 @@ namespace MISA.CukCuk.WebAPI
             //Customer
             services.AddScoped<ICustomerDAO, CustomerDAO>();
             services.AddScoped<ICustomerBL, CustomerBL>();
+            //Employee
+            services.AddScoped<IEmployeeDAO, EmployeeDAO>();
+            services.AddScoped<IEmployeeBL, EmployeeBL>();
             //Department
             services.AddScoped<IDepartmentDAO, DepartmentDAO>();
             services.AddScoped<IDepartmentBL, DepartmentBL>();
+            //Position
+            services.AddScoped<IPositionDAO, PositionDAO>();
+            services.AddScoped<IPositionBL, PositionBL>();
+            //WorkStatus
+            services.AddScoped<IWorkStatusDAO, WorkStatusDAO>();
+            services.AddScoped<IWorkStatusBL, WorkStatusBL>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
