@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Dapper;
+using Microsoft.AspNetCore.Mvc;
 using Misa.CukCuk.Web.Model;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,25 +18,35 @@ namespace Misa.CukCuk.Web.Controllers
     {
         // GET: api/<CustomersController1>
         [HttpGet]
-        public Customer Get()
+        public IEnumerable<Customer> Get()
         {
-            var customer = new Customer();
-            customer.Field = "MM";
+            string connectionStirng = "Host = 103.124.92.43; Port = 3306; " +
+                "Database = MS1_17_NguyenHuuHung_CukCuk; User Id = nvmanh;" +
+                " Password = 12345678; Character Set=utf8";
+            IDbConnection dbconnection = new MySqlConnection(connectionStirng);
+            var customers = dbconnection.Query<Customer>("Select * from Customer");
 
-            return customer;
+            return customers;
         }
 
         // GET api/<CustomersController1>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{customerId}")]
+        public Customer Get(Guid customerId)
         {
-            return "value";
+            string connectionStirng = "Host = 103.124.92.43; Port = 3306; " +
+               "Database = MS1_17_NguyenHuuHung_CukCuk; User Id = nvmanh;" +
+               " Password = 12345678; Character Set=utf8";
+            IDbConnection dbconnection = new MySqlConnection(connectionStirng);
+            string sql = $"select * from Customer where CustomerId = '{customerId.ToString()}'";
+            var customer = dbconnection.Query<Customer>(sql).FirstOrDefault();
+            return customer;
         }
 
         // POST api/<CustomersController1>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public int Post([FromBody] Customer customer)
         {
+
         }
 
         // PUT api/<CustomersController1>/5
