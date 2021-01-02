@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Misa.CukCuk.Web.Data;
+using Misa.CukCuk.Web.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,35 +12,48 @@ namespace Misa.CukCuk.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BaseEntityController : ControllerBase
+    public class BaseEntityController<NVMANH> : ControllerBase
     {
-        // GET: api/<BaseEntityController>
+        protected DatabaseConnector _dbConnector;
+        public BaseEntityController()
+        {
+            _dbConnector = new DatabaseConnector();
+        }
+        // GET: api/<CustomersController1>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public virtual IEnumerable<NVMANH> Get()
         {
-            return new string[] { "value1", "value2" };
+           
+            var customers = _dbConnector.GetData<NVMANH>();
+            return customers;
         }
 
-        // GET api/<BaseEntityController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        // GET api/<CustomersController1>/5
+        [HttpGet("{customerId}")]
+        public  NVMANH Get(Guid customerId)
         {
-            return "value";
+         
+            var customers = _dbConnector.GetById<NVMANH>(customerId);
+            return customers;
         }
 
-        // POST api/<BaseEntityController>
+        // POST api/<CustomersController1>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public int Post([FromBody] NVMANH customer)
         {
+           // customer.CustomerId = Guid.NewGuid();
+          
+            var effectRows = _dbConnector.Insert<NVMANH>(customer);
+            return effectRows;
         }
 
-        // PUT api/<BaseEntityController>/5
+        // PUT api/<CustomersController1>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<BaseEntityController>/5
+        // DELETE api/<CustomersController1>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

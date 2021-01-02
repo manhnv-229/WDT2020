@@ -12,23 +12,8 @@ namespace Misa.CukCuk.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CustomerGroupsController : ControllerBase
+    public class CustomerGroupsController : BaseEntityController<CustomerGroup>
     {
-        // GET: api/<CustomerGroupsController>
-        [HttpGet]
-        public IEnumerable<CustomerGroup> Get()
-        {
-            var databaseConnector = new DatabaseConnector();
-            var customers = databaseConnector.GetAll<CustomerGroup>();
-            return customers;
-        }
-        [HttpPost]
-        public int Post([FromBody] CustomerGroup customer)
-        {
-            customer.CustomerGroupId = Guid.NewGuid();
-            var databaseConnector = new DatabaseConnector();
-            var effectRows = databaseConnector.Insert<CustomerGroup>(customer);
-            return effectRows;
-        }
+        
     }
 }

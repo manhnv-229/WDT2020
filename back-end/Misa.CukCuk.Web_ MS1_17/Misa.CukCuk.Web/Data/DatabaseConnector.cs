@@ -17,10 +17,17 @@ namespace Misa.CukCuk.Web.Data
         {
             _dbconnection = new MySqlConnection(connectionString);
         }
-        public IEnumerable<TEntity> GetAll<TEntity>()
+        public IEnumerable<TEntity> GetData<TEntity>()
         {
             string className = typeof(TEntity).Name;
             var sql = $"select * from {className}";
+            var entities = _dbconnection.Query<TEntity>(sql);
+            return entities;
+        }
+        public IEnumerable<TEntity> GetData<TEntity>(string commandText)
+        {
+            string className = typeof(TEntity).Name;
+            var sql = commandText;
             var entities = _dbconnection.Query<TEntity>(sql);
             return entities;
         }
