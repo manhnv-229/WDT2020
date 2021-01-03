@@ -34,5 +34,19 @@ namespace Misa.CukCuk.Web.Model
             this.ErrorMessenger = errorMessage;
         }
     }
+    public class MaxLength : Attribute
+    {
+
+        public string PropertyName; // ten cua property
+        public string ErrorMessenger; // cau canh bao
+
+        public int Length { get; set; } // do dai toi da duoc phep
+        public MaxLength(string propertyName,int length, string errorMessage = null)
+        {
+            this.Length = length;
+            this.PropertyName = propertyName;
+            this.ErrorMessenger = errorMessage;
+        }
+    }
 }
 

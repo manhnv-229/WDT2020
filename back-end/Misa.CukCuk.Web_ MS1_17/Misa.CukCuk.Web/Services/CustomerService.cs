@@ -83,6 +83,22 @@ namespace Misa.CukCuk.Web.Services
                     _serviceResult.MISACode = MISAServiceCode.BadRequest;
 
                 }
+                // max length
+                if (property.IsDefined(typeof(MaxLength), true))
+                {
+                    var requiredAttribute = property.GetCustomAttributes(typeof(MaxLength), true).FirstOrDefault();
+                    if (requiredAttribute != null)
+                    {
+                        var propertyText = (requiredAttribute as MaxLength).PropertyName;
+                        var errorMsg = (requiredAttribute as MaxLength).ErrorMessenger;
+                        var length = (requiredAttribute as MaxLength).Length;
+                        if (propValue.ToString().Trim().Length > length )
+                        {
+                            _serviceResult.Messenger.Add(errorMsg == null ? $"{propertyText} không được dài quá" : errorMsg);
+                        }
+                    }
+                    _serviceResult.MISACode = MISAServiceCode.BadRequest;
+                }
             }
         }
     }

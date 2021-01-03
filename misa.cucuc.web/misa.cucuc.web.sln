@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "misa.cucuc.web(2)", ".", "{7979805D-C078-4A5E-B9E1-E18E9486E92B}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54896"
+		Debug.AspNetCompiler.PhysicalPath = "H:\HocTap\misaCUkCUk\misa.cucuc.web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54896\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54896"
+		Release.AspNetCompiler.PhysicalPath = "H:\HocTap\misaCUkCUk\misa.cucuc.web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54896\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54896"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7979805D-C078-4A5E-B9E1-E18E9486E92B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7979805D-C078-4A5E-B9E1-E18E9486E92B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {890CC052-1A13-4A03-A169-80557B74DF24}
+	EndGlobalSection
+EndGlobal

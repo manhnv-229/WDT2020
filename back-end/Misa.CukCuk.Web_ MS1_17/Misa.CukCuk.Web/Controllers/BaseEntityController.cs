@@ -22,8 +22,7 @@ namespace Misa.CukCuk.Web.Controllers
         // GET: api/<CustomersController1>
         [HttpGet]
         public virtual IActionResult Get()
-        {
-           
+        {          
             var customers = _dbConnector.GetData<TEntity>();
             return Ok(customers);
         }

@@ -4,8 +4,8 @@
     left: 200px;
     bottom: 0px;
     right: 0px;
-    border-left: 1px dashed black;
-    border-top: 1px dashed black;
+    border-left: 1px solid #9e9e9ecf;
+    border-top: 1px solid #9e9e9ecf;
 }
 .division1{
     margin-top: 40px;
