@@ -1,0 +1,59 @@
+﻿.header{
+    width: calc(100% - 200px);
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    display: flex;
+    margin-bottom: 2px;
+    border-bottom: 2px solid #e5e5e5;
+}
+.header .header__title{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    cursor: pointer;
+}
+    .header .header__title .title__text{
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .header .header__title .title__icon {
+        width: 14px;
+        height: 14px;
+        margin-left: 20px;
+        background-image: url('../../Content/icon/expand-button.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        
+    }
+.header .header__profile{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+    .header .header__profile .profile__avatar {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 160px;
+        background-image: url('../../Content/icon/avatar-default.png');
+        background-size: contain;
+
+    }
+    .header .header__profile .profile__name{
+        position: absolute;
+        right: 40px;
+    }
+    .header .header__profile .profile__option {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 10px;
+        background-image: url('../../Content/icon/option.png');
+        background-size: contain;
+    }

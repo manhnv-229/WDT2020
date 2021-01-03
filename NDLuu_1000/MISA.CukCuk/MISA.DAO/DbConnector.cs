@@ -11,9 +11,11 @@ namespace MISA.DAO
 {
     public class DbConnector
     {
+        //Khởi tạo chuỗi kết nối
         protected String connectionString = "User Id=nvmanh;password = 12345678;Host=103.124.92.43;port = 3306;Database = MS1_22_NDLuu_CukCuk;" +
                 "Character Set=utf8";
         protected IDbConnection db;
+        //Hàm khơi tạo
         public DbConnector()
         {
             db = new MySqlConnection(connectionString);

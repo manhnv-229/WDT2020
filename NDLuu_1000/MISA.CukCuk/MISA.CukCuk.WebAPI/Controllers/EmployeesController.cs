@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MISA.BL.Interfaces;
+using MISA.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,28 +27,38 @@ namespace MISA.CukCuk.WebAPI.Controllers
         }
 
         // GET api/<EmployeesController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{EmployeeID}")]
+        public IActionResult Get(String EmployeeID)
         {
-            return "value";
+            return Ok(_employeeBL.GetEmployeeByID(EmployeeID));
         }
 
         // POST api/<EmployeesController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post(Employee employee)
         {
+            var effectRow = _employeeBL.InsertEmployee(employee);
+            if (effectRow == -1)
+            {
+                return BadRequest("Mã bị trùng");
+            }
+
+            return Ok(effectRow);
         }
 
         // PUT api/<EmployeesController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult Put(String id, [FromBody] Employee employee)
         {
+            var e = _employeeBL.UpdateEmployee(employee);
+           return Ok(e);
         }
 
         // DELETE api/<EmployeesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("{EmployeeID}")]
+        public IActionResult Delete(String EmployeeID)
         {
+            return Ok(_employeeBL.DeleteEmployee(EmployeeID));
         }
     }
 }

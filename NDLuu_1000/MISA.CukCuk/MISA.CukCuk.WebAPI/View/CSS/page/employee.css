@@ -1,0 +1,24 @@
+.a_infor{
+    margin:0px 0 20px 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.b_infor{
+    margin:20px 0 20px 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.line-green{
+    width: 70px;
+    height: 3px;
+    background-color: #01B075;
+    position: absolute;
+
+}
+.dialog-body{
+    margin-top: 30px;
+}
+.txtIdentityPlace{
+    margin: 0 0 10px 10px;
+    width: 215px;
+}

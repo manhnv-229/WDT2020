@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misa.CukCuk</title>
+    <link href="../lib/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
+    <link href="../CSS/main.css" rel="stylesheet" />
+    <link href="../CSS/page/customer.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="menu">
+        <div class="logo">
+            <div class="icon-bar"></div>
+            <div class="logo-page"></div>
+        </div>
+        <div class="menu__content">
+            <div class="menu__item">
+                <div class="menu__icon icon__home"></div>
+                <div class="menu__text"><a href="">Tổng quan</a> </div>
+            </div>
+
+            <div class="menu__item">
+                <div class="menu__icon icon__report"></div>
+                <div class="menu__text"><a href="">Báo Cáo</a> </div>
+            </div>
+
+            <div class="menu__item">
+                <div class="menu__icon icon__home"></div>
+                <div class="menu__text"><a href="">Mua Hàng</a> </div>
+            </div>
+
+            <div class="menu__item">
+                <div class="menu__icon icon__customer"></div>
+                <div class="menu__text"><a href="">Danh Mục Nhân Viên</a> </div>
+            </div>
+
+            <div class="menu__item">
+                <div class="menu__icon icon__customer"></div>
+                <div class="menu__text"><a href="">Danh Mục Khách Hàng</a> </div>
+            </div>
+
+
+            <div class="menu__item">
+                <div class="menu__icon icon__System"></div>
+                <div class="menu__text"><a href="">Thiết lập hệ thống</a> </div>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="header__title">
+            <div class="title__text">Nhà Hàng Biển Đông</div>
+            <div class="title__icon"></div>
+        </div>
+        <div class="header__profile">
+            <div class="profile__avatar"></div>
+            <div class="profile__name">Nguyễn Danh Lưu</div>
+            <div class="profile__option"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content__title">
+            <div class="title__text">Danh sách khách hàng</div>
+            <button class="title__add" id="btnAdd">
+                <div class="add__icon"></div>
+                <div class="add__text" >Thêm khách hàng</div>
+
+            </button>
+        </div>
+        <div class="content__search">
+            <div class="search">
+                <div class="search__search">
+                    <img src="../Content/icon/search.png" class=""/>
+                </div>
+                
+                <input class="input__search" type="text" placeholder="Tìm kiếm theo mã, tên khác">
+            </div>
+            <button id="btnRefresh" class="content__refresh">
+                <div class="content__refresh__icon"></div>
+            </button>
+        </div>
+        <div class="content__table">
+            <table id="myTable">
+                <thead>
+                    <tr>
+                        <th fieldName="CustomerCode">
+                            Mã Khách Hàng
+                        </th>
+                        <th fieldName="FullName">
+                            Họ và tên
+                        </th>
+                        <th fieldName="GenderName">
+                            Giới Tính
+                        </th>
+                        <th fieldName="DateOfBirth" formatType ="ddmmyyyy">
+                            Ngày Sinh
+                        </th>
+                        <th fieldName="CustomerGroupName" >
+                            Nhóm khách hàng
+                        </th>
+                        <th fieldName="PhoneNumber">
+                            Điện thoại
+                        </th>
+                        <th fieldName="Email">
+                            Email
+                        </th>
+                        <th fieldName="Address">
+                            Địa chỉ
+                        </th>
+                        <th fieldName="DebitAmount" formatType = "MoneyVND">
+                            Số Tiền Nợ
+                        </th>
+                        <th fieldName="MemberCardCode">
+                            Mã Thẻ Thành Viên
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>123456</td>
+                        <td>Nguyen Van A</td>
+                        <td>Nam</td>
+                        <td>1/1/19999</td>
+                        <td>VIP</td>
+                        <td>0912345678</td>
+                        <td>ndl@gmail.com</td>
+                        <td>Ha Noi</td>
+                    </tr>
+                    <tr>
+                        <td>123456</td>
+                        <td>Nguyen Van A</td>
+                        <td>Nam</td>
+                        <td>1/1/19999</td>
+                        <td>VIP</td>
+                        <td>0912345678</td>
+                        <td>ndl@gmail.com</td>
+                        <td>Ha Noi</td>
+                    </tr>
+                    <tr>
+                        <td>123456</td>
+                        <td>Nguyen Van A</td>
+                        <td>Nam</td>
+                        <td>1/1/19999</td>
+                        <td>VIP</td>
+                        <td>0912345678</td>
+                        <td>ndl@gmail.com</td>
+                        <td>Ha Noi</td>
+                    </tr>
+                    <tr>
+                        <td>123456</td>
+                        <td>Nguyen Van A</td>
+                        <td>Nam</td>
+                        <td>1/1/19999</td>
+                        <td>VIP</td>
+                        <td>0912345678</td>
+                        <td>ndl@gmail.com</td>
+                        <td>Ha Noi</td>
+                    </tr>
+                    <tr>
+                        <td>12345678</td>
+                        <td>Nguyen Van A</td>
+                        <td>Nam</td>
+                        <td>1/1/19999</td>
+                        <td>VIP</td>
+                        <td>0912345678</td>
+                        <td>ndl@gmail.com</td>
+                        <td>Ha Noi</td>
+                    </tr> -->
+                </tbody>
+
+
+            </table>
+        </div>
+        <div class="paging-bar">
+            <div class="paging-record-info">
+                Hiển thị <b>1-10/1000</b> Khách hàng
+            </div>
+            <div class="paging-option">
+                <div class="btn-select-page m-btn-firstpage"></div>
+                <div class="btn-select-page m-btn-prev-page"></div>
+                <div class="m-btn-list-page">
+                    <button class="btn-pagenumber btn-pagenumber-selected">1</button>
+                    <button class="btn-pagenumber">2</button>
+                    <button class="btn-pagenumber">3</button>
+                    <button class="btn-pagenumber">4</button>
+                </div>
+                <div class="btn-select-page m-btn-next-page"></div>
+                <div class="btn-select-page m-btn-lastpage"></div>
+            </div>
+            <div class="paging-record-option">
+                <b>10</b> Khách hàng/trang
+            </div>
+        </div>
+
+    </div>
+
+    
+    <div class="m-dialog dialog-detail" title="Thông tin khách hàng"  style="display: none">
+        <!--<div class="dialog-modal"></div>-->
+        <form action="">
+        <div class="dialog-content">
+            <div class="dialog-body">
+                <div class="m-row  m-flex">
+                    <div class="m-col el-avatar-customer m-flex-1">
+                        <div class="el-avatar"></div>
+                        <div class="el-avatar-note text-align-center">
+                            Vui lòng chọn ảnh có định dạng <br><b>.jpg, .jpeg, .png, .gif. </b>
+                        </div>
+                    </div>
+                    <div class="m-col el-left  m-flex-2">
+                        <div class="m-row mg-top-0 m-flex">
+                            <div class="m-col m-flex-1">
+                                <div class="m-label">Mã khách hàng (<span class="label-required">*</span>)</div>
+                                <div class="m-control"><input id="txtCustomerCode" fieldName="CustomerCode" required class="input-required" type="text" /></div>
+                            </div>
+                            <div class="m-flex-1 mg-left-10px">
+                                <div class="m-label">Họ và tên (<span class="label-required">*</span>)</div>
+                                <div class="m-control">
+                                    <input id="txtFullName" fieldName="FullName" class="input-required" type="text" required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-row mg-top-0 m-flex">
+                            <div class="m-col m-flex-1">
+                                <div class="m-label">Mã thẻ thành viên</div>
+                                <div class="m-control"><input id="txtMemberCardCode" fieldName="MemberCardCode" type="text" /></div>
+
+                            </div>
+                            <div class="m-flex-1 mg-left-10px">
+                                <div class="m-label">Nhóm khách hàng</div>
+                                <select  id="cbxCustomerGroup" fieldName="CustomerGroupName" fieldValue="CustomerGroupId" api="/api/customergroups" class="m-control">
+                                    <option value="19165ed7-212e-21c4-0428-030d4265475f">Khách VIP</option>
+                                    <option selected class="selected"  value="7a0b757e-41eb-4df6-c6f8-494a84b910f4">Khách thường</option>
+                                    <option value="3631011e-4559-4ad8-b0ad-cb989f2177da">Khách vãng lai</option>
+                                </select>
+                                <combobox id="cbxCustomerGroup"
+                                          fieldName=""
+                                          valueName=""
+                                          api=""></combobox>
+                            </div>
+                        </div>
+                        <div class="m-row mg-top-0 m-flex">
+                            <div class="m-flex-1">
+                                <div class="m-label">Ngày sinh</div>
+                                <div class="m-control"><input id="dtDateOfBirth" fieldName="DateOfBirth" type="date" /></div>
+                            </div>
+                            <div class="m-flex-1 mg-left-10px">
+                                <div class="m-label">Giới tính</div>
+                                <div class="gender">
+                                    <input type="radio" name="gender" value="male">
+                                    <span for="male">Male</span>
+                                    <input type="radio" name="gender" value="female">
+                                    <span for="female">Female</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-row m-other m-flex">
+                    <div class="m-flex-2">
+                        <div class="m-label">Email</div>
+                        <div class="m-control"><input id="txtEmail" fieldName="Email" type="email"  /></div>
+                    </div>
+                    <div class="m-flex-1 mg-left-10px">
+                        <div class="m-label">Số điện thoại (<span class="label-required">*</span>)</div>
+                        <div class="m-control"><input id="txtPhoneNumber" fieldName="PhoneNumber" class="input-required" type="tel" required /></div>
+                    </div>
+                </div>
+                <div class="m-row m-other m-flex">
+                    <div class="m-flex-2">
+                        <div class="m-label">Tên công ty</div>
+                        <div class="m-control"><input type="text" fieldName="CompanyName" /></div>
+                    </div>
+                    <div class="m-flex-1 mg-left-10px">
+                        <div class="m-label">Mã số thuế</div>
+                        <div class="m-control"><input type="text" fieldName="CompanyTaxCode"  /></div>
+                    </div>
+                </div>
+                <div class="address">
+                    <div class="m-flex-3">
+                        <div class="m-label">Địa chỉ</div>
+                        <div class="m-control"><input id="txtAddress" fieldName="Address" type="tel" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dialog-footer">
+                <button id="btnCancel" class="m-btn m-btn-default m-btn-cancel">Hủy</button>
+                <button id="btnSave" class="m-btn m-btn-default"><i class="far fa-save"></i><span class="btn-text">Lưu</span></button>
+            </div>
+        </div>
+        </form>
+    </div>
+    <script src="../lib/jquery-3.5.1.min.js"></script>
+    <script src="../lib/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="../JS/page/base.js"></script>
+    <script src="../JS/page/customer.js"></script>
+</body>
+</html>

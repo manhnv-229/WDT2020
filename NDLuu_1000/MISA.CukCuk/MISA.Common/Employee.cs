@@ -7,6 +7,9 @@ namespace MISA.Common
     public class Employee
     {
         public Guid EmployeeID { get; set; }
+        public String id { set {
+                this.id = EmployeeID.ToString();
+            } }
         public String EmployeeCode { get; set; }
         public String FullName { get; set; }
         public DateTime DateOfBirth { get; set; }

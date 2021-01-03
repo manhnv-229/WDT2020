@@ -15,6 +15,7 @@ namespace MISA.BL
             _departmentDAO = departmentDAO;
         }
 
+        
         public IEnumerable<Department> getALLData()
         {
            //xử lý nghiệp vụ

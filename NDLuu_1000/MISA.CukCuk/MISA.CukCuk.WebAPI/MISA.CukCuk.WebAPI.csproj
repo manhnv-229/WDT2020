@@ -17,4 +17,8 @@
     <ProjectReference Include="..\MISA.Common\MISA.Common.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="View\JS\Common\" />
+  </ItemGroup>
+
 </Project>
