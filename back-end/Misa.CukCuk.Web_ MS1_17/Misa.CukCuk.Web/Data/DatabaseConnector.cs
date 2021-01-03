@@ -24,6 +24,7 @@ namespace Misa.CukCuk.Web.Data
             var entities = _dbconnection.Query<TEntity>(sql);
             return entities;
         }
+        // lay du lieu theo text truyen vao
         public IEnumerable<TEntity> GetData<TEntity>(string commandText)
         {
             string className = typeof(TEntity).Name;
