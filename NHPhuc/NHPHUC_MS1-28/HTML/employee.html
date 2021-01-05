@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,7 +32,7 @@
             </div>
             <div class="menu__item">
                 <div class="menu-icon employee"></div>
-                <div class="menu-text"><a href="/NHPhuc/NHPHUC_MS1-28/HTML/employee.html">Danh mục nhân viên</a></div>
+                <div class="menu-text">Danh mục nhân viên</div>
             </div>
             <div class="menu__item">
                 <div class="menu-icon setting"></div>
@@ -42,8 +42,12 @@
     </div>
     <div class="header">
         <div class="header__resaurant" style="cursor:pointer;display: flex;width: 200px;height: 30px;position: absolute;left: 10px; justify-content: center;">
-            <div class="header__restaurant-name" style="line-height: 30px;font-weight: bolder;">Nhà hàng biển đông</div>
-            <div class="header__restaurant-angledown" style="background-image: url('../CONTENT/icon/angle-down.png');width: 10px;height: 10px;background-size: contain;background-repeat: no-repeat;margin: 10px 0 0 10px;"></div>
+            <select class="header__restaurant-name" style="cursor:pointer;border:none;line-height: 30px;font-weight: bolder;">
+                <option>Nhà hàng Biển Đông</option>
+                <option>Trưởng phòng</option>
+                <option>Nhân viên</option>
+                <option>Fresher</option>
+            </select>
         </div>
         <div class="user">
             <div class="avatar"></div>
@@ -67,16 +71,20 @@
                 </div>
             </div>
             <div class="department-position">
-                <div class="department">
-                    <div class="" style="margin-left: 10px;">Tất cả phòng ban</div>
-                    <div class="header__restaurant-angledown" style="background-image: url('../CONTENT/icon/angle-down.png');width: 10px;height: 10px;background-size: contain;background-repeat: no-repeat;margin: 0 0 0 20px;"></div>
-                </div>
-                <div class="department">
-                    <div class="" style="margin-left: 10px;">Tất cả vị trí</div>
-                    <div class="header__restaurant-angledown" style="background-image: url('../CONTENT/icon/angle-down.png');width: 10px;height: 10px;background-size: contain;background-repeat: no-repeat;margin: 0 0 0 58px;"></div>
-                </div>
+                <select name="speed" id="dp-ps" class="department">
+                    <option id="all" value="Tất cả">Tất cả phòng ban</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Nhân sự">Nhân sự</option>
+                    <option value="Kế toán">Kế toán</option>
+                </select>
+                <select name="speed" id="dp-ps" class="department">
+                    <option>Tất cả vị trí</option>
+                    <option>Trưởng phòng</option>
+                    <option>Nhân viên</option>
+                    <option>Fresher</option>
+                </select>
             </div>
-            <div class="refresh"><a href=""><img class="refresh__img" src="../CONTENT/icon/refresh.png" alt=""></a></div>
+            <button id="btn-refresh" class="refresh"><img class="refresh__img" src="../CONTENT/icon/refresh.png" alt=""></button>
         </div>
         <div class="customer__list">
             <table id="table_data" class="customer__table">
@@ -212,40 +220,44 @@
                     <div class="titles">A.THÔNG TIN CHUNG</div>
                     <div class="line"></div>
                     <div class="small-info">
-                        <div class="right-titles-info">Mã khách hàng (<span style="color:red">*</span>)<br>
-                            <input class="info-input" type="text">
+                        <div class="right-titles-info">Mã nhân viên (<span style="color:red">*</span>)<br>
+                            <input id="txtCode" class="info-input" type="text">
                         </div>
                         <div class="left-titles-info">Họ và tên (<span style="color:red">*</span>)<br>
-                            <input class="info-input" type="text">
-                        </div>
-                    </div>
-                    <div class="small-info">
-                        <div class="right-titles-info">Mã thẻ thành viên<br>
-                            <input class="info-input" type="text">
-                        </div>
-                        <div class="left-titles-info">Nhóm khách hàng<br>
-                            <input class="info-input" type="text">
+                            <input id="txtName" class="info-input" type="text">
                         </div>
                     </div>
                     <div class="small-info">
                         <div class="right-titles-info">Ngày sinh<br>
-                            <input class="info-input" type="text">
+                            <input id="txtDoB" class="info-input" type="date">
                         </div>
                         <div class="left-titles-info">Giới tính<br>
-                            <input class="info-input" type="text">
+                            <select name="speed" id="txtGender" class="info-sel">
+                                <option value="1">Nam</option>
+                                <option value="0">Nữ</option>
+                                <option value="2">Khác</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="small-info">
+                        <div class="right-titles-info">Số CMTND/CCCD (<span style="color:red">*</span>)<br>
+                            <input id="txtCMND" class="info-input" type="text">
+                        </div>
+                        <div class="left-titles-info">Ngày cấp<br>
+                            <input id="txtDateRange" class="info-input" type="date">
                         </div>
                     </div>
                     <div class="small-info">
                         <div class="right-titles-info">Nơi cấp<br>
-                        <input class="info-input" type="text">
+                        <input id="txtAddress" class="info-input" type="text">
                         </div>
                     </div>
                     <div class="small-info">
                         <div class="right-titles-info">Email (<span style="color:red">*</span>)<br>
-                            <input class="info-input" type="text">
+                            <input id="txtEmail" class="info-input" type="text">
                         </div>
                         <div class="left-titles-info">Số điện thoại (<span style="color:red">*</span>)<br>
-                            <input class="info-input" type="text">
+                            <input id="txtPhoneNumber" class="info-input" type="text">
                         </div>
                     </div>
                 </div>
@@ -254,40 +266,52 @@
                     <div class="line"></div>
                     <div class="small-info">
                         <div class="right-titles-info">Vị trí<br>
-                            <input class="info-input" type="text">
+                            <select name="speed" id="txtDepartment" class="info-sel">
+                                <option value="6528b15d-6674-724f-79a4-4b24de418577">Trưởng phòng</option>
+                                <option value="3e39129b-279f-623f-88ea-778aee59fea3">Nhân viên</option>
+                                <option value="30007451-29ff-4fe4-3707-70859f4ff30d">Fresher</option>
+                            </select>
                         </div>
                         <div class="left-titles-info">Phòng ban<br>
-                            <input class="info-input" type="text">
+                            <select name="speed" id="txtPosition" class="info-sel">
+                                <option value="34bd2cef-5026-567c-3b71-153b37881afe">Marketing</option>
+                                <option value="64a59a25-2488-54b0-f6b4-c8af08a50cbf">Nhân sự</option>
+                                <option value="674934cc-42cf-20cf-1d4a-aea48a10ed18">Kế toán</option>
+                            </select>
                         </div>
                     </div>
                     <div class="small-info">
                         <div class="right-titles-info">Mã số thuế cá nhân<br>
-                            <input class="info-input" type="text">
+                            <input id="txtTaxCode" class="info-input" type="text">
                         </div>
                         <div class="left-titles-info">Mức lương cơ bản<br>
-                            <input class="info-input" type="text">
+                            <input id="txtSalary" class="info-input" type="text">
                         </div>
                     </div>
                     <div class="small-info">
                         <div class="right-titles-info">Ngày gia nhập công ty<br>
-                            <input class="info-input" type="text">
+                            <input id="txtDateJoin" class="info-input" type="date">
                         </div>
                         <div class="left-titles-info">Tình trạng công việc<br>
-                            <input class="info-input" type="text">
+                            <select name="speed" id="txtJobStatus" class="info-sel">
+                                <option value="26021185-77af-263c-842a-acc8fc2f00af">Đang công tác</option>
+                                <option value="6118a7ff-742b-25db-a9c1-8e252c39bb73">Nghỉ phép</option>
+                                <option value="2b031b59-5276-589c-9d75-2a7ae1c799c8">Đã nghỉ việc</option>
+                            </select>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="action-info">
-            <di class="action-cs">
+            <div class="action-cs">
                 <div class="save-info" id="btn-cancel">Hủy</div>
-                <div class="green save-info">Lưu</div>
-            </di>
+                <div id="btn-save" class="green save-info">Lưu</div>
+            </div>
         </div>
     </div>
     <script src="../lib/jquery-3.5.1.min.js"></script>
     <script src="../lib/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
-    <script src="../JS/page/customer.js"></script>
+    <script src="../JS/page/employee.js"></script>
 </body>
 </html>

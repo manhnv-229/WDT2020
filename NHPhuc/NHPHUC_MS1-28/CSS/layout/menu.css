@@ -48,7 +48,7 @@
     align-items: center;
 }
 .menu .menu__content .menu__item:hover{
-    background-color: #bbbbbb;
+    background-color: #E9EBEE;
 }
 .menu__content .menu__item .menu-icon{
     width: 30px;

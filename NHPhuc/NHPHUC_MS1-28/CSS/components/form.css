@@ -1,0 +1,88 @@
+.dialog{
+    /* align-items: center; */
+}
+/* css top-info */
+.top-info{
+    width: 540px;
+    display: flex;
+    padding: 5px 20px;
+    height: 490px;
+}
+.top-info .avatar-default{
+    background-image: url('../../CONTENT/img/default-avatar.jpg');
+    background-size: contain    ;
+    height: 118px;
+    width: 118px;
+    border-radius: 50%;
+    border: 1px solid #bbbbbb;
+}
+.avatar-note{
+    text-align: center;
+}
+.top-info .info-left-avatar{
+    width: 550px;
+    height: 200px;
+    padding-left: 10px;
+}
+.top-info .line{
+    height: 3px;
+    width: 100px;
+    background-color: #019160;
+    margin: 5px 0;
+}
+.info-left-avatar .small-info{
+    display: flex;
+}
+.top-info .small-info .left-titles-info{
+    margin-left: 10px;
+}
+.top-info .small-info{
+    margin-bottom: 10px;
+}
+.top-info .small-info .info-input{
+    height: 25px;
+    width: 194px;
+    border: 1px solid #bbbbbb;
+    border-radius: 3px;
+} 
+.top-info .small-info .info-sel{
+    height: 29px;
+    width: 200px;
+    border: 1px solid #bbbbbb;
+    border-radius: 3px;
+    cursor: pointer;
+}
+/*css action-info*/
+.action-info{
+    position: absolute;
+    width: 540px;
+    bottom: 0px;
+    background-color: #bbbbbb;
+    padding: 2.5px 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.action-cs{
+    display: flex;
+    width: 130px;
+    height: 36px;
+    position: relative;
+    right: -425px;
+}
+.action-info .save-info{
+    height: 36px;
+    width: 65px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 36px;
+    cursor: pointer;
+}
+.action-info .green{
+    background-color: #019160;
+} 
+.action-info .save-info:hover{
+    background-color: #E9EBEE;
+} 
+.action-info .green:hover{
+    background-color: #2FBE8E;
+}

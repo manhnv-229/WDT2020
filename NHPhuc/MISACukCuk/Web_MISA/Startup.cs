@@ -7,6 +7,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MISA.BL;
+using MISA.BL.interfaces;
+using MISA.DL;
+using MISA.DL.Interfaces;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,9 +33,21 @@ namespace Web_MISA
         {
 
             services.AddControllers();
+            services.AddCors();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Web_MISA", Version = "v1" });
+            });
+
+            services.AddScoped<ICustomerDL, CustomerDL>();
+            services.AddScoped<ICustomerBL, CustomerBL>();
+            services.AddControllers().AddNewtonsoftJson(options =>
+            {
+                // Use the default property (Pascal) casing
+                options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+
+                // Configure a custom converter
+                
             });
         }
 
@@ -40,6 +57,7 @@ namespace Web_MISA
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseCors(o=>o.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Web_MISA v1"));
             }

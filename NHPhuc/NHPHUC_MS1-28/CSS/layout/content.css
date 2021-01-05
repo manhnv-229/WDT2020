@@ -25,7 +25,7 @@
     font-size: 20px;
 }
 .content .customer .customer__add{
-    background-color: #089e58;
+    background-color: #019160;
     display: flex;
     position: absolute;
     right: 15px;
@@ -35,16 +35,19 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.content .customer .customer__add:hover{
+    background-color: #2FBE8E;
+}
 .customer .customer__add .customer__add-icon{
     background-image: url('../../CONTENT/icon/add.png');
     width: 20px;
     height: 20px;
     background-size: contain;
     background-repeat: no-repeat;
-    margin: 10px 10px 0 0;
+    margin: 5px 10px 0 0;
 }
 .customer .customer__add .customer__add-text{
-    line-height: 40px;
+    line-height: 36px;
     color: white;
 }
 /* css search-refresh */
@@ -62,7 +65,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 210px;
+    width: 250px;
     height: 40px;
     border-radius: 5px;
     border: 2px solid #bbbbbb;
@@ -79,7 +82,7 @@
 .search .search__text .search__text-input{
     border: none;
     font-size: 10px;
-    width: 130px;
+    width: 170px;
     height: 30px;
 }
 .content .search-refresh .refresh{
@@ -93,7 +96,25 @@
 .search-refresh .refresh .refresh__img{
     width: 20px;
     height: 20px;
-    margin: 10px;
+    cursor: pointer;
+}
+/* css department-position */
+.content .search-refresh .department-position{
+    display: flex;
+    position: relative;
+    left: 280px;
+    height: 44px;
+    
+}
+.content .search-refresh .department{
+    border: 2px solid #bbbbbb;
+    border-radius: 5px;
+    height: 45px;
+    width: 150px;
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+    cursor: pointer;
 }
 /* css table customer */
 .content .customer__list{
@@ -102,55 +123,56 @@
     top: 125px;
     left: 15px;
     overflow-x:auto;
+    overflow-y:auto;
 }
 .content .customer__list .customer__table{
     width: 100%;
     border-collapse: collapse;
     text-align: left;
 }
-.customer__list .customer__table .customer__row{  
-    height: 40px;
+.customer__list .customer__table tr{  
+    height: 35px;
 }
-.customer__list .customer__table .customer__row:nth-child(even) {
+.customer__list .customer__table tr:nth-child(even) {
     background-color: #f2f2f2;
 }
-.customer__table .customer__row th,td{
+.customer__table tr th,td{
     border-bottom: 2px solid #bbbbbb;
     padding-left: 10px;
     padding-right: 10px;
     cursor: pointer;
 }
-.customer__list .customer__table .customer__row:hover{
-    background-color: #bbbbbb;
+.customer__list .customer__table tr:hover{
+    background-color: #E9EBEE;
 }
-.customer__list .customer__table .customer__row:first-child:hover{
+.customer__list .customer__table tr:first-child:hover{
     background-color: #ffffff;
 }
 /* css page number */
 .content .page__number{
     position: relative;
-    bottom: -570px;
+    bottom: -484px;
     width: 100%;
     display: flex;
-    height: 50px;
+    height: 56px;
     align-items: center;
     justify-content: center;
 }
 .content .page__number .customer__sum{
     width: 200px;
-    text-align: center;
+    text-align: left;
 }
 .content .page__number .page__change{
     width: 400px;
     height: 40px;
-    margin: auto 250px;
+    margin: auto 166px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .content .page__number .customer__onpage{
     width: 200px;
-    text-align: center;
+    text-align: right;
 }
 .page__number .page__change .page__change-ps{
     background-image: url('../../CONTENT/icon/angle-double-back.png');
@@ -174,19 +196,20 @@
     background-image: url('../../CONTENT/icon/angle-double-next.png');
 }
 .page__number .page__change .page__change-nb{
-    width: 25px;
-    height: 25px;
-    background-color: #089e58;
+    width: 30px;
+    height: 30px;
+    background-color: #019160;
     border-radius: 50%;
     font-size: 15px;
     color: white;
     text-align: center;
-    line-height: 25px;
+    line-height: 30px;
     margin: 0 5px;
     cursor: pointer;
-    border: 2px solid #bbbbbb;
 }
-
+.page__number .page__change .page__change-nb:hover{
+    background-color: #2FBE8E;
+}
 /* width */
 ::-webkit-scrollbar {
     height: 5px;
