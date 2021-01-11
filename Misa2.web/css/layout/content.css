@@ -1,0 +1,118 @@
+.content {
+    width: calc(100% - 221px);
+    height: calc(100% - 61px);
+    border-bottom: 2px solid #bbbbbb;
+    position: absolute;
+    top: 60px;
+    left: 221px;
+    bottom: 0;
+    right: 0;
+    /* z-index: 1; */
+}
+
+.content .content-header{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.content-header .title {
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 8px;
+}
+
+.content-header .add-customes {
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    right: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.content .filter-bar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.filter-bar .filter-left {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    padding-left: 8px;
+}
+
+.filter-left .filter{
+    margin-right: 40px;
+}
+
+.filter-bar .filter-right {
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    right: 8px;
+}
+
+.content .content-body {
+    width: 100%;
+    height: calc(100% - 120px);
+    border-bottom: 3px solid #bbbbbb;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.content .paging-bar {
+    width: calc(100% - 32px);
+    border-top: 2px solid #bbbbbb;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    bottom: 0;
+}
+
+.paging-bar .paging-option-infor {
+    position: relative;
+    width: 20%;
+    height: 40px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.paging-bar .paging-option {
+    position: relative;
+    width: 60%;
+    height: 40px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paging-option .page-list{
+    display: flex; 
+    align-items: center;
+}
+
+.paging-bar .paging-option-record {
+    position: relative;
+    float: right;
+    width: 20%;
+    height: 40px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.page-option{
+    position: absolute;
+    right: 0;
+};
+}

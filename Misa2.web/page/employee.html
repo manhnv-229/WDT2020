@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>employee</title>
+    <link href="../css/main.css" rel="stylesheet" />
+    <link href="../lib/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-site">
+            <div class="logo-box">
+                <div class="toggle-icon"></div>
+                <div class="amis-logo"></div>
+            </div>
+        </div>
+        <div class="navbar-content">
+            <div class="navbar-item">
+                <div class="navbar-item-icon nav-item-dashboard"></div>
+                <div class="navbar-item-content">Tổng quan</div>
+            </div>
+            <div class="navbar-item">
+                <div class="navbar-item-icon nav-item-report"></div>
+                <div class="navbar-item-content">Báo cáo</div>
+            </div>
+            <div class="navbar-item">
+                <div class="navbar-item-icon nav-item-dic"></div>
+                <div class="navbar-item-content">Mua hàng</div>
+            </div>
+            <div class="navbar-item">
+                <div class="navbar-item-icon nav-item-dic"></div>
+                <div class="navbar-item-content"><a href="customer.html">Danh mục khách hàng</a></div>
+            </div>
+            <div class="navbar-item">
+                <div class="navbar-item-icon nav-item-dic"></div>
+                <div class="navbar-item-content"><a href="employee.html">Danh mục nhân viên</a></div>
+            </div>
+            <div class="navbar-item">
+                <div class="navbar-item-icon nav-item-setting"></div>
+                <div class="navbar-item-content">Cài dặt</div>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="department">
+            <select>
+                <option>Nhà hàng NMT</option>
+                <option>Nhà hàng Việt Nam</option>
+                <option>Nhà hàng Đông Á</option>
+            </select>
+        </div>
+        <div class="account">
+            <div class="account-icon"></div>
+            <div class="account-name">Nguyễn Mạnh Tiến</div>
+            <div class="account-option"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-header">
+            <div class="title">Danh sách nhân viên</div>
+            <div class="add-customes">
+                <button id="btnAdd" class="m-btn" style="position: absolute; right: 0;margin-right: 0px;">
+                    <div class="icon-add"></div>
+                    <div class="text-add">Thêm nhân viên</div>
+                </button>
+            </div>
+        </div>
+
+        <div class="filter-bar">
+            <div class="filter-left">
+                <div class="filter" title="Tìm kiếm theo mã, Tên khách hàng hoặc số điện thoại">
+                    <input id="searching" class="input-search icon-search" placeholder="Tìm kiếm theo mã, Tên nhân viên hoặc số điện thoại" />
+                </div>
+                <div class="filter">
+                    <select id="all-department">
+                        <option value="">Tất cả phòng ban</option>
+                    </select>
+                </div>
+                <div class="filter">
+                    <select id="all-position">
+                        <option value="">Tất cả vị trí</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-right">
+                <button id="fresh-data" class="btn-refresh icon-refresh" style="position: absolute; right: 0;" title="tải lại dữ liệu trang"></button>
+            </div>
+        </div>
+
+        <div class="content-body">
+            <div class="grid">
+                <table id="tbListData">
+                    <thead>
+                        <tr>
+                            <th fieldName="EmployeeCode">Mã nhân viên</th>
+                            <th fieldName="EmployeeName">Họ và tên</th>
+                            <th fieldName="Gender" formatType="gender">Giới tính</th>
+                            <th fieldName="DateOfBirth" formatType="ddmmyyyy" style="text-align:center">Ngày sinh</th>
+                            <th fieldName="PhoneNumber">Điện thoại</th>
+                            <th fieldName="Email">Email</th>
+                            <th fieldName="EmployeePositionName">Chức vụ</th>
+                            <th fieldName="EmployeeDepartmentName">Phòng ban</th>
+                            <th fieldName="EmployeeSalary" formatType="money" class="text-align-right">Mức lương cơ bản</th>
+                            <th fieldName="EmployeeSate" formatType="state">Tình trạng công việc</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="paging-bar">
+            <div class="paging-option-infor">Hiển thị<span id="lowOffSet"></span>-<span id="offSet"> </span> / <span id="total"> </span> nhân viên</div>
+            <div class="paging-option">
+                <div class="btn-first-page" id="first-page"></div>
+                <div class="btn-prev-page" id="prev-page"></div>
+                <div class="page-list">
+                    <div class="page-number" id="page-number-1" style="background-color: #019160">1</div>
+                    <div class="page-number" id="page-number-2">2</div>
+                    <div class="page-number" id="page-number-3">3</div>
+                    <div class="page-number" id="page-number-4">4</div>
+                </div>
+                <div class="btn-next-page" id="next-page"></div>
+                <div class="btn-last-page" id="last-page"></div>
+            </div>
+            <div class="paging-option-record">
+                <select class="page-option" id="option-page">
+                    <option value=5 >5 nhân viên/trang</option>
+                    <option value=10 >10 nhân viên/trang</option>
+                    <option value=15 >15 nhân viên/trang</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="dialog" style="display: none; z-index: 0">
+        <div class="dialog-modal"></div>
+        <div class="container">
+            <div class="header-dialog">
+                <div class="header-dialog-text">Thông tin nhân viên</div>
+                <button id="btnClose" class="btn-close">X</button>
+            </div>
+            <div class="body-form">
+                <div class="avatar">
+                    <div class="avatar-pic"></div>
+                    <div class="avartar-text">Vui lòng chọn ảnh có định dạng <br /> .jpg, .jpeg, .png, .gif</div>
+                </div>
+                <div class="content">
+                    <div class="general-infor">A. THÔNG TIN CHUNG</div>
+                    <div><input id="txtId" style="display: none" type="text" /></div>
+                    <div class="input-pair">
+                        <div class="employee">
+                            <div><label class="label">Mã nhân viên(<span class="require-charecter">*</span>)</label></div>
+                            <input type="text" class="input-field" id="txtEmployeeCode"/>
+                        </div>
+                        <div class="employee">
+                            <div><label class="label">Họ và tên(<span class="require-charecter">*</span>)</label></div>
+                            <input type="text" class="input-field" id="txtFullName"/>
+                        </div>
+                    </div>
+                    <div class="input-pair">
+                        <div class="employee">
+                            <div><label class="label">Ngày sinh</label></div>
+                            <input type="date" class="input-field" id="txtDOB"/>
+                        </div>
+                        <div class="employee">
+                            <div><label class="label">Giới tính</label></div>
+                            <select class="input-field" id="gender">
+                                <option value=1>Nam</option>
+                                <option value=0>Nữ</option>
+                                <option value=2>Khác</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-pair">
+                        <div class="employee">
+                            <div><label class="label">Số CMTND/thẻ căn cước(<span class="require-charecter">*</span>)</label></div>
+                            <input type="text" class="input-field" id="txtIdCardNumber"/>
+                        </div>
+                        <div class="employee">
+                            <div><label class="label">Ngày cấp</label></div>
+                            <input type="date" class="input-field" id="txtIssueDate"/>
+                        </div>
+                    </div>
+                    <div class="input-pair">
+                        <div class="employee">
+                            <div><label class="label">Nơi cấp</label></div>
+                            <input type="text" class="input-field" id="txtIssuePlace"/>
+                        </div>
+                        
+                    </div>
+                    <div class="input-pair">
+                        <div class="employee">
+                            <div><label class="label">Email(<span class="require-charecter">*</span>)</label></div>
+                            <input type="text" class="input-field" id="txteEmail"/>
+                        </div>
+                        <div class="employee">
+                            <div><label class="label">Số điện thoại(<span class="require-charecter">*</span>)</label></div>
+                            <input type="text" class="input-field" id="txtPhonenumber"/>
+                        </div>
+                    </div>
+                    <div class="work-infor">B. THÔNG TIN CÔNG VIỆC</div>
+                    <div class="input-pair">
+                        <div class="employee">
+                            <div><label class="label">Vị trí</label></div>
+                            <select class="input-field" id="all-position-dialog">
+                            </select>
+                        </div>
+                        <div class="employee">
+                            <div><label class="label">Phòng ban</label></div>
+                            <select class="input-field" id="all-department-dialog">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-pair">
+                        <div class="employee">
+                            <div><label class="label">Mã số thuế cá nhân</label></div>
+                            <input type="text" class="input-field" id="txtEmployeeTaxCode"/>
+                        </div>
+                        <div class="employee">
+                            <div><label class="label">Mức lương cơ bản</label></div>
+                            <input type="text" class="input-field" id="txtSalary"/>
+                        </div>
+                    </div>
+                    <div class="input-pair">
+                        <div class="employee">
+                            <div><label class="label">Ngày gia nhập công ty</label></div>
+                            <input type="date" class="input-field" id="txtDOJ"/>
+                        </div>
+                        <div class="employee">
+                            <div><label class="label">Tình trạng công việc</label></div>
+                            <select class="input-field" id="stateWoring">
+                                <option value=0>Làm việc</option>
+                                <option value=1>Nghỉ việc</option>
+                                <option value=2>Thử việc</option>
+                                <option value=3>Nghỉ hưu</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-form">
+                <button class="btn-cancel" id="cancel">Hủy</button>
+                <button class="m-btn" id="saveEmployee">
+                    <div class="icon-save"></div>
+                    <div class="save-text" >Lưu</div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: none" id="pup-up">
+        <div class="dialog-modal">
+        </div>
+        <div class="pup-up-container">
+            <div class="header-dialog">
+                <div class="header-dialog-text" id="txtContnetHead"></div>
+            </div>
+            <div class="body-form">
+                <div id="txtContentBody"></div>
+            </div>
+            <div class="footer-form">
+                <button class="btn-cancel" id="cancel-pup-up">Hủy</button>
+                <button class="m-btn" id="deleteEmployee" style="background-color: #F65454">
+                    <div class="save-text">Xóa</div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: none; z-index: 5" id="notice">
+        <div class="dialog-modal" style="z-index: 6"></div>
+        <div class="pup-up-container">
+            <div class="header-dialog">
+                <div class="header-dialog-text" id="txtHeadNotice"></div>
+            </div>
+            <div class="body-form">
+                <div id="txtBodyNotice"></div>
+            </div>
+            <div class="footer-form">
+                <button class="btn-cancel" id="oke">Ok</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../lib/jquery-3.5.1.min.js"></script>
+    <script src="../lib/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="../js/common/base.js"></script>
+    <script src="../js/page/employee.js"></script>
+    <script src="../js/common/common.js"></script>
+</body>
+</html>

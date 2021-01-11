@@ -1,0 +1,140 @@
+.dialog-modal {
+    opacity: .5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    z-index: 2;
+}
+
+.container {
+    width: 700px;
+    height: 650px;
+    border: solid 1px rgb(66, 53, 53);
+    border-radius: 4px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    background-color: white;
+    z-index: 3;
+    margin-top: -300px;
+    margin-left: -300px;
+}
+
+.pup-up-container {
+    width: 400px;
+    height: 250px;
+    border: solid 1px rgb(66, 53, 53);
+    border-radius: 4px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    background-color: #ffffff;
+    z-index: 10;
+    margin-top: -150px;
+    margin-left: -200px;
+}
+
+.header-dialog {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+    .header-dialog .header-dialog-text {
+        font-size: 20px;
+        font-weight: bolder;
+        padding-left: 16px;
+    }
+
+.body-form {
+    height: calc(100% - 60px);
+    padding: 10px;
+}
+
+.avatar {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: auto;
+}
+
+    .avatar .avatar-pic {
+        width: 120px;
+        height: 120px;
+        background-image: url('../../content/img/default-avatar.jpg');
+        padding-right: 24px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border: 1px solid black;
+        margin-left: 24px;
+    }
+
+    .avatar .avartar-text {
+        width: 100%;
+        height: 80px;
+        text-align: center;
+    }
+.body-form .content{
+    width: calc(100% - 200px);
+    left: 200px;
+}
+
+.input-pair{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-right: 8px;
+}
+    .input-pair .employee {
+        border-radius: 4px;
+        height: 35px;
+        width: 100%;
+        margin-left: 16px;
+    }
+
+.footer-form {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-content: center;
+    background-color: #bebebe;
+    justify-content: flex-end;
+}
+
+
+.save-text {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.require-charecter {
+    color: red;
+}
+
+.label {
+    padding: 4px;
+    text-align: left;
+}
+
+.input-field {
+    border-radius: 4px;
+    height: 35px;
+    width: 100%;
+}
+
+
+
+.general-infor, .work-infor{
+    font-size: larger;
+    font-weight: bold;
+}

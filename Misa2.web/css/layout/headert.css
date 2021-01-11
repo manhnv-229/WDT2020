@@ -1,0 +1,65 @@
+﻿.header{
+    height: 60px;
+    width: calc(100% - 221px);
+    border-bottom: 1px solid #bbbbbb;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.header .department{
+    padding: 16px;
+    font-size: 16px;
+}
+
+.header .department select{
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+    .header .department option{
+        cursor: pointer;
+    }
+
+.header .account{
+    width: 240px;
+    height: 40px;
+    position: absolute;
+    right: 16px;
+    display: flex;
+    align-items: center;
+}
+
+    .header .account .account-icon {
+        width: 25px;
+        height: 40px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        padding-right: 16px;
+        background-image: url('../../content/icon/avatar-default.png');
+        background-size:contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 8px;
+    }
+
+    .header .account .account-name{
+        padding-right: 16px;
+    }
+
+    .header .account .account-option {
+        width: 30px;
+        height: 30px;
+        padding-right: 16px;
+        cursor: pointer;
+        background-image: url('../../content/icon/option.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Misa.CukCuk_3", "Misa.CukCuk_3.csproj", "{6FCDA891-717B-452E-80EA-298F03ABFB1F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Misa.DL", "..\Misa.DL\Misa.DL.csproj", "{17918D57-92F8-4BDD-8A3C-7E28088EE2E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Misa.BL", "..\Misa.BL\Misa.BL.csproj", "{1B4055C8-0655-44FF-9FEA-0A0FAA41E286}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FCDA891-717B-452E-80EA-298F03ABFB1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FCDA891-717B-452E-80EA-298F03ABFB1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FCDA891-717B-452E-80EA-298F03ABFB1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FCDA891-717B-452E-80EA-298F03ABFB1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17918D57-92F8-4BDD-8A3C-7E28088EE2E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17918D57-92F8-4BDD-8A3C-7E28088EE2E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17918D57-92F8-4BDD-8A3C-7E28088EE2E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17918D57-92F8-4BDD-8A3C-7E28088EE2E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B4055C8-0655-44FF-9FEA-0A0FAA41E286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B4055C8-0655-44FF-9FEA-0A0FAA41E286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B4055C8-0655-44FF-9FEA-0A0FAA41E286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B4055C8-0655-44FF-9FEA-0A0FAA41E286}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8DB5262-4B9A-4745-B6FE-EEADEEDCAF02}
+	EndGlobalSection
+EndGlobal

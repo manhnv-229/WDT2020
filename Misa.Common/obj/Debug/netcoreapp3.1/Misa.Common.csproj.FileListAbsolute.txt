@@ -1,0 +1,9 @@
+E:\Misa-Web\WDT2020\MTien\Misa.Common\bin\Debug\netcoreapp3.1\Misa.Common.deps.json
+E:\Misa-Web\WDT2020\MTien\Misa.Common\bin\Debug\netcoreapp3.1\Misa.Common.dll
+E:\Misa-Web\WDT2020\MTien\Misa.Common\bin\Debug\netcoreapp3.1\Misa.Common.pdb
+E:\Misa-Web\WDT2020\MTien\Misa.Common\obj\Debug\netcoreapp3.1\Misa.Common.csprojAssemblyReference.cache
+E:\Misa-Web\WDT2020\MTien\Misa.Common\obj\Debug\netcoreapp3.1\Misa.Common.AssemblyInfoInputs.cache
+E:\Misa-Web\WDT2020\MTien\Misa.Common\obj\Debug\netcoreapp3.1\Misa.Common.AssemblyInfo.cs
+E:\Misa-Web\WDT2020\MTien\Misa.Common\obj\Debug\netcoreapp3.1\Misa.Common.csproj.CoreCompileInputs.cache
+E:\Misa-Web\WDT2020\MTien\Misa.Common\obj\Debug\netcoreapp3.1\Misa.Common.dll
+E:\Misa-Web\WDT2020\MTien\Misa.Common\obj\Debug\netcoreapp3.1\Misa.Common.pdb

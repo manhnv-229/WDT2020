@@ -1,0 +1,108 @@
+﻿.m-btn{
+    display: flex;
+    align-items: center;
+    background-color: #019160;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 13px;
+    color: #ffffff;
+    font-family: GoogleSans-Regular;
+    padding-left: 16px;
+    padding-right: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    min-width: 100px;
+    justify-content: center;
+    margin: 8px 16px 8px 16px;
+}
+
+    .m-btn:hover {
+        background-color: #2FBE8E;
+    }
+
+.btn-refresh {
+    height: 40px;
+    width: 40px;
+    border-radius: 4px;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.btn-cancel {
+    height: 40px;
+    border-radius: 4px;
+    background-color: #bebebe;
+    margin: 8px 16px 8px 16px;
+    cursor: pointer;
+}
+
+    .btn-cancel:hover {
+        background-color: #e5e5e5;
+    }
+
+.btn-close {
+    background-image: url('../../content/icon/x.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+    .btn-close:hover {
+        background-color: #F65454;
+    }
+
+.btn-first-page {
+    height: 20px;
+    width: 20px;
+    background-image: url('../../content/icon/btn-firstpage.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.btn-prev-page {
+    height: 20px;
+    width: 20px;
+    background-image: url('../../content/icon/btn-prev-page.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.btn-next-page {
+    height: 20px;
+    width: 20px;
+    background-image: url('../../content/icon/btn-next-page.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.btn-last-page {
+    height: 20px;
+    width: 20px;
+    background-image: url('../../content/icon/btn-lastpage.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.page-number {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    border: 1px solid #808080;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 8px;
+}
+
+    .page-number:hover {
+        background-color: #019160
+    }
+
+.btn-close {
+    position: absolute;
+    right: 16px;
+}

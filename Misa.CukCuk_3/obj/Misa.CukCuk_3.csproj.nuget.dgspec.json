@@ -1,0 +1,244 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Misa-Web\\WDT2020\\MTien\\Misa.CukCuk_3\\Misa.CukCuk_3.csproj": {}
+  },
+  "projects": {
+    "E:\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj",
+        "projectName": "Misa.BL",
+        "projectPath": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj",
+        "packagesPath": "C:\\Users\\ManhTien\\.nuget\\packages\\",
+        "outputPath": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ManhTien\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            },
+            "WebSocket4Net": {
+              "target": "Package",
+              "version": "[0.15.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Misa-Web\\WDT2020\\MTien\\Misa.CukCuk_3\\Misa.CukCuk_3.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.CukCuk_3\\Misa.CukCuk_3.csproj",
+        "projectName": "Misa.CukCuk_3",
+        "projectPath": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.CukCuk_3\\Misa.CukCuk_3.csproj",
+        "packagesPath": "C:\\Users\\ManhTien\\.nuget\\packages\\",
+        "outputPath": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.CukCuk_3\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ManhTien\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj": {
+                "projectPath": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj"
+              },
+              "E:\\Misa-Web\\WDT2020\\MTien\\Misa.DL\\Misa.DL.csproj": {
+                "projectPath": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.DL\\Misa.DL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.0, )",
+              "noWarn": [
+                "NU1605"
+              ]
+            },
+            "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+              "target": "Package",
+              "version": "[5.0.0, )",
+              "noWarn": [
+                "NU1605"
+              ]
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Misa-Web\\WDT2020\\MTien\\Misa.DL\\Misa.DL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.DL\\Misa.DL.csproj",
+        "projectName": "Misa.DL",
+        "projectPath": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.DL\\Misa.DL.csproj",
+        "packagesPath": "C:\\Users\\ManhTien\\.nuget\\packages\\",
+        "outputPath": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.DL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ManhTien\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "E:\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj": {
+                "projectPath": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
