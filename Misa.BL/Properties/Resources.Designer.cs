@@ -133,6 +133,15 @@ namespace Misa.BL.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Vui lòng liên hệ Misa để nhận trợ giúp.
+        /// </summary>
+        public static string Exception_User_Mess {
+            get {
+                return ResourceManager.GetString("Exception_User_Mess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Thành công.
         /// </summary>
         public static string Success {

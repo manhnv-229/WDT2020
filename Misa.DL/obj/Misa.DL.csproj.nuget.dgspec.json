@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Misa-Web\\WDT2020\\MTien\\Misa.DL\\Misa.DL.csproj": {}
+    "E:\\Misa\\Misa-web-8buoi\\Misa-Web\\WDT2020\\MTien\\Misa.DL\\Misa.DL.csproj": {}
   },
   "projects": {
-    "E:\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj": {
+    "E:\\Misa\\Misa-web-8buoi\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj",
+        "projectUniqueName": "E:\\Misa\\Misa-web-8buoi\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj",
         "projectName": "Misa.BL",
-        "projectPath": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj",
+        "projectPath": "E:\\Misa\\Misa-web-8buoi\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj",
         "packagesPath": "C:\\Users\\ManhTien\\.nuget\\packages\\",
-        "outputPath": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\obj\\",
+        "outputPath": "E:\\Misa\\Misa-web-8buoi\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ManhTien\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -68,14 +68,14 @@
         }
       }
     },
-    "E:\\Misa-Web\\WDT2020\\MTien\\Misa.DL\\Misa.DL.csproj": {
+    "E:\\Misa\\Misa-web-8buoi\\Misa-Web\\WDT2020\\MTien\\Misa.DL\\Misa.DL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.DL\\Misa.DL.csproj",
+        "projectUniqueName": "E:\\Misa\\Misa-web-8buoi\\Misa-Web\\WDT2020\\MTien\\Misa.DL\\Misa.DL.csproj",
         "projectName": "Misa.DL",
-        "projectPath": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.DL\\Misa.DL.csproj",
+        "projectPath": "E:\\Misa\\Misa-web-8buoi\\Misa-Web\\WDT2020\\MTien\\Misa.DL\\Misa.DL.csproj",
         "packagesPath": "C:\\Users\\ManhTien\\.nuget\\packages\\",
-        "outputPath": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.DL\\obj\\",
+        "outputPath": "E:\\Misa\\Misa-web-8buoi\\Misa-Web\\WDT2020\\MTien\\Misa.DL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ManhTien\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -92,8 +92,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj": {
-                "projectPath": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj"
+              "E:\\Misa\\Misa-web-8buoi\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj": {
+                "projectPath": "E:\\Misa\\Misa-web-8buoi\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj"
               }
             }
           }

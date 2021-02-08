@@ -22,36 +22,68 @@ namespace Misa.CukCuk_3.DL
             connectionString = configuration.GetSection("ConnectionStrings").GetSection("mariaDB").Value;
             dbConnection = new MySqlConnection(connectionString);
         }
+
+        #region get entity
         /// <summary>
-        /// lấy danh toàn bộ bản ghi trong bảng
+        /// lấy danh sách bản ghi theo fielName(option)
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <returns>Danh sách toàn bộ bản ghi</returns>
-        /// createdBy: Mạnh Tiến(26/12/2020)
-        public IEnumerable<T> GetAllData<T>()
+        /// <param name="offSet"></param>
+        /// <param name="limmit"></param>
+        /// <param name="fieldNames"></param>
+        /// <param name="values"></param>
+        /// <returns>danh sách các bản ghi</returns>
+        /// createdBy: Manh Tien (5/2/2021)
+        public IEnumerable<T> GetData<T>(long page, long limmit, List<string> fieldNames = null, List<string> values = null)
         {
+            long offSet;
+            if (page == 1)
+            {
+                offSet = 0;
+            }
+            else
+            {
+                offSet = (page - 1) * limmit - 1;
+            }
             var tableName = typeof(T).Name;
-            var storeName = $"Proc_Get{tableName}s";
-            var entity = dbConnection.Query<T>(storeName,commandType:CommandType.StoredProcedure);
-            return entity;
+            var storeName = $"Proc_Get{tableName}";
+            DynamicParameters dynamicParameters = new DynamicParameters();
+            dynamicParameters.Add("@offSet", offSet);
+            dynamicParameters.Add("@limmit", limmit);
+            if (values == null)
+            {
+                var entities = dbConnection.Query<T>(storeName, dynamicParameters, commandType: CommandType.StoredProcedure);
+                return entities;
+            }
+            else
+            {
+                int index = 0;
+                storeName += "By";
+                Array _values = values.ToArray();
+                foreach (var fieldName in fieldNames)
+                {
+                    storeName += $"{fieldName}";
+                    dynamicParameters.Add($"@{fieldName}", _values.GetValue(index));
+                    index++;
+                }
+                var entities = dbConnection.Query<T>(storeName, dynamicParameters, commandType: CommandType.StoredProcedure);
+                return entities;
+            }
         }
 
         /// <summary>
-        /// lấy bản ghi theo id
+        /// lấy bản ghi bằng câu lệnh sql
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="id"></param>
-        /// <returns>một bản ghi</returns>
-        /// /// createdBy: Mạnh Tiến(26/12/2020)
-        public T GetById<T>(string id)
+        /// <param name="sql"></param>
+        /// <returns>danh sách bản ghi</returns>
+        /// createdBy: Mạnh Tiến(27/12/2020)
+        public IEnumerable<T> GetData<T>(string sql)
         {
-            var tableName = typeof(T).Name;
-            var storeName = $"Proc_Get{tableName}ById";
-            DynamicParameters dynamicParameters = new DynamicParameters();
-            dynamicParameters.Add($"@{tableName}Id", id);
-            var entity = dbConnection.Query<T>(storeName, dynamicParameters, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            var entity = dbConnection.Query<T>(sql);
             return entity;
         }
+        #endregion
 
         /// <summary>
         /// thêm mới 1 bản ghi
@@ -62,7 +94,6 @@ namespace Misa.CukCuk_3.DL
         /// createdBy: Mạnh Tiến(26/12/2020)
         public int Insert<T>(T entity)
         {
-            var customer = entity as Customer;
             var tableName = typeof(T).Name;
             var storeName = $"Proc_Insert{tableName}";
             DynamicParameters dynamicParameters = new DynamicParameters();
@@ -74,7 +105,14 @@ namespace Misa.CukCuk_3.DL
                 var propertyType = property.PropertyType;
                 if(propertyType == typeof(Guid) || propertyType == typeof(Guid?))
                 {
-                    propertyValue = propertyValue.ToString();
+                    if(propertyValue == null)
+                    {
+                        propertyValue = "";
+                    }
+                    else
+                    {
+                        propertyValue = propertyValue.ToString();
+                    }
                 }
                 dynamicParameters.Add($"@{propertyName}", propertyValue);
             }
@@ -127,49 +165,47 @@ namespace Misa.CukCuk_3.DL
             return affect;
         }
 
+        #region count entity
         /// <summary>
-        /// lấy bản ghi bằng câu lệnh sql
+        /// lấy tổng số bản ghi, không truyền tham số thì sẽ lấy tổng số bản ghỉ
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="sql"></param>
-        /// <returns>danh sách bản ghi</returns>
-        /// createdBy: Mạnh Tiến(27/12/2020)
-        public IEnumerable<T> GetData<T>(string sql)
-        {
-            var entity = dbConnection.Query<T>(sql);
-            return entity;
-        }
-
-        /// <summary>
-        /// lấy bản ghi theo phân trang
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="offSet"></param>
-        /// <param name="limmit"></param>
-        /// <returns>danh sánh bản ghi</returns>
-        public IEnumerable<T> GetTPaging<T>(int offSet, int limmit)
+        /// <param name="fieldNames"></param>
+        /// <param name="values"></param>
+        /// <returns>số lượng bản ghi: long</returns>
+        /// createdBy: Manh Tien (5/2/2021)
+        public long Count<T>(List<string> fieldNames = null, List<string> values = null)
         {
             var tableName = typeof(T).Name;
-            var storeName = $"Proc_Get{tableName}Paging";
-            DynamicParameters dynamicParameters = new DynamicParameters();
-            dynamicParameters.Add("offSet", offSet);
-            dynamicParameters.Add("limmit", limmit);
-            var entities = dbConnection.Query<T>(storeName, dynamicParameters, commandType: CommandType.StoredProcedure);
-            return entities;
+            if(values == null)
+            {
+                var storeName = $"Proc_Count{tableName}";
+                long total = (long)dbConnection.ExecuteScalar(storeName, commandType: CommandType.StoredProcedure);
+                return total;
+            }
+            else
+            {
+                string storeName = $"Proc_Count{tableName}By";
+                DynamicParameters dynamicParameters = new DynamicParameters();
+                Array _values = values.ToArray();
+                int index = 0;
+                if (fieldNames.Any() == false)
+                {
+                    return -1;
+                }
+                else
+                {
+                    foreach (var fieldName in fieldNames)
+                    {
+                        storeName = storeName + $"{fieldName}";
+                        dynamicParameters.Add($"@{fieldName}", _values.GetValue(index));
+                        index++;
+                    }
+                }
+                long total = (long)dbConnection.ExecuteScalar(storeName, dynamicParameters, commandType: CommandType.StoredProcedure);
+                return total;
+            }
         }
-
-        /// <summary>
-        /// số lượng bản ghi trong 1 bảng
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <returns>số lượng bản ghi</returns>
-        /// createdBy: Mạnh Tiến(27/12/2020)
-        public long Count<T>()
-        {
-            var tableName = typeof(T).Name;
-            var storName = $"Proc_Count{tableName}";
-            long total = (long)dbConnection.ExecuteScalar(storName, commandType: CommandType.StoredProcedure);
-            return total;
-        }
+        #endregion
     }
 }

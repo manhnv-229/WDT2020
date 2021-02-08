@@ -1,9 +1,6 @@
 ﻿using Misa.BL.Interface.IRepository;
 using Misa.BL.Interface.IService;
 using Misa.BL.Entity;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Misa.BL.ServiceImp
 {

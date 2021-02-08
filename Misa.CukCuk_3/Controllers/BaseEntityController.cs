@@ -22,22 +22,31 @@ namespace Misa.CukCuk_3.Controllers
         [HttpGet]
         public IEnumerable<T> Get()
         {
-            return _baseService.GetTs();
+            long totalRow = _baseService.CountEntity();
+            return _baseService.GetEntity(0, totalRow);
+        }
+
+        [HttpGet("{page}/{limmit}")]
+        public IEnumerable<T> GetEntities(long page, long limmit)
+        {
+            var entities = _baseService.GetEntity(page, limmit);
+            return entities;
         }
 
         // GET api/<BaseController>/5
         [HttpGet("{id}")]
         public T Get(string id)
         {
-            return _baseService.GetTById(id);
+            return _baseService.GetEntityById(id);
         }
 
         [HttpGet("numberEntity")]
         public long GetNumberEntity()
         {
 
-            return _baseService.Count();
+            return _baseService.CountEntity();
         }
+
         // POST api/<BaseController>
         [HttpPost]
         public ServiceResult Post([FromBody] T entity)

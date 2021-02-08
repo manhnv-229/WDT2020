@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6b66L61rUGyN8UsE6agMCR0VfSx415Puo7R79N+hmvQktO9RQQWVlIVY2xrf3ff99vR5/Lk+nxTjMZ4Ll0CrHQ==",
+  "dgSpecHash": "S1OhpucIO5QrCbW4IDyme0CR3FoVlJUf+ogYb93+SBmOp/GgLLFaZR20KSScgxYmMyhz5MMIy756/Svsc7vXdg==",
   "success": true,
-  "projectFilePath": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.DL\\Misa.DL.csproj",
+  "projectFilePath": "E:\\Misa\\Misa-web-8buoi\\Misa-Web\\WDT2020\\MTien\\Misa.DL\\Misa.DL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ManhTien\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\ManhTien\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",

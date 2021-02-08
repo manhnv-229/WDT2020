@@ -14,36 +14,16 @@ namespace Misa.DL
 
         }
 
-        public long CountEntity()
-        {
-            return base.Count<T>();
-        }
-
-        public int DeleteEntity(string id)
-        {
-            return base.Delete<T>(id);
-        }
-
         public IEnumerable<T> GEtDataBySQL(string sql)
         {
             return base.GetData<T>(sql);
         }
 
-        public T GetEntityById(string id)
+        public IEnumerable<T> GetData(long page, long limmit, List<string> fieldNames = null, List<string> values = null)
         {
-            return base.GetById<T>(id);
+            return base.GetData<T>(page, limmit, fieldNames, values);
         }
-
-        public IEnumerable<T> GetEntityPaging(int offSet, int limmit)
-        {
-            return base.GetTPaging<T>(offSet, limmit);
-        }
-
-        public IEnumerable<T> GetEntitys()
-        {
-            return base.GetAllData<T>();
-        }
-
+        
         public int InsertEntity(T entity)
         {
             return base.Insert<T>(entity);
@@ -53,5 +33,16 @@ namespace Misa.DL
         {
             return base.Update<T>(entity);
         }
+
+        public long CountEntity(List<string> fieldNames = null, List<string> values = null)
+        {
+            return base.Count<T>(fieldNames, values);
+        }
+
+        public int DeleteEntity(string id)
+        {
+            return base.Delete<T>(id);
+        }
+
     }
 }

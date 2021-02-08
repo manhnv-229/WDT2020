@@ -1,11 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Misa.BL.Interface.IRepository;
 using Misa.BL.Entity;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Misa.DL
+namespace Misa.DL.EmployeeRepository
 {
     public class EmployeePositionRepository : BaseRepository<EmployeePosition>, IEmployeePositionRepository
     {

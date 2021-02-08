@@ -3683,11 +3683,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj",
+      "projectUniqueName": "E:\\Misa\\Misa-web-8buoi\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj",
       "projectName": "Misa.BL",
-      "projectPath": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj",
+      "projectPath": "E:\\Misa\\Misa-web-8buoi\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj",
       "packagesPath": "C:\\Users\\ManhTien\\.nuget\\packages\\",
-      "outputPath": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\obj\\",
+      "outputPath": "E:\\Misa\\Misa-web-8buoi\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ManhTien\\AppData\\Roaming\\NuGet\\NuGet.Config",

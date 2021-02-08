@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BWrU+r60W/FykbzOdG4RV5lmNMHbv9egFDLuQ4EWl++6JmL/yhHrqOSVLA1ruo/K4AKYyZUphbgZ46zuW3evkQ==",
+  "dgSpecHash": "crFk8gj7uHUWcjOSzK7Th0nVtibva3vWVRjl5WyXO8zq4iwOTg0ykQq+YKqK3vEmwyLVlDGUSyWdN/fpfR3rTA==",
   "success": true,
-  "projectFilePath": "E:\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj",
+  "projectFilePath": "E:\\Misa\\Misa-web-8buoi\\Misa-Web\\WDT2020\\MTien\\Misa.BL\\Misa.BL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ManhTien\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
     "C:\\Users\\ManhTien\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

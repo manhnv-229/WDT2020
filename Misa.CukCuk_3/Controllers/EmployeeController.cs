@@ -16,83 +16,32 @@ namespace Misa.CukCuk_3.Controllers
             _employeeService = empService;
         }
 
-        [HttpGet("{page}/{limmit}")]
-        public IEnumerable<Employee> GetEmployees(int page, int limmit)
-        {
-            int offSet;
-            if (page == 1)
-            {
-                offSet = 0;
-            }
-            else
-            {
-                offSet = (page - 1) * limmit - 1;
-            }
-            var employees = _employeeService.GetTPaging(offSet, limmit);
-            return employees;
-        }
 
         [HttpGet("name/{fullName}/{page}/{limmit}")]
-        public IEnumerable<Employee> GetEmployeesByName(string fullName, int page, int limmit)
+        public IEnumerable<Employee> GetEmployeesByName(string fullName, long page, long limmit)
         {
-            int offSet;
-            if (page == 1)
-            {
-                offSet = 0;
-            }
-            else
-            {
-                offSet = (page - 1) * limmit - 1;
-            }
-            var employees = _employeeService.GetEmployeesByName(fullName, offSet, limmit);
+            var employees = _employeeService.GetEmployeesByName(fullName, page, limmit);
             return employees;
         }
 
         [HttpGet("position/{employeePosition}/{page}/{limmit}")]
-        public IEnumerable<Employee> GetEmployeesByemployeePosition(string employeePosition, int page, int limmit)
+        public IEnumerable<Employee> GetEmployeesByemployeePosition(string employeePosition, long page, long limmit)
         {
-            int offSet;
-            if (page == 1)
-            {
-                offSet = 0;
-            }
-            else
-            {
-                offSet = (page - 1) * limmit - 1;
-            }
-            var employees = _employeeService.GetEmployeesByEmployeePosition(employeePosition, offSet, limmit);
+            var employees = _employeeService.GetEmployeesByEmployeePosition(employeePosition, page, limmit);
             return employees;
         }
 
         [HttpGet("department/{employeeDepartment}/{page}/{limmit}")]
-        public IEnumerable<Employee> GetEmployeesByDepar(string employeeDepartment, int page, int limmit)
+        public IEnumerable<Employee> GetEmployeesByDepar(string employeeDepartment, long page, long limmit)
         {
-            int offSet;
-            if (page == 1)
-            {
-                offSet = 0;
-            }
-            else
-            {
-                offSet = (page - 1) * limmit - 1;
-            }
-            var employees = _employeeService.GetEmployeesByEmployeeDepartment(employeeDepartment, offSet, limmit);
+            var employees = _employeeService.GetEmployeesByEmployeeDepartment(employeeDepartment, page, limmit);
             return employees;
         }
 
         [HttpGet("{employeePos}/{employeeDep}/{page}/{limmit}")]
-        public IEnumerable<Employee> GetEmployeesPosAndDep(string employeePos, string employeeDep, int page, int limmit)
+        public IEnumerable<Employee> GetEmployeesPosAndDep(string employeePos, string employeeDep, long page, long limmit)
         {
-            int offSet;
-            if (page == 1)
-            {
-                offSet = 0;
-            }
-            else
-            {
-                offSet = (page - 1) * limmit - 1;
-            }
-            var employees = _employeeService.GetEmployeesByPositionAndDepartment(employeePos,employeeDep, offSet, limmit);
+            var employees = _employeeService.GetEmployeesByPositionAndDepartment(employeePos,employeeDep, page, limmit);
             return employees;
         }
         
@@ -115,19 +64,16 @@ namespace Misa.CukCuk_3.Controllers
         }
 
         [HttpGet("filter/{key}/{page}/{limmit}")]
-        public IEnumerable<Employee> GetEmployeesResult(string key, int page, int limmit)
+        public IEnumerable<Employee> GetEmployeesResult(string key, long page, long limmit)
         {
-            int offSet;
-            if (page == 1)
-            {
-                offSet = 0;
-            }
-            else
-            {
-                offSet = (page - 1) * limmit - 1;
-            }
             key = key.Trim();
-            return _employeeService.SearchEmployee(key, offSet, limmit);
+            return _employeeService.SearchEmployee(key, page, limmit);
+        }
+
+        [HttpGet("countEmployeeByKey/{key}")]
+        public long CountEmplooyeeByKey(string key)
+        {
+            return _employeeService.CountEmployeeByKey(key);
         }
 
         [HttpGet("employeeCode/{employeeCode}")]
@@ -152,6 +98,24 @@ namespace Misa.CukCuk_3.Controllers
         public ServiceResult DeleteEmployeeByCode(string code)
         {
             return _employeeService.DeleteEmployeeByCode(code);
+        }
+
+        /*[HttpDelete("deleteEmployeeList")]
+        public ServiceResult DeleteEmployeeByIdList([FromBody] List<string> ids)
+        {
+            return _employeeService.DeleteEmployeesByListId(ids);
+        }*/
+
+        [HttpPost("deleteEmployeeList")]
+        public ServiceResult DeleteEmployeeByIdList([FromBody] List<string> ids)
+        {
+            return _employeeService.DeleteEmployeesByListId(ids);
+        }
+
+        [HttpPost("deleteEmployeeListByCode")]
+        public ServiceResult DeleteEmployeeListByCode([FromBody] List<string> codes)
+        {
+            return _employeeService.DeleteEmployeeByListCode(codes);
         }
     }
 }

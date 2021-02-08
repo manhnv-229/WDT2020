@@ -30,6 +30,9 @@ namespace Misa.BL.Emum
         False = 600
     }
 
+    /// <summary>
+    /// Mã giới tính
+    /// </summary>
     public enum Gender
     {
         Male = 1,

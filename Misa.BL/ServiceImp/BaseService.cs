@@ -16,45 +16,24 @@ namespace Misa.BL.ServiceImp
             baseRepository = _baseRepository;
         }
 
-        public virtual long Count()
+        public virtual long CountEntity(List<string> fieldNames = null, List<string> values = null)
         {
-            return baseRepository.CountEntity();
+            return baseRepository.CountEntity(fieldNames, values);
         }
 
-        public ServiceResult DeleteT(string id)
+        public IEnumerable<T> GetEntity(long page, long limmit, List<string> fieldNames = null, List<string> values = null)
         {
-            var serviceResult = new ServiceResult();
+            return baseRepository.GetData(page, limmit, fieldNames, values);
+        }
+        public T GetEntityById(string id)
+        {
             var tableName = typeof(T).Name;
-            var sql = $"SELECT {tableName}Id FROM {typeof(T)} WHERE {tableName}Id = '{id}'";
-            var entity = baseRepository.GEtDataBySQL(sql);
-            if(entity.Any() == false)
-            {
-                serviceResult.Messenger.Add($"{typeof(T)}Id" + Properties.Resources.Error_NotExist);
-                serviceResult.MisaCode = MisaEmun.False;
-                return serviceResult;
-            }
-            else
-            {
-                var affect = baseRepository.DeleteEntity(id);
-                serviceResult.Messenger.Add(Properties.Resources.Success);
-                serviceResult.MisaCode = MisaEmun.Scuccess;
-                return serviceResult;
-            }
-        }
-
-        public T GetTById(string id)
-        {
-            return baseRepository.GetEntityById(id);
-        }
-
-        public IEnumerable<T> GetTPaging(int offSet, int limmit)
-        {
-            return baseRepository.GetEntityPaging(offSet, limmit);
-        }
-
-        public IEnumerable<T> GetTs()
-        {
-            return baseRepository.GetEntitys();
+            List<string> fieldNames = new List<string>();
+            List<string> values = new List<string>();
+            fieldNames.Add(tableName + "Id");
+            values.Add(id);
+            var entity = GetEntity(0, 1, fieldNames, values).FirstOrDefault();
+            return entity;
         }
 
         public ServiceResult InsertT(T entity)
@@ -79,5 +58,27 @@ namespace Misa.BL.ServiceImp
             }
             return serviceResult;
         }
+
+        public ServiceResult DeleteT(string id)
+        {
+            var serviceResult = new ServiceResult();
+            var tableName = typeof(T).Name;
+            var sql = $"SELECT {tableName}Id FROM {typeof(T).Name} WHERE {tableName}Id = '{id}'";
+            var entity = baseRepository.GEtDataBySQL(sql);
+            if (entity.Any() == false)
+            {
+                serviceResult.Messenger.Add($"{typeof(T)}Id" + Properties.Resources.Error_NotExist);
+                serviceResult.MisaCode = MisaEmun.False;
+                return serviceResult;
+            }
+            else
+            {
+                var affect = baseRepository.DeleteEntity(id);
+                serviceResult.Messenger.Add(Properties.Resources.Success);
+                serviceResult.MisaCode = MisaEmun.Scuccess;
+                return serviceResult;
+            }
+        }
+
     }
 }

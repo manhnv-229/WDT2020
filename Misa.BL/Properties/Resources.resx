@@ -141,6 +141,9 @@
   <data name="Error_NotExist" xml:space="preserve">
     <value>Không tồn tại</value>
   </data>
+  <data name="Exception_User_Mess" xml:space="preserve">
+    <value>Vui lòng liên hệ Misa để nhận trợ giúp</value>
+  </data>
   <data name="Success" xml:space="preserve">
     <value>Thành công</value>
   </data>

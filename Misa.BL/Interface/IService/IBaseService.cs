@@ -7,21 +7,27 @@ namespace Misa.BL.Interface.IService
 {
     public interface IBaseService<T>
     {
-        /// <summary>
-        /// Lấy toàn bộ entity
-        /// </summary>
-        /// <returns>Danh sách các entity</returns>
-        /// CreatedBy: Mạnh Tiến(25/12/2020)
-        IEnumerable<T> GetTs();
+        #region get entity
 
         /// <summary>
-        /// Lấy entity bằng id
+        /// lấy bản ghi có phân trang
+        /// </summary>
+        /// <param name="page"></param>
+        /// <param name="limmit"></param>
+        /// <param name="fieldNames"></param>
+        /// <param name="values"></param>
+        /// <returns>danh sách các bản ghi</returns>
+        /// creadtedBy: Mạnh TIến(5/2/2020)
+        IEnumerable<T> GetEntity(long page, long limmit, List<string> fieldNames = null, List<string> values = null);
+
+        /// <summary>
+        /// lấy thông tin đối tượng bằng id
         /// </summary>
         /// <param name="id"></param>
-        /// <returns>Một entity</returns>
-        /// CreadtedBy: Mạnh Tiến(25/12/2020)
-        /// 
-        T GetTById(string id);
+        /// <returns>thông tin đối tượng</returns>
+        /// creadtedBy: Mạnh TIến(5/2/2020)
+        T GetEntityById(string id);
+        #endregion
 
         /// <summary>
         /// Thêm một thông tin khách hàng
@@ -45,21 +51,12 @@ namespace Misa.BL.Interface.IService
         /// <returns>Số lượng bản ghi được xóa</returns>
         /// /// CreadtedBy: Mạnh Tiến(25/12/2020)
         ServiceResult DeleteT(string id);
-        
-        /// <summary>
-        /// lấy bản ghi có phân trang
-        /// </summary>
-        /// <param name="offSet"></param>
-        /// <param name="limmit"></param>
-        /// <returns>danh sách các bản ghi</returns>
-        /// creadtedBy: Mạnh TIến(27/12/2020)
-        IEnumerable<T> GetTPaging(int offSet, int limmit);
 
         /// <summary>
         /// tính số bản ghi trong database
         /// </summary>
         /// <returns>Số lượng bản ghi</returns>
         /// createdBy: Mạnh Tiến(27/12/2020)
-        long Count();
+        long CountEntity(List<string> fieldNames = null, List<string> values = null);
     }
 }

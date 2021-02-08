@@ -9,3 +9,14 @@ E:\Misa-Web\WDT2020\MTien\Misa.BL\obj\Debug\netcoreapp3.1\Misa.BL.dll
 E:\Misa-Web\WDT2020\MTien\Misa.BL\obj\Debug\netcoreapp3.1\Misa.BL.pdb
 E:\Misa-Web\WDT2020\MTien\Misa.BL\obj\Debug\netcoreapp3.1\Misa.BL.Properties.Resources.resources
 E:\Misa-Web\WDT2020\MTien\Misa.BL\obj\Debug\netcoreapp3.1\Misa.BL.csproj.GenerateResource.cache
+E:\Misa\Misa-web-8buoi\Misa-Web\WDT2020\MTien\Misa.BL\bin\Debug\netcoreapp3.1\Misa.BL.deps.json
+E:\Misa\Misa-web-8buoi\Misa-Web\WDT2020\MTien\Misa.BL\bin\Debug\netcoreapp3.1\Misa.BL.dll
+E:\Misa\Misa-web-8buoi\Misa-Web\WDT2020\MTien\Misa.BL\bin\Debug\netcoreapp3.1\Misa.BL.pdb
+E:\Misa\Misa-web-8buoi\Misa-Web\WDT2020\MTien\Misa.BL\obj\Debug\netcoreapp3.1\Misa.BL.csprojAssemblyReference.cache
+E:\Misa\Misa-web-8buoi\Misa-Web\WDT2020\MTien\Misa.BL\obj\Debug\netcoreapp3.1\Misa.BL.Properties.Resources.resources
+E:\Misa\Misa-web-8buoi\Misa-Web\WDT2020\MTien\Misa.BL\obj\Debug\netcoreapp3.1\Misa.BL.csproj.GenerateResource.cache
+E:\Misa\Misa-web-8buoi\Misa-Web\WDT2020\MTien\Misa.BL\obj\Debug\netcoreapp3.1\Misa.BL.AssemblyInfoInputs.cache
+E:\Misa\Misa-web-8buoi\Misa-Web\WDT2020\MTien\Misa.BL\obj\Debug\netcoreapp3.1\Misa.BL.AssemblyInfo.cs
+E:\Misa\Misa-web-8buoi\Misa-Web\WDT2020\MTien\Misa.BL\obj\Debug\netcoreapp3.1\Misa.BL.csproj.CoreCompileInputs.cache
+E:\Misa\Misa-web-8buoi\Misa-Web\WDT2020\MTien\Misa.BL\obj\Debug\netcoreapp3.1\Misa.BL.dll
+E:\Misa\Misa-web-8buoi\Misa-Web\WDT2020\MTien\Misa.BL\obj\Debug\netcoreapp3.1\Misa.BL.pdb
